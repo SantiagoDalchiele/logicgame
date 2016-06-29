@@ -1,0 +1,47 @@
+Para leer de heroku	
+		
+	
+	
+-------------------------------------------------------------------------------------------------------------------------------------
+Heroku vs tomcat:
+https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat
+	(esto lo logré implementar en el proyecto first-tomcat)
+	
+Deployar un war en heroku -> no entendí nada y no andubo	
+	https://devcenter.heroku.com/articles/war-deployment
+		heroku deploy:war --war lgweb.war --app primera-aplicacion
+		
+			
+-------------------------------------------------------------------------------------------------------------------------------------
+abrir una ventana de comandos DOS
+ejecutar:
+	set HTTP_PROXY=http://d0172:nidO.978@proxy:8080
+	set HTTPS_PROXY=http://d0172:nidO.978@proxy:8080
+	
+cd c:\santiago\heroku
+	
+heroku login 
+	santiagodalchiele@gmail.com
+
+heroku apps:create [NOMBRE_DE_LA_APLICACION]
+
+git push heroku master
+
+heroku ps:scale web=1
+
+heroku open								/** abre la aplicación remota */
+
+mvn clean install						/** para instalar la aplicación localmente */
+heroku local web -f Procfile.windows	/** abre la aplicación local */
+
+
+git add .								/** agregar cambios a mi repositorio local */
+git commit -m "Comentario"				/** commitear los cambios */
+git push heroku master					/** deploy de cambios al servidor */
+heroku open hello						/** abrir la aplicacion remota */
+
+	
+--app primera-aplicacion
+
+Para limpiar todo por si da errores:
+heroku update	

@@ -1,0 +1,117 @@
+-como usar github con eclipse? -> setear las variables HTTPS_PROXY y HTTP_PROXY y re-arrancar eclipse
+-subir a github logicgame y logicgame-fe ?
+
+-limpiar las aplicaciones creadas en heroku
+
+-subir a heroku logicgame-fe	
+
+-Como ejecutar los comandos sql en heroku? --> no hay manera todo lo que se necesite hay que incluirlo en la aplicación
+
+-Otros sitios de free-hosting (getupcloud es de unos brazucas, openshift parece mas serio)			
+	www.openshift.com
+	getupcloud.com
+
+-Llevar nueva versión del .war a casa
+-Ver sugerencias de Sabrina
+
+-migrar a maven comunide
+-migrar a maven lgide
+-borrar la carpeta git
+
+-cambiar los identificadores de la UI para poder "incrustar" la pagina web en otra, usar algún prefijo tipo "lg."
+	
+-pantalla donde visualizar los juegos cargados en el sistema (tipo trabajar con)
+	
+-Mejorar la interface de administración
+	hacer el upload con javascript?
+	visualizar las cosas de forma mas coqueta
+	
+-Repensar el tema de la internacionalización, si no incluirla dentro del xsd del juego y que cada literal tenga asociado un idioma
+
+-Usar cache para las hojas de estilos levantadas en el web-server (http://www.ehcache.org/)
+
+-olvido de clave, mandar un mail con un token y con ese token poder re-ingresar la clave, en una página aparte a la del juego o no?
+	https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet
+
+-Poder visualizar TODAS las pistas en un panel por encima o al costado
+
+-Probar en casa la instalación de logic-game y su administracion
+
+-Seguridad		
+	Controles de abuso de uso de servicios (ataques)
+		Intentar logearse muchas veces con un id de usuario
+		Intentar registrarse muchas veces desde una ip, o validar si un usuario es válido
+		Mandar muchos setvalor para probar todas las combinaciones posibles
+		Otro tipo de ataques
+	Del curso de seguridad:
+		No permitir la enumeración de usuarios
+		Bloquear usuarios luego de N intentos
+		Mantener un log de cada intento de autenticación
+		IP Origen, usuario, digest contraseña, resultado	
+
+-Buenas practicas de programación web
+	https://developer.yahoo.com/performance/
+	
+-Hacer un asistente para mostrar como se juega el juego con un juego sencillo (el de los apodos tal vez)
+
+-Login con facebook
+	https://www.elserver.com/facebook-login-javascript/
+	https://platzi.com/blog/facebook-login-button/
+	
+-Como integrar una aplicación en facebook
+	crearme un mail desa.logicgame@gmail.com
+	crear un perfil de facebook para LogicGame Desa
+	https://developers.facebook.com/docs
+	https://developers.facebook.com/quickstarts/
+	http://hayageek.com/facebook-javascript-sdk/
+	http://www.maestrosdelweb.com/primeros-pasos-para-generar-aplicaciones-de-facebook/
+	https://devcenter.heroku.com/articles/facebook	
+
+-Controles de uso del juego
+	si recomienda el juego a 10 usuarios mas pasa a ser usuario premium
+	que no pueda pasar mas de 2 niveles por día si no es un usuario pago
+	cantidad de ayudas que puede enviar un usuario a otro
+	solicitud de ayudas a otros amigos
+
+-Documentar todo lo hecho
+
+-Seguridad (necesario usando heroku?)
+	Como obtener que mi certificado generado en forma local me lo certifique una autoridad certificadora
+		letsecrypt.org
+		https://www.startssl.com/
+		
+-Interface para android
+
+-Swift
+
+-librerías para generar en ios, android y windows-phone (cordova? tag-libs?)
+	Loquito, si queres enfocarte en mobile, la posta hoy por hoy es ir a lo hibrido.
+	Es decir, programar en html5 + javascript y si necesitas un backend servidor, le metes
+	REST y del  lado del servidor, metele java, nodejs, ruby, php, phyton o lo que quieras.	
+	App hibirda significa que usas algun framework que te genera para IOS, ANDROID, WINDOWSMOBILE ,firefox os, etc....	
+	Frameworks hay muchos, yo usaría Cordova (open) o su versión comercial phonegap	
+	pero ahora apareció uno que promete mucho se llama IONIC
+	que extiende cordova y angluarjs.	
+	https://cordova.apache.org/
+	ionicframework.com
+	
+-Node JS, MEAN
+	
+-TomEE, tomcat + J2EE
+
+-Cursos gratis: https://miriadax.net/web/general-navigation/cursos
+
+-Estudiar Java Server Faces (JSF), ver combinación de AJAX con JSF
+
+-Buscar mas juegos para resolver
+http://cvc.cervantes.es/aula/pasatiempos/pasatiempos1/
+
+-explorar la implentación de sopas de letras, palabras cruzadas, y otros juegos
+
+-AngularJS
+	https://es.wikipedia.org/wiki/AngularJS
+	https://angularjs.org/
+	http://www.w3schools.com/angular/
+
+-aplicaciones responsivas
+	http://www.lingulo.com/tutorials/css/how-to-build-a-html5-website-from-scratch	

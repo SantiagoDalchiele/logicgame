@@ -1,0 +1,18 @@
+14
+Ríos y banderas
+Seguramente que ya sabes muchas cosas sobre países de Hispanoamérica, pero siempre se puede aprender más. En el juego de hoy tienes que relacionar los ríos Loa, Negro, Pilcomayo y Guayas con sus países respectivos (Paraguay, Chile, Ecuador y Uruguay), así como con los símbolos de sus banderas (sol, estrella, pájaro y símbolo circular).
+3
+País
+Paraguay, Chile, Ecuador,Uruguay
+Bandera
+sol, estrella, pájaro,símbolo circular
+Río
+Loa,Negro,Pilcomayo,Guayas
+El sol no está en la bandera de Ecuador
+En Paraguay está el río Pilcomayo
+En la bandera de Uruguay no hay una estrella ni un símbolo circular
+El río Negro no está en Ecuador ni en Chile
+La estrella está en la bandera de Chile
+El río Loa no está en Ecuador
+El pájaro no está en la bandera de Paraguay ni en la de Uruguay
+El río Guayas no está en Chile

@@ -1,0 +1,40 @@
+<!-- Graba en la base de datos los juegos indicados -->
+<!DOCTYPE xml>
+<project name="LogicGame-GrabarEnBD">
+	<property name="jaxb-lib" value="c:/util/jaxb-ri/lib"/>
+	<property name="hibernate-lib" value="c:/util/hibernate-release-4.3.11.Final/lib/required"/>
+	<property name="postgres-lib" value="c:/santiago/software"/>
+	<property name="lg-lib" value="../../../lib"/>
+	<property name="lg-jar" value="../.."/>
+	<property name="conf-dir" value="../../conf"/>
+
+	<taskdef name="lg2db" classname="uy.com.uma.logicgame.ant.Lg2dbTask">
+		<classpath>
+			<fileset dir="${jaxb-lib}" includes="*.jar"/>
+			<fileset dir="${hibernate-lib}" includes="*.jar"/>
+			<fileset dir="${postgres-lib}" includes="postgresql-9.4-1201.jdbc4.jar"/>
+			<fileset dir="${lg-lib}" includes="*.jar"/>
+			<fileset dir="${lg-jar}" includes="*.jar"/>
+		</classpath>		
+	</taskdef>
+
+	<lg2db confDir="${conf-dir}" overwrite="yes"> <!-- overwrite="yes" -->
+		<!-- <fileset file="../juegos/01-problemas-en-la-escuela.xml"/>
+		<fileset file="../juegos/03-vacaciones-islas.xml"/>
+		<fileset file="../juegos/04-esoterico.xml"/>
+		<fileset file="../juegos/06-museos.xml"/>
+		<fileset file="../juegos/07-gustos-literarios.xml"/>
+		<fileset file="../juegos/08-mascotas.xml"/>
+		<fileset file="../juegos/09-einstein.xml"/>
+		<fileset file="../juegos/10-simple.xml"/>
+		<fileset file="../juegos/13-hispanoamerica-recursos.xml"/>	
+		<fileset file="../juegos/15-problemas-en-la-vivienda.xml"/>
+		<fileset file="../juegos/16-juegos-infantiles.xml"/>
+		<fileset file="../juegos/17-vacaciones-uruguay.xml"/>
+		<fileset file="../juegos/18-comensales.xml"/> 
+		<fileset file="../juegos/19-mundial-de-rugby.xml"/>
+		<fileset file="../juegos/20-casamientos.xml"/> 
+		<fileset file="../juegos/21-turistas-en-uruguay.xml"/> -->
+		<fileset file="../juegos/22-video-juegos-tecnologia.xml"/>
+	</lg2db>
+</project>

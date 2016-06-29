@@ -1,0 +1,34 @@
+Software necesario runtime:
+	-PostgreSQL 9 (o superior) - postgresql-9.4.4-3-windows-x64.exe
+	-Apache Tomcat 8 (o superior) - apache-tomcat-8.0.27-windows-x64.zip
+	-lgweb-x.y.z.war
+
+Software necesario develop:
+	-PostgreSQL 9 (o superior) - postgresql-9.4.4-3-windows-x64.exe
+	-Driver de PostgreSQL 9 (o superior) - postgresql-9.4-1201.jdbc4.jar
+	-Hibernate 4 (o superior) - hibernate-release-4.3.11.Final.zip
+	-yuicompressor-2.4.7.jar (y NO superior)
+	-log4j2 2.3 (o superior) - log4j-api-2.3.jar y log4j-core-2.3.jar
+	-jaxb					- jaxb-api.jar
+	-ss_css2				- ss_css2.jar
+	-Eclipse-Mars
+	
+
+Deploy:
+	-Crear la base
+	-Crear el esquema (esquema-db.sql)
+	-Crear usuarios y permisos (permisos.sql)
+	-Copiar a TOMCAT_HOME/webapps el archivo: lgweb-x.y.z.war como lgweb.war	 
+	-En TOMCAT_HOME/conf/tomcat-users.xml
+		<user username="tomcat" password="tomcat" roles="tomcat,manager-gui,admin-gui"/>
+	-Arrancar TOMCAT_HOME/bin/startup.bat
+	-En el archivo TOMCAT_HOME/webapps/lgweb/logicgame.properties
+		setear: hibernate.cfg.path = TOMCAT_HOME/webapps/lgweb/conf/hibernate.cfg.xml
+		setear: logicgame.cfg.path = TOMCAT_HOME/webapps/lgweb/conf/logicgame-conf.xml
+	-En el archivo TOMCAT_HOME/webapps/lgweb/conf/hibernate.cfg.xml
+		setear la base en la entrada <property name="connection.url">		
+	-Acceder a la url: localhost:8080/lgweb/admlg.html
+		Cargar recursos_1.0.1.zip
+	-Crear ruta por defecto (1): (ruta1.sql)
+	-Acceder a la url: localhost:8080/lgweb
+	-Registrarse como usuario y luego empezar a jugar

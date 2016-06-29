@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>22</id>
+	<titulo>Video juegos y tecnología</titulo>
+	<texto>5 jovenes de distintas nacionalidades son fanáticos de los video juegos, sus consolas, los celulares y las redes sociales.  Descubre la nacionalidad de cada uno de ellos, su video juego y consola favorita, el celular de su preferencia y en que red social prefiere pasar su tiempo libre</texto>
+	<costo>524</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Jack</valor>
+				<valor>Liam</valor>
+				<valor>Benjamin</valor>
+				<valor>Andrew</valor>
+				<valor>James</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Nacionalidad</id>
+			<valores>
+				<valor>estadounidense</valor>
+				<valor>inglés</valor>
+				<valor>canadiense</valor>
+				<valor>australiano</valor>
+				<valor>neozelandés</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Consola</id>
+			<valores>
+				<valor>PlayStation</valor>
+				<valor>XBox</valor>
+				<valor>Wii</valor>
+				<valor>Nintendo</valor>
+				<valor>Game Boy</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Video juego</id>
+			<valores>
+				<valor>Call of duty</valor>
+				<valor>Mortal Kombat</valor>
+				<valor>Super Mario</valor>
+				<valor>Mario Kart</valor>
+				<valor>Battlefield</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Marca de celular</id>
+			<valores>
+				<valor>Samsung</valor>
+				<valor>Apple</valor>
+				<valor>LG</valor>
+				<valor>Sony</valor>
+				<valor>Windows Phone</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Red social</id>
+			<valores>
+				<valor>facebook</valor>
+				<valor>twitter</valor>
+				<valor>youtube</valor>
+				<valor>google+</valor>
+				<valor>instagram</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa la consola Nintendo no tiene un celular marca Windows Phone</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Windows Phone</id-valor1>
+					<id-dimension2>Consola</id-dimension2>
+					<id-valor2>Nintendo</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Liam, quien prefiere un celular Sony, es fanático de la red social facebook</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Sony</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Liam</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Sony</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>facebook</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Benjamin usa un celular LG, pero no le gustan las consolas Nintendo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>LG</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Benjamin</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>LG</id-valor1>
+					<id-dimension2>Consola</id-dimension2>
+					<id-valor2>Nintendo</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El estadounidense es fanático de "Call of duty"</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Call of duty</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>estadounidense</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien juega con "Mario Kart" no usa celular LG, ni Samsung, ni se llama Liam</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Mario Kart</id-valor1>
+					<id-dimension2>Marca de celular</id-dimension2>
+					<id-valor2>LG</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Mario Kart</id-valor1>
+					<id-dimension2>Marca de celular</id-dimension2>
+					<id-valor2>Samsung</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Mario Kart</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Liam</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>James, que juega con "Super Mario", su red social favorita no es ni instagram ni twitter</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Super Mario</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>James</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Super Mario</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>instagram</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Super Mario</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>twitter</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Andrew, el australiano, es fanático de la consola Nintendo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Andrew</id-valor1>
+					<id-dimension2>Consola</id-dimension2>
+					<id-valor2>Nintendo</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>australiano</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Andrew</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Consola</id-dimension1>
+					<id-valor1>XBox</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Andrew</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa un IPhone (marca Apple) no prefiere la consola XBox, ni el video juego "Call of duty"</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Apple</id-valor1>
+					<id-dimension2>Consola</id-dimension2>
+					<id-valor2>XBox</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Apple</id-valor1>
+					<id-dimension2>Video juego</id-dimension2>
+					<id-valor2>Call of duty</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El canadiense juega con su PlayStation, usa la red social twitter, pero no le gusta "Mario Kart"</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>canadiense</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>facebook</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Consola</id-dimension1>
+					<id-valor1>PlayStation</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>canadiense</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>canadiense</id-valor1>
+					<id-dimension2>Video juego</id-dimension2>
+					<id-valor2>Mario Kart</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>twitter</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>canadiense</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa un Samsung habitualmente juega al Battlefield</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Samsung</id-valor1>
+					<id-dimension2>Video juego</id-dimension2>
+					<id-valor2>Battlefield</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El estadounidense no usa facebook</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>estadounidense</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>facebook</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa la red social instagram (el australiano) no le gusta la PlayStation ni el juego "Call of duty"</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>instagram</id-valor1>
+					<id-dimension2>Video juego</id-dimension2>
+					<id-valor2>Call of duty</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>instagram</id-valor1>
+					<id-dimension2>Consola</id-dimension2>
+					<id-valor2>PlayStation</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>neozelandés</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>instagram</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>instagram</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>australiano</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Liam no es estadounidense</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Liam</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>estadounidense</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa IPhone no usa facebook</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>facebook</id-valor1>
+					<id-dimension2>Marca de celular</id-dimension2>
+					<id-valor2>Apple</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa youtube (que no es James) prefiere la consola XBox, pero no los celulares Apple, ni le gusta el juego "Mortal Kombat"</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>youtube</id-valor1>
+					<id-dimension2>Consola</id-dimension2>
+					<id-valor2>XBox</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Marca de celular</id-dimension1>
+					<id-valor1>Apple</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>youtube</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>James</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>youtube</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Video juego</id-dimension1>
+					<id-valor1>Mortal Kombat</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>youtube</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien usa la consola Game Boy, no usa ni twitter ni google+</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Consola</id-dimension1>
+					<id-valor1>Game Boy</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>twitter</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Consola</id-dimension1>
+					<id-valor1>Game Boy</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>google+</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien prefiere la red social google+ usa un celular Windows Phone, es neozelandés, pero no le gusta la consola XBox ni Nintendo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>google+</id-valor1>
+					<id-dimension2>Marca de celular</id-dimension2>
+					<id-valor2>Windows Phone</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Consola</id-dimension1>
+					<id-valor1>XBox</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>google+</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Consola</id-dimension1>
+					<id-valor1>Nintendo</id-valor1>
+					<id-dimension2>Red social</id-dimension2>
+					<id-valor2>google+</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Red social</id-dimension1>
+					<id-valor1>google+</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>neozelandés</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

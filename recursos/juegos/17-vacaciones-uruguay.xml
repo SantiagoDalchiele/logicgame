@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>17</id>
+	<titulo>Vacaciones en Uruguay</titulo>
+	<texto>Juan, Pedro y Manuel pasarán sus vacaciones en balnearios de Uruguay, descubre en que balneario pasará sus vacaciones cada uno y cuál es su deporte preferido</texto>
+	<costo>12</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Juan</valor>
+				<valor>Pedro</valor>
+				<valor>Manuel</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Balneario</id>
+			<valores>
+				<valor>Punta del Este</valor>
+				<valor>Piriápolis</valor>
+				<valor>La Paloma</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Deporte</id>
+			<valores>
+				<valor>surf</valor>
+				<valor>fútbol</valor>
+				<valor>volleyball</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>A Juan no le gusta el fútbol</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Juan</id-valor1>
+					<id-dimension2>Deporte</id-dimension2>
+					<id-valor2>fútbol</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Pedro pasará sus vacaciones en Punta del Este</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Pedro</id-valor1>
+					<id-dimension2>Balneario</id-dimension2>
+					<id-valor2>Punta del Este</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Manuel prefiere La Paloma</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Balneario</id-dimension1>
+					<id-valor1>La Paloma</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Manuel</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien visita Punta del Este prefiere como deporte el	volleyball</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Balneario</id-dimension1>
+					<id-valor1>Punta del Este</id-valor1>
+					<id-dimension2>Deporte</id-dimension2>
+					<id-valor2>volleyball</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

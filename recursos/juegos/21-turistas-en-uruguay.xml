@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>21</id>
+	<titulo>Turistas de vacaciones en Uruguay</titulo>
+	<texto>Averigua que balneario visita cada turista según su nacionalidad, donde se hospedan cada uno de ellos, por cuantos días, quienes los acompañan en su estadía y cuál es su entretenimiento favorito</texto>
+	<costo>687</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nacionalidad</id>
+			<valores>
+				<valor>español</valor>
+				<valor>argentino</valor>
+				<valor>brasileño</valor>
+				<valor>paraguayo</valor>
+				<valor>chileno</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Balneario</id>
+			<valores>
+				<valor>Punta del Este</valor>
+				<valor>Piriápolis</valor>
+				<valor>La Paloma</valor>
+				<valor>Punta del Diablo</valor>
+				<valor>Atlantida</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Hospedaje</id>
+			<valores>
+				<valor>casa</valor>
+				<valor>apartamento</valor>
+				<valor>hotel</valor>
+				<valor>camping</valor>
+				<valor>hostel</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Días</id>
+			<valores>
+				<valor>4</valor>
+				<valor>7</valor>
+				<valor>10</valor>
+				<valor>14</valor>
+				<valor>15</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Acompañado</id>
+			<valores>
+				<valor>primos</valor>
+				<valor>pareja</valor>
+				<valor>hijos</valor>
+				<valor>amigos</valor>
+				<valor>padres</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Entretenimiento</id>
+			<valores>
+				<valor>surf</valor>
+				<valor>navegar</valor>
+				<valor>senderismo</valor>
+				<valor>volleyball</valor>
+				<valor>cabalgar</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Quien viaja acompañado por amigos es argentino y le encanta el surf</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Acompañado</id-dimension1>
+					<id-valor1>amigos</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>argentino</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Acompañado</id-dimension1>
+					<id-valor1>amigos</id-valor1>
+					<id-dimension2>Entretenimiento</id-dimension2>
+					<id-valor2>surf</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien viaja acompañado por sus hijos es brasileño</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Acompañado</id-dimension1>
+					<id-valor1>hijos</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>brasileño</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien viaja por la menor cantidad de días visita Punta del Este</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Días</id-dimension1>
+					<id-valor1>4</id-valor1>
+					<id-dimension2>Balneario</id-dimension2>
+					<id-valor2>Punta del Este</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien visita el país por 14 días no es argentino</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Días</id-dimension1>
+					<id-valor1>14</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>argentino</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien visita el país por 10 días es chileno, pero no le gusta navegar</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Días</id-dimension1>
+					<id-valor1>10</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>chileno</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Días</id-dimension1>
+					<id-valor1>10</id-valor1>
+					<id-dimension2>Entretenimiento</id-dimension2>
+					<id-valor2>navegar</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El paraguayo se hospeda en un camping en Punta del Diablo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>paraguayo</id-valor1>
+					<id-dimension2>Hospedaje</id-dimension2>
+					<id-valor2>camping</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Balneario</id-dimension1>
+					<id-valor1>Punta del Diablo</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>paraguayo</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien gusta de navegar se hospeda en una casa en el balneario La Paloma.  Su estadía no es de 14 días</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Hospedaje</id-dimension1>
+					<id-valor1>casa</id-valor1>
+					<id-dimension2>Balneario</id-dimension2>
+					<id-valor2>La Paloma</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Balneario</id-dimension1>
+					<id-valor1>La Paloma</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>14</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Entretenimiento</id-dimension1>
+					<id-valor1>navegar</id-valor1>
+					<id-dimension2>Balneario</id-dimension2>
+					<id-valor2>La Paloma</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien viaja con sus primos se quedará la mayor cantidad de días en Uruguay</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Acompañado</id-dimension1>
+					<id-valor1>primos</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>15</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El argentino no visitará Punta del Este</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>argentino</id-valor1>
+					<id-dimension2>Balneario</id-dimension2>
+					<id-valor2>Punta del Este</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El senderismo es preferido por quien se hospeda en un apartamento, que no es el chileno</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Entretenimiento</id-dimension1>
+					<id-valor1>senderismo</id-valor1>
+					<id-dimension2>Hospedaje</id-dimension2>
+					<id-valor2>apartamento</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>chileno</id-valor1>
+					<id-dimension2>Entretenimiento</id-dimension2>
+					<id-valor2>senderismo</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien elige un hostel, no le gusta el volleyball</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Hospedaje</id-dimension1>
+					<id-valor1>hostel</id-valor1>
+					<id-dimension2>Entretenimiento</id-dimension2>
+					<id-valor2>volleyball</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El volleyball es el entretenimiento preferido de quien viaja acompañado por sus padres y visita Atlantida</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Entretenimiento</id-dimension1>
+					<id-valor1>volleyball</id-valor1>
+					<id-dimension2>Acompañado</id-dimension2>
+					<id-valor2>padres</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Entretenimiento</id-dimension1>
+					<id-valor1>volleyball</id-valor1>
+					<id-dimension2>Balneario</id-dimension2>
+					<id-valor2>Atlantida</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

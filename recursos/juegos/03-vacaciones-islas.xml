@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>3</id>
+	<titulo>Vacaciones en las islas</titulo>
+	<texto>Descubre a que isla viajará cada una de las 4 amigas, en que compañía aérea y cuantos días durará su estadía</texto>
+	<costo>156</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Carolina</valor>
+				<valor>Diana</valor>
+				<valor>Luisa</valor>
+				<valor>María</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Isla</id>
+			<valores>
+				<valor>Ibiza</valor>
+				<valor>Lanzarote</valor>
+				<valor>Mallorca</valor>
+				<valor>Tenerife</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Compañia</id>
+			<valores>
+				<valor>Air France</valor>
+				<valor>Iberia</valor>
+				<valor>Lufthansa</valor>
+				<valor>Sabena</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Días</id>
+			<valores>
+				<valor>7</valor>
+				<valor>10</valor>
+				<valor>14</valor>
+				<valor>15</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Diana ha planeado ir a Lanzarote</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Diana</id-valor1>
+					<id-dimension2>Isla</id-dimension2>
+					<id-valor2>Lanzarote</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La que va a volar con Sabena pasará siete días en su isla elegida</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Compañia</id-dimension1>
+					<id-valor1>Sabena</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>7</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Lufthansa es la compañía elegida por la que viajará a Tenerife</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Compañia</id-dimension1>
+					<id-valor1>Lufthansa</id-valor1>
+					<id-dimension2>Isla</id-dimension2>
+					<id-valor2>Tenerife</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien volará con Air France cuenta con 15 días de descanso</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Compañia</id-dimension1>
+					<id-valor1>Air France</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>15</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Carolina se tomará diez días de relax</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Carolina</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>10</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien viajará con Iberia se ha reservado más días que quien viajará a Mallorca</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Compañia</id-dimension1>
+					<id-valor1>Iberia</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>7</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Isla</id-dimension1>
+					<id-valor1>Mallorca</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>15</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Luisa no piensa ir a Ibiza</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Luisa</id-valor1>
+					<id-dimension2>Isla</id-dimension2>
+					<id-valor2>Ibiza</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>María (que no visitará Tenerife) tiene programados 14 días de ocio</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>María</id-valor1>
+					<id-dimension2>Isla</id-dimension2>
+					<id-valor2>Tenerife</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>María</id-valor1>
+					<id-dimension2>Días</id-dimension2>
+					<id-valor2>14</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

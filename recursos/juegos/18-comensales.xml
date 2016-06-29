@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>18</id>
+	<titulo>Comensales</titulo>
+	<texto>Descubre que comió y que bebida tomó cada uno de los comensales, y en que lugar disfrutaron de sus alimentos</texto>
+	<costo>95</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Miguel</valor>
+				<valor>Luciana</valor>
+				<valor>Julia</valor>
+				<valor>Natalia</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Comida</id>
+			<valores>
+				<valor>lasagna</valor>
+				<valor>arroz con pollo</valor>
+				<valor>pescado</valor>
+				<valor>papas fritas</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Bebida</id>
+			<valores>
+				<valor>Coca-Cola</valor>
+				<valor>agua mineral</valor>
+				<valor>vino</valor>
+				<valor>cerveza</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Lugar</id>
+			<valores>
+				<valor>bar</valor>
+				<valor>restaurant</valor>
+				<valor>cantina</valor>
+				<valor>casa</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Quien prefirió las papas fritas no lo hizo en un restaurant</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Lugar</id-dimension1>
+					<id-valor1>restaurant</id-valor1>
+					<id-dimension2>Comida</id-dimension2>
+					<id-valor2>papas fritas</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Julia disfrutó de su comida en su propia casa</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Julia</id-valor1>
+					<id-dimension2>Lugar</id-dimension2>
+					<id-valor2>casa</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>A Miguel no le gusta el pescado</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Miguel</id-valor1>
+					<id-dimension2>Comida</id-dimension2>
+					<id-valor2>pescado</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien comió papas fritas no lo acompañó con Coca-Cola</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Bebida</id-dimension1>
+					<id-valor1>Coca-Cola</id-valor1>
+					<id-dimension2>Comida</id-dimension2>
+					<id-valor2>papas fritas</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien disfrutó de la lasagna lo hizo con una copa de vino</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Bebida</id-dimension1>
+					<id-valor1>vino</id-valor1>
+					<id-dimension2>Comida</id-dimension2>
+					<id-valor2>lasagna</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Natalia bebió cerveza, pero no fue ni en un bar ni en un restaurant</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Bebida</id-dimension1>
+					<id-valor1>cerveza</id-valor1>
+					<id-dimension2>Lugar</id-dimension2>
+					<id-valor2>bar</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Bebida</id-dimension1>
+					<id-valor1>cerveza</id-valor1>
+					<id-dimension2>Lugar</id-dimension2>
+					<id-valor2>restaurant</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Natalia</id-valor1>
+					<id-dimension2>Bebida</id-dimension2>
+					<id-valor2>cerveza</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Luciana optó por comer arroz con pollo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Comida</id-dimension1>
+					<id-valor1>arroz con pollo</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Luciana</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Miguel no comió lasagna</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Comida</id-dimension1>
+					<id-valor1>lasagna</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Miguel</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>1</id>
+	<titulo>Problemas en la escuela</titulo>
+	<texto>Encuentra el apodo de cada estudiante y donde estaba cuando fue observado por lo que hizo</texto>
+	<costo>34</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Daniela</valor>
+				<valor>Marcos</valor>
+				<valor>Saul</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Apodo</id>
+			<valores>
+				<valor>Nela</valor>
+				<valor>Tarta</valor>
+				<valor>Mercurio</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Estaba</id>
+			<valores>
+				<valor>Patio</valor>
+				<valor>Baño</valor>
+				<valor>Aula</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Que hizo</id>
+			<valores>
+				<valor>Rompio</valor>
+				<valor>Dibujaba</valor>
+				<valor>Charlaba</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Todo comenzó porque hubo roturas en el baño</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Estaba</id-dimension1>
+					<id-valor1>Baño</id-valor1>
+					<id-dimension2>Que hizo</id-dimension2>
+					<id-valor2>Rompio</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Al que apodan "Tarta" fue visto por el preceptor en el patio</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Apodo</id-dimension1>
+					<id-valor1>Tarta</id-valor1>
+					<id-dimension2>Estaba</id-dimension2>
+					<id-valor2>Patio</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>A Marcos no le dicen "Nela" y no estaba dibujando</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Marcos</id-valor1>
+					<id-dimension2>Apodo</id-dimension2>
+					<id-valor2>Nela</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Marcos</id-valor1>
+					<id-dimension2>Que hizo</id-dimension2>
+					<id-valor2>Dibujaba</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>"Nela" recibió un reto del preceptor por estar dibujando en su mesa corazones</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Apodo</id-dimension1>
+					<id-valor1>Nela</id-valor1>
+					<id-dimension2>Que hizo</id-dimension2>
+					<id-valor2>Dibujaba</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Apodo</id-dimension1>
+					<id-valor1>Nela</id-valor1>
+					<id-dimension2>Estaba</id-dimension2>
+					<id-valor2>Aula</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Estaba</id-dimension1>
+					<id-valor1>Aula</id-valor1>
+					<id-dimension2>Que hizo</id-dimension2>
+					<id-valor2>Dibujaba</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Una profesora comentó que en una evaluación de Daniela estaba escrito varias veces el sobrenombre "Nela &amp; Ricardo" / "Richard &amp; Daniela"</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Daniela</id-valor1>
+					<id-dimension2>Apodo</id-dimension2>
+					<id-valor2>Nela</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>A Marcos le dicen "mercurio", por lo denso que es</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Marcos</id-valor1>
+					<id-dimension2>Apodo</id-dimension2>
+					<id-valor2>Mercurio</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

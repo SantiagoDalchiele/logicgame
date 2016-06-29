@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>6</id>
+	<titulo>¡Vamos al museo!</titulo>
+	<texto>Antoñito Desastres ha vuelto a casa después de visitar varios museos. En todos ellos ha recogido folletos informativos, pero no los ha leído hasta llegar a su casa, durante el desayuno. Pero, claro, él es un poco desastre y ha tirado todo el chocolate por la mesa, manchando los folletos. Ahora no puede leer las informaciones que necesita para su tesis en la universidad. ¿Puedes ayudarle a organizar correctamente los siguientes datos?</texto>
+	<costo>50</costo>
+	<dimensiones>
+		<dimension>
+			<id>Museo</id>
+			<valores>
+				<valor>Centro Galego de Arte Contemporánea</valor>
+				<valor>Museo Guggenheim</valor>
+				<valor>Museo Nacional de Arte Romano</valor>
+				<valor>Museu d´Art Contemporani</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Ciudad</id>
+			<valores>
+				<valor>Barcelona</valor>
+				<valor>Bilbao</valor>
+				<valor>Mérida</valor>
+				<valor>Santiago de Compostela</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Arquitecto</id>
+			<valores>
+				<valor>Álvaro Siza</valor>
+				<valor>Frank O. Gehry</valor>
+				<valor>Rafael Moneo</valor>
+				<valor>Richard Meier</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Año</id>
+			<valores>
+				<valor>1985</valor>
+				<valor>1990</valor>
+				<valor>1995</valor>
+				<valor>1997</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Moneo hizo en 1985 un museo en España</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Arquitecto</id-dimension1>
+					<id-valor1>Rafael Moneo</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1985</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El museo que está en Bilbao se construyó en 1997</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Bilbao</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1997</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El Museu d´Art Contemporani de Barcelona se hizo en 1995</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Museo</id-dimension1>
+					<id-valor1>Museu d´Art Contemporani</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Barcelona</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Museo</id-dimension1>
+					<id-valor1>Museu d´Art Contemporani</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1995</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Barcelona</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1995</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El Museo Guggenheim es el más nuevo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Museo</id-dimension1>
+					<id-valor1>Museo Guggenheim</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1997</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Richard Meier trabajó en Cataluña</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Arquitecto</id-dimension1>
+					<id-valor1>Richard Meier</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Barcelona</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>En Mérida se encuentra el museo que hizo Rafael Moneo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Mérida</id-valor1>
+					<id-dimension2>Arquitecto</id-dimension2>
+					<id-valor2>Rafael Moneo</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El Centro Galego de Arte Contemporánea se hizo en 1990</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Museo</id-dimension1>
+					<id-valor1>Centro Galego de Arte Contemporánea</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1990</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Frank O. Gehry trabajó en Bilbao</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Arquitecto</id-dimension1>
+					<id-valor1>Frank O. Gehry</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Bilbao</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>De estos cuatro museos, el primero que se hizo fue el Museo Nacional de Arte Romano</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Museo</id-dimension1>
+					<id-valor1>Museo Nacional de Arte Romano</id-valor1>
+					<id-dimension2>Año</id-dimension2>
+					<id-valor2>1985</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>En 1990 Álvaro Siza trabajó en Santiago de Compostela</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Año</id-dimension1>
+					<id-valor1>1990</id-valor1>
+					<id-dimension2>Arquitecto</id-dimension2>
+					<id-valor2>Álvaro Siza</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Año</id-dimension1>
+					<id-valor1>1990</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Santiago de Compostela</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Arquitecto</id-dimension1>
+					<id-valor1>Álvaro Siza</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Santiago de Compostela</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>19</id>
+	<titulo>Mundial de Rugby</titulo>
+	<texto>Descubre el color de la camiseta de cada selección, en que ciudad enfrenta a su rival y cuál es su capitán</texto>
+	<costo>244</costo>
+	<dimensiones>
+		<dimension>
+			<id>Selección</id>
+			<valores>
+				<valor>Inglaterra</valor>
+				<valor>Australia</valor>
+				<valor>Sudafrica</valor>
+				<valor>Nueva Zelanda</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Camiseta</id>
+			<valores>
+				<valor>negra</valor>
+				<valor>amarilla</valor>
+				<valor>verde</valor>
+				<valor>blanca</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Ciudad</id>
+			<valores>
+				<valor>Birmingham</valor>
+				<valor>Brighton</valor>
+				<valor>Newcastle</valor>
+				<valor>Londres</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Rival</id>
+			<valores>
+				<valor>Japón</valor>
+				<valor>Tonga</valor>
+				<valor>Uruguay</valor>
+				<valor>Fiyi</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Capitán</id>
+			<valores>
+				<valor>Dylan Hartley</valor>
+				<valor>Fourie du Preez</valor>
+				<valor>Stephen Moore</valor>
+				<valor>Richie McCaw</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Nueva Zelanda que tiene como rival a Tonga, usa la camiseta negra</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Rival</id-dimension1>
+					<id-valor1>Tonga</id-valor1>
+					<id-dimension2>Camiseta</id-dimension2>
+					<id-valor2>negra</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Selección</id-dimension1>
+					<id-valor1>Nueva Zelanda</id-valor1>
+					<id-dimension2>Camiseta</id-dimension2>
+					<id-valor2>negra</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La selección que tiene como rival a Japón, juega en la ciudad de Brighton pero su capitán no es Stephen Moore</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Rival</id-dimension1>
+					<id-valor1>Japón</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Brighton</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Capitán</id-dimension1>
+					<id-valor1>Stephen Moore</id-valor1>
+					<id-dimension2>Rival</id-dimension2>
+					<id-valor2>Japón</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La selección de Australia no juega su partido en la ciudad de Brighton y su camiseta no es blanca</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Selección</id-dimension1>
+					<id-valor1>Australia</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Brighton</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Selección</id-dimension1>
+					<id-valor1>Australia</id-valor1>
+					<id-dimension2>Camiseta</id-dimension2>
+					<id-valor2>blanca</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien juega su partido en la ciudad de Newcastle no enfrenta a Uruguay ni su capitán es Stephen Moore</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Newcastle</id-valor1>
+					<id-dimension2>Rival</id-dimension2>
+					<id-valor2>Uruguay</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Capitán</id-dimension1>
+					<id-valor1>Stephen Moore</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Newcastle</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Dylan Hartley es el capitán de la selección de Inglaterra que disputa su partido en Londres, pero no es contra Uruguay</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Capitán</id-dimension1>
+					<id-valor1>Dylan Hartley</id-valor1>
+					<id-dimension2>Selección</id-dimension2>
+					<id-valor2>Inglaterra</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Capitán</id-dimension1>
+					<id-valor1>Dylan Hartley</id-valor1>
+					<id-dimension2>Rival</id-dimension2>
+					<id-valor2>Uruguay</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Londres</id-valor1>
+					<id-dimension2>Capitán</id-dimension2>
+					<id-valor2>Dylan Hartley</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Fourie du Preez es el capitán de la selección que usa camiseta verde</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Camiseta</id-dimension1>
+					<id-valor1>verde</id-valor1>
+					<id-dimension2>Capitán</id-dimension2>
+					<id-valor2>Fourie du Preez</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

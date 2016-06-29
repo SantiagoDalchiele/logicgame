@@ -1,0 +1,3 @@
+Comando para crear mi propio certificado auto-firmado:
+
+keytool -genkey -keyalg RSA -alias tomcat -keystore lglocalhost.jks -storepass lg_key

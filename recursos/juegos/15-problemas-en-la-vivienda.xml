@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>15</id>
+	<titulo>Problemas en la vivienda</titulo>
+	<texto>Mónica, Claudia y Laura están teniendo problemas en sus viviendas.  Descubre en que tipo de vivienda vive cada uno que tipo de problemas tienen y en que habitación</texto>
+	<costo>48</costo>
+	<dimensiones>
+		<dimension>
+			<id>nombre</id>
+			<valores>
+				<valor>Mónica</valor>
+				<valor>Claudia</valor>
+				<valor>Laura</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>vivienda</id>
+			<valores>
+				<valor>apartamento</valor>
+				<valor>casa</valor>
+				<valor>loft</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>habitación</id>
+			<valores>
+				<valor>baño</valor>
+				<valor>cocina</valor>
+				<valor>dormitorio</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>problema</id>
+			<valores>
+				<valor>caño roto</valor>
+				<valor>humedad</valor>
+				<valor>eléctricos</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Mónica tiene problemas eléctricos pero no en el baño</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>nombre</id-dimension1>
+					<id-valor1>Mónica</id-valor1>
+					<id-dimension2>problema</id-dimension2>
+					<id-valor2>eléctricos</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>habitación</id-dimension1>
+					<id-valor1>baño</id-valor1>
+					<id-dimension2>nombre</id-dimension2>
+					<id-valor2>Mónica</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Claudia no es quien tiene problemas con el caño roto ni vive en una casa</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>nombre</id-dimension1>
+					<id-valor1>Claudia</id-valor1>
+					<id-dimension2>problema</id-dimension2>
+					<id-valor2>caño roto</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>vivienda</id-dimension1>
+					<id-valor1>casa</id-valor1>
+					<id-dimension2>nombre</id-dimension2>
+					<id-valor2>Claudia</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Laura no vive en casa ni tiene problemas en su cocina</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>nombre</id-dimension1>
+					<id-valor1>Laura</id-valor1>
+					<id-dimension2>vivienda</id-dimension2>
+					<id-valor2>casa</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>nombre</id-dimension1>
+					<id-valor1>Laura</id-valor1>
+					<id-dimension2>habitación</id-dimension2>
+					<id-valor2>cocina</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien tiene problemas de humedad no los tiene el dormitorio ni vive en un loft</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>problema</id-dimension1>
+					<id-valor1>humedad</id-valor1>
+					<id-dimension2>vivienda</id-dimension2>
+					<id-valor2>loft</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>problema</id-dimension1>
+					<id-valor1>humedad</id-valor1>
+					<id-dimension2>habitación</id-dimension2>
+					<id-valor2>dormitorio</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien vive en un apartamento no tiene problemas en su cocina</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>vivienda</id-dimension1>
+					<id-valor1>apartamento</id-valor1>
+					<id-dimension2>habitación</id-dimension2>
+					<id-valor2>cocina</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Quien vive en un loft tiene un caño roto</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>vivienda</id-dimension1>
+					<id-valor1>loft</id-valor1>
+					<id-dimension2>problema</id-dimension2>
+					<id-valor2>caño roto</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

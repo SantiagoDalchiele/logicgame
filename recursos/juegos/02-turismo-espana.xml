@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>2</id>
+	<titulo>Turismo por España</titulo>
+	<texto>Tres estudiantes hispanoamericanos de distintos países visitan España. Descubre la nacionalidad de cada uno y también la ciudad y el monumento que quieren visitar</texto>
+	<costo>26</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Pedro</valor>
+				<valor>Belen</valor>
+				<valor>Carlos</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Nacionalidad</id>
+			<valores>
+				<valor>Mejicano</valor>
+				<valor>Argentino</valor>
+				<valor>Puertoriqueño</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Ciudad</id>
+			<valores>
+				<valor>Sevilla</valor>
+				<valor>Barcelona</valor>
+				<valor>Madrid</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Monumento</id>
+			<valores>
+				<valor>Casa Milá</valor>
+				<valor>Palacio Real</valor>
+				<valor>La Giralda</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>El mejicano quiere visitar Sevilla</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>Mejicano</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Sevilla</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Belen</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>Mejicano</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Sevilla</id-valor1>
+					<id-dimension2>Monumento</id-dimension2>
+					<id-valor2>La Giralda</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Barcelona</id-valor1>
+					<id-dimension2>Monumento</id-dimension2>
+					<id-valor2>Casa Milá</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Ciudad</id-dimension1>
+					<id-valor1>Madrid</id-valor1>
+					<id-dimension2>Monumento</id-dimension2>
+					<id-valor2>Palacio Real</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La argentina quiere ver la Casa Milá</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Belen</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>Argentino</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>Argentino</id-valor1>
+					<id-dimension2>Monumento</id-dimension2>
+					<id-valor2>Casa Milá</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Carlos quiere visitar el Palacio Real</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Carlos</id-valor1>
+					<id-dimension2>Monumento</id-dimension2>
+					<id-valor2>Palacio Real</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Belén quiere ir a Barcelona</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Belen</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Barcelona</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Carlos no es argentino</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Carlos</id-valor1>
+					<id-dimension2>Nacionalidad</id-dimension2>
+					<id-valor2>Argentino</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El que quiere visitar Madrid es puertorriqueño</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nacionalidad</id-dimension1>
+					<id-valor1>Puertoriqueño</id-valor1>
+					<id-dimension2>Ciudad</id-dimension2>
+					<id-valor2>Madrid</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Pedro quiere visitar La Giralda</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Pedro</id-valor1>
+					<id-dimension2>Monumento</id-dimension2>
+					<id-valor2>La Giralda</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

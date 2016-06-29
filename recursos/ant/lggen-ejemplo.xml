@@ -1,0 +1,21 @@
+<!DOCTYPE xml>
+<project name="LogicGame-GenerarJuegoAlAzar">
+	<property name="jaxb-lib" value="c:/util/jaxb-ri/lib"/>
+	<property name="hibernate-lib" value="c:/util/hibernate-release-4.3.11.Final/lib/required"/>
+	<property name="postgres-lib" value="c:/santiago/software"/>
+	<property name="lg-lib" value="../../../lib"/>
+	<property name="lg-jar" value="../.."/>
+
+	<taskdef name="lggen" classname="uy.com.uma.logicgame.ant.GeneraLgTask">
+		<classpath>
+			<fileset dir="${jaxb-lib}" includes="*.jar"/>
+			<fileset dir="${hibernate-lib}" includes="*.jar"/>
+			<fileset dir="${postgres-lib}" includes="postgresql-9.4-1201.jdbc4.jar"/>
+			<fileset dir="${lg-lib}" includes="*.jar"/>
+			<fileset dir="${lg-jar}" includes="*.jar"/>
+		</classpath>		
+	</taskdef>
+
+	<lggen id="16" file="../juegos/AutoGenerado.xml" overwrite="yes" dims="4" values="3" percent="35" 
+			min="10" max="9999" timeout="20"/>
+</project>

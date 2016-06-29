@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<element name="configuracion">
+		<complexType>
+			<sequence>
+				<element name="costo-inicial-por-absurdo" type="integer"/>
+				<element name="estrategias">
+					<complexType>
+						<sequence maxOccurs="unbounded">
+							<element name="estrategia">
+								<complexType>
+									<sequence>
+										<element name="descripcion" type="string"/>
+										<element name="clase" type="string"/>
+										<element name="orden" type="short"/>
+										<element name="costo" type="integer"/>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="manejadores">
+					<complexType>
+						<sequence>
+							<element name="estructura" type="string"/>
+							<element name="sesiones" type="string"/>
+							<element name="adm-internacionalizacion" type="string"/>
+							<element name="internacionalizacion" type="string"/>
+							<element name="juego" type="string"/>
+							<element name="juego-web" type="string"/>
+							<element name="seguridad" type="string"/>
+							<element name="configuracion" type="string"/>
+							<element name="cargador-recursos" type="string"/>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="ruta-defecto" type="short"/>
+				<element name="security-salt" type="string"/>
+				<!-- Claves para los roles en la base de datos en caso que la estructura de la base se cree por programa y no por script (Heroku) -->
+				<element name="clave-rol-adm" type="string"/>  <!-- clave del rol: lg -->
+				<element name="clave-rol-web" type="string"/>  <!-- clave del rol: lgweb -->
+			</sequence>
+		</complexType>
+	</element>
+</schema>

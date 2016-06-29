@@ -1,0 +1,20 @@
+<!DOCTYPE xml>
+<project name="LogicGame-2Xml-02-turismo-espana">
+	<property name="jaxb-lib" value="c:/util/jaxb-ri/lib"/>
+	<property name="hibernate-lib" value="c:/util/hibernate-release-4.3.11.Final/lib/required"/>
+	<property name="postgres-lib" value="c:/santiago/software"/>
+	<property name="lg-lib" value="../../../lib"/>
+	<property name="lg-jar" value="../.."/>	
+
+	<taskdef name="lg2xml" classname="uy.com.uma.logicgame.ant.Lg2xmlTask">
+		<classpath>
+			<fileset dir="${jaxb-lib}" includes="*.jar"/>
+			<fileset dir="${hibernate-lib}" includes="*.jar"/>
+			<fileset dir="${postgres-lib}" includes="postgresql-9.4-1201.jdbc4.jar"/>
+			<fileset dir="${lg-lib}" includes="*.jar"/>
+			<fileset dir="${lg-jar}" includes="*.jar"/>
+		</classpath>		
+	</taskdef>
+	
+	<lg2xml id="2" file="c:/temp/02-turismo-espana-bd.xml" overwrite="yes"/>
+</project>

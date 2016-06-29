@@ -1,0 +1,78 @@
+<!DOCTYPE xml>
+<project name="Backup-fuentes" default="pack" basedir="./../..">
+	<property name="version" value="20160609-src.zip"/>
+
+	<target name="delete-comun">
+		<delete file="comun-${version}"/>
+	</target>	
+	<target name="delete-comunide">
+		<delete file="comunide-${version}"/>
+	</target>
+	<target name="delete-lgide">
+		<delete file="lgide-${version}"/>
+	</target>
+	<target name="delete-lgweb">
+		<delete file="lgweb-${version}"/>
+	</target>
+	<target name="delete-logicgame">
+		<delete file="logicgame-${version}"/>
+	</target>
+	
+	<target name="pack-comun" depends="delete-comun">
+		<zip destfile="comun-${version}">
+			<zipfileset dir="comun/src" prefix="comun/src"/>			
+			<zipfileset dir="comun" prefix="comun">
+				<include name="pack.xml"/>
+			</zipfileset>
+		</zip>
+	</target>
+	
+	<target name="pack-comunide" depends="delete-comunide">
+		<zip destfile="comunide-${version}">
+			<zipfileset dir="comunide/src" prefix="comunide/src"/>			
+			<zipfileset dir="comunide/META-INF" prefix="comunide/META-INF"/>
+			<zipfileset dir="comunide" prefix="comunide">
+				<include name="build.properties"/>
+				<include name="pack.xml"/>
+			</zipfileset>
+		</zip>
+	</target>
+	
+	<target name="pack-lgide" depends="delete-lgide">
+		<zip destfile="lgide-${version}">
+			<zipfileset dir="lgide/src" prefix="lgide/src"/>			
+			<zipfileset dir="lgide/icons" prefix="lgide/icons"/>
+			<zipfileset dir="lgide/META-INF" prefix="lgide/META-INF"/>
+			<zipfileset dir="lgide" prefix="lgide">
+				<include name="build.properties"/>
+				<include name="pack.xml"/>
+				<include name="plugin.xml"/>
+			</zipfileset>
+		</zip>
+	</target>
+	
+	<target name="pack-lgweb" depends="delete-lgweb">
+		<zip destfile="lgweb-${version}">
+			<zipfileset dir="lgweb/src" prefix="lgweb/src"/>			
+			<zipfileset dir="lgweb/conf" prefix="lgweb/conf"/>
+			<zipfileset dir="lgweb/WebContent" prefix="lgweb/WebContent"/>
+			<zipfileset dir="lgweb" prefix="lgweb">
+				<include name="pack.xml"/>
+			</zipfileset>
+		</zip>
+	</target>
+		
+	<target name="pack-logicgame" depends="delete-logicgame">
+		<zip destfile="logicgame-${version}">
+			<zipfileset dir="logicgame/src" prefix="logicgame/src"/>			
+			<zipfileset dir="logicgame/conf" prefix="logicgame/conf"/>
+			<zipfileset dir="logicgame/doc" prefix="logicgame/doc"/>
+			<zipfileset dir="logicgame/recursos" prefix="logicgame/recursos"/>
+			<zipfileset dir="logicgame" prefix="logicgame">
+				<include name="pack.xml"/>
+			</zipfileset>
+		</zip>
+	</target>
+		
+	<target name="pack" depends="pack-comun,pack-comunide,pack-lgide,pack-lgweb,pack-logicgame"/>
+</project>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<!-- No utilizar tiene más de una solución -->
+	<id>5</id>
+	<titulo>Ropa prestada</titulo>
+	<texto></texto>
+	<costo>70</costo>
+	<dimensiones>
+		<dimension>
+			<id>Amiga</id>
+			<valores>
+				<valor>Almudena</valor>
+				<valor>Ester</valor>
+				<valor>Pilar</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Prenda</id>
+			<valores>
+				<valor>falda</valor>
+				<valor>camisa</valor>
+				<valor>jersey</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Material</id>
+			<valores>
+				<valor>tergal</valor>
+				<valor>lana</valor>
+				<valor>piel</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Color</id>
+			<valores>
+				<valor>negro</valor>
+				<valor>blanca</valor>
+				<valor>rosa</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>La falda es de color negro</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Prenda</id-dimension1>
+					<id-valor1>falda</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>negro</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La camisa es de tergal</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Prenda</id-dimension1>
+					<id-valor1>camisa</id-valor1>
+					<id-dimension2>Material</id-dimension2>
+					<id-valor2>tergal</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La prenda que le ha dejado Almudena es de lana</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Amiga</id-dimension1>
+					<id-valor1>Almudena</id-valor1>
+					<id-dimension2>Material</id-dimension2>
+					<id-valor2>lana</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Almudena no le ha dejado la camisa</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Amiga</id-dimension1>
+					<id-valor1>Almudena</id-valor1>
+					<id-dimension2>Prenda</id-dimension2>
+					<id-valor2>camisa</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Ester le ha dejado una prenda blanca</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Amiga</id-dimension1>
+					<id-valor1>Ester</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>blanca</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El jersey es rosa</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Prenda</id-dimension1>
+					<id-valor1>jersey</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>rosa</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Pilar le ha dejado una prenda de piel</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Amiga</id-dimension1>
+					<id-valor1>Pilar</id-valor1>
+					<id-dimension2>Material</id-dimension2>
+					<id-valor2>piel</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

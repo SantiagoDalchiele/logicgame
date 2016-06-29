@@ -1,0 +1,17 @@
+Consola de postgresql:
+
+psql -U postgres -W -h localhost logicgame
+clave: postgres
+
+Esto no andó:
+heroku pg:psql -U myjmdgzuplozxs -W -h ec2-54-235-208-3.compute-1.amazonaws.com dfaps7lal5sik7
+heroku pg:psql --app heroku-postgres-8e5249b1 HEROKU_POSTGRESQL_AMBER
+
+
+ssh -L5555:localhost:5432 myjmdgzuplozxs@ec2-54-235-208-3.compute-1.amazonaws.com
+
+	https://devcenter.heroku.com/articles/heroku-postgresql
+		http://viviryaprenderweb.com/postgres-comandos-basicos-con-psql-en-la-consola/
+		http://stackoverflow.com/questions/20508898/how-can-i-import-a-sql-file-into-my-heroku-postgres-database
+		http://www.westernwillow.com/cms/blog/franco/connect-your-postgres-db-over-ssh-tunnel-proxy
+		http://stackoverflow.com/questions/15768913/relay-postgresql-connection-over-another-server

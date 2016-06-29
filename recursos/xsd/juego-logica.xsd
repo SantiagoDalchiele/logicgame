@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+	<element name="juego">
+		<complexType>
+			<sequence>
+				<element name="id" type="integer"/>
+				<element name="titulo" type="string"/>
+				<element name="texto" type="string"/>
+				<element name="costo" type="integer"/>
+				<element name="dimensiones">
+					<complexType>
+						<sequence maxOccurs="unbounded">
+							<element name="dimension">
+								<complexType>
+									<sequence>
+										<element name="id" type="string"/>
+										<element name="valores">
+											<complexType>
+												<sequence maxOccurs="unbounded">
+													<element name="valor" type="string"/>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+				<element name="pistas-del-juego">
+					<complexType>
+						<sequence maxOccurs="unbounded">
+							<element name="pista-del-juego">
+								<complexType>
+									<sequence>
+										<element name="texto" type="string"/>
+										<element name="pistas">
+											<complexType>
+												<sequence maxOccurs="unbounded">
+													<element name="pista">
+														<complexType>
+															<sequence>
+																<element name="id-dimension1" type="string"/>
+																<element name="id-valor1" type="string"/>
+																<element name="id-dimension2" type="string"/>
+																<element name="id-valor2" type="string"/>
+																<element name="afirma-niega" type="boolean"/>																
+															</sequence>
+														</complexType>
+													</element>
+												</sequence>
+											</complexType>
+										</element>
+									</sequence>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>10</id>
+	<titulo>Nombres, apellidos y apodos</titulo>
+	<texto>¿Cuál es el apellido y el apodo de cada uno?</texto>
+	<costo>12</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Juan</valor>
+				<valor>José</valor>
+				<valor>Francisco</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Apellido</id>
+			<valores>
+				<valor>Pérez</valor>
+				<valor>González</valor>
+				<valor>Silva</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Apodo</id>
+			<valores>
+				<valor>Pepe</valor>
+				<valor>Juancho</valor>
+				<valor>Pancho</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>A Juan le dicen Juancho y no Pancho y su apellido no es Silva</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Juan</id-valor1>
+					<id-dimension2>Apodo</id-dimension2>
+					<id-valor2>Juancho</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Juan</id-valor1>
+					<id-dimension2>Apellido</id-dimension2>
+					<id-valor2>Silva</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El apellido de Francisco es González y no Pérez, y no le dicen Pepe</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Francisco</id-valor1>
+					<id-dimension2>Apellido</id-dimension2>
+					<id-valor2>González</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Francisco</id-valor1>
+					<id-dimension2>Apodo</id-dimension2>
+					<id-valor2>Pepe</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

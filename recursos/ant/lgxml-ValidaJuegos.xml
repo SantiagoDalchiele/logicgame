@@ -1,0 +1,27 @@
+<!DOCTYPE xml>
+<project name="LogicGame-ValidaJuegos">
+	<property name="jaxb-lib" value="c:/util/jaxb-ri/lib"/>
+	<property name="hibernate-lib" value="c:/util/hibernate-release-4.3.11.Final/lib/required"/>
+	<property name="postgres-lib" value="c:/santiago/software"/>
+	<property name="lg-lib" value="../../../lib"/>
+	<property name="lg-jar" value="../.."/>
+
+	<!-- Valida si el juego tiene solución, si es única y el costo de resolverlo -->
+	<taskdef name="lgxml" classname="uy.com.uma.logicgame.ant.ProcesaXmlTask">
+		<classpath>
+			<fileset dir="${jaxb-lib}" includes="*.jar"/>
+			<fileset dir="${hibernate-lib}" includes="*.jar"/>
+			<fileset dir="${postgres-lib}" includes="postgresql-9.4-1201.jdbc4.jar"/>
+			<fileset dir="${lg-lib}" includes="*.jar"/>
+			<fileset dir="${lg-jar}" includes="*.jar"/>
+		</classpath>		
+	</taskdef>
+
+	<!-- <lgxml file="../juegos/02-turismo-espana.xml"/>
+	<lgxml file="../juegos/05-ropa-prestada.xml"/>
+	<lgxml file="../juegos/10-simple.xml"/>
+	<lgxml file="../juegos/11-simple-sin-solucion.xml"/>
+	<lgxml file="../juegos/12-simple-2-soluciones.xml"/> -->
+	
+	<lgxml file="../juegos/17-Vacaciones-uruguay.xml"/>
+</project>

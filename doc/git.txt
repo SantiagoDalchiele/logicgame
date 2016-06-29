@@ -1,0 +1,12 @@
+git add .
+git commit -m "Comentario"
+
+# esto una sola vez
+git remote add origin https://github.com/SantiagoDalchiele/repositorio.git
+git remote add prueba-git https://github.com/SantiagoDalchiele/prueba-git.git
+
+git push -u origin master
+	usuario: santiagodalchiele
+	clave: ........
+	
+git push -u prueba-git master	

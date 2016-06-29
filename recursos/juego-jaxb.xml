@@ -1,0 +1,14 @@
+<!DOCTYPE xml>
+<project name="Juego-Generación-jaxb" basedir="./..">
+	<property name="esquema" location="recursos/xsd/juego-logica.xsd"/>
+	<property name="paquete" value="uy.com.uma.logicgame.nucleo.jaxb.juego"/>
+	<property name="jaxb-home" value="c:/util/jaxb-ri/lib"/>
+	
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJCTask">
+		<classpath>
+			<fileset dir="${jaxb-home}" includes="*.jar" />
+		</classpath>
+	</taskdef>
+	
+	<xjc schema="${esquema}" destdir="src" package="${paquete}"/>
+</project>

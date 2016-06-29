@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>8</id>
+	<titulo>Mascotas</titulo>
+	<texto>Roberto, Daniel, Isabel, Mónica y Patricia son amantes de las mascotas.  Descubre que mascota tiene cada uno, que nombre les pusieron y de que color es cada una</texto>
+	<costo>126</costo>
+	<dimensiones>
+		<dimension>
+			<id>Nombre</id>
+			<valores>
+				<valor>Roberto</valor>
+				<valor>Daniel</valor>
+				<valor>Isabel</valor>
+				<valor>Mónica</valor>
+				<valor>Patricia</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Mascota</id>
+			<valores>
+				<valor>gato</valor>
+				<valor>perro</valor>
+				<valor>cobaya</valor>
+				<valor>conejo</valor>
+				<valor>serpiente</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Nombre de la mascota</id>
+			<valores>
+				<valor>Guiñitos</valor>
+				<valor>Pompón</valor>
+				<valor>Óscar</valor>
+				<valor>Ka</valor>
+				<valor>Zara</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Color</id>
+			<valores>
+				<valor>negro</valor>
+				<valor>marrón</valor>
+				<valor>gris</valor>
+				<valor>rojo</valor>
+				<valor>blanco</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>Pompón no es un perro. No es gris. Su dueña no es Isabel</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Pompón</id-valor1>
+					<id-dimension2>Mascota</id-dimension2>
+					<id-valor2>perro</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Pompón</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>gris</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Pompón</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Isabel</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Una niña tiene una serpiente. Es de color marrón. Pero no se llama Zara</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>serpiente</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Roberto</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>serpiente</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Daniel</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>serpiente</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>marrón</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>serpiente</id-valor1>
+					<id-dimension2>Nombre de la mascota</id-dimension2>
+					<id-valor2>Zara</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La mascota de Daniel se llama Guiñitos. Es negro. No es una cobaya</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre</id-dimension1>
+					<id-valor1>Daniel</id-valor1>
+					<id-dimension2>Nombre de la mascota</id-dimension2>
+					<id-valor2>Guiñitos</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Guiñitos</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>negro</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Guiñitos</id-valor1>
+					<id-dimension2>Mascota</id-dimension2>
+					<id-valor2>cobaya</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El gato de Isabel no es rojo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>gato</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Isabel</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>gato</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>rojo</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El conejo de Patricia es blanco. Pero no se llama Ka</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>conejo</id-valor1>
+					<id-dimension2>Nombre</id-dimension2>
+					<id-valor2>Patricia</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>conejo</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>blanco</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Mascota</id-dimension1>
+					<id-valor1>conejo</id-valor1>
+					<id-dimension2>Nombre de la mascota</id-dimension2>
+					<id-valor2>Ka</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Óscar es roja. Pero no es un perro</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Óscar</id-valor1>
+					<id-dimension2>Color</id-dimension2>
+					<id-valor2>rojo</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Óscar</id-valor1>
+					<id-dimension2>Mascota</id-dimension2>
+					<id-valor2>perro</id-valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Ka no tiene pelo</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Nombre de la mascota</id-dimension1>
+					<id-valor1>Ka</id-valor1>
+					<id-dimension2>Mascota</id-dimension2>
+					<id-valor2>serpiente</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>

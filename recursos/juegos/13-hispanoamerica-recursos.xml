@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
+	<id>13</id>
+	<titulo>Hispanoamérica y su economía</titulo>
+	<texto>Los países hispanoamericanos tienen un enorme potencial económico. Hoy vamos a conocer algunas de sus riquezas más importantes en varios sectores de la economía. Pero para conseguir esta información debes leer atentamente las pistas que te damos</texto>
+	<costo>88</costo>
+	<dimensiones>
+		<dimension>
+			<id>País</id>
+			<valores>
+				<valor>Costa Rica</valor>
+				<valor>Cuba</valor>
+				<valor>Chile</valor>
+				<valor>Ecuador</valor>
+				<valor>Guatemala</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Agricultura</id>
+			<valores>
+				<valor>maíz</valor>
+				<valor>caña de azúcar</valor>
+				<valor>trigo</valor>
+				<valor>algodón</valor>
+				<valor>plátano</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Minería</id>
+			<valores>
+				<valor>bauxita</valor>
+				<valor>níquel</valor>
+				<valor>cobre</valor>
+				<valor>oro</valor>
+				<valor>zinc</valor>
+			</valores>
+		</dimension>
+		<dimension>
+			<id>Industria</id>
+			<valores>
+				<valor>maquinaria</valor>
+				<valor>tabaco</valor>
+				<valor>siderurgia</valor>
+				<valor>tejido</valor>
+				<valor>alimentos</valor>
+			</valores>
+		</dimension>
+	</dimensiones>
+	<pistas-del-juego>
+		<pista-del-juego>
+			<texto>El país andino utiliza en su bandera el color amarillo, que recuerda sus importantes yacimientos de oro</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Ecuador</id-valor1>
+					<id-dimension2>Minería</id-dimension2>
+					<id-valor2>oro</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La caña de azúcar es el más importante producto agrícola de la mayor de las islas de las Antillas</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Agricultura</id-dimension1>
+					<id-valor1>caña de azúcar</id-valor1>
+					<id-dimension2>País</id-dimension2>
+					<id-valor2>Cuba</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Costa Rica posee grandes plantaciones de maíz</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Costa Rica</id-valor1>
+					<id-dimension2>Agricultura</id-dimension2>
+					<id-valor2>maíz</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Cuba produce, fabrica y exporta tabaco de gran calidad</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Cuba</id-valor1>
+					<id-dimension2>Industria</id-dimension2>
+					<id-valor2>tabaco</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Chile, con su clima templado, tiene excelentes tierras para la siembra de trigo y ricas minas de cobre</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Chile</id-valor1>
+					<id-dimension2>Agricultura</id-dimension2>
+					<id-valor2>trigo</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Chile</id-valor1>
+					<id-dimension2>Minería</id-dimension2>
+					<id-valor2>cobre</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Ecuador destaca por sus algodonales, que le han permitido desarrollar una importante industria textil</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Ecuador</id-valor1>
+					<id-dimension2>Agricultura</id-dimension2>
+					<id-valor2>algodón</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Ecuador</id-valor1>
+					<id-dimension2>Industria</id-dimension2>
+					<id-valor2>tejido</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Los guatemaltecos dedican sus tierras a la siembra del plátano y su industria a los alimentos en general</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Guatemala</id-valor1>
+					<id-dimension2>Agricultura</id-dimension2>
+					<id-valor2>plátano</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Guatemala</id-valor1>
+					<id-dimension2>Industria</id-dimension2>
+					<id-valor2>alimentos</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El país caribeño posee grandes yacimientos de níquel</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Cuba</id-valor1>
+					<id-dimension2>Minería</id-dimension2>
+					<id-valor2>níquel</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>El cobre ha permitido a este País sudamericano desarrollar la siderurgia</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Minería</id-dimension1>
+					<id-valor1>cobre</id-valor1>
+					<id-dimension2>Industria</id-dimension2>
+					<id-valor2>siderurgia</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>Guatemala tiene un gran recurso minero: el zinc</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>País</id-dimension1>
+					<id-valor1>Guatemala</id-valor1>
+					<id-dimension2>Minería</id-dimension2>
+					<id-valor2>zinc</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>La bauxita es un mineral de gran importancia en el país centroamericano, que, además, produce maquinaria para la industria</texto>
+			<pistas>
+				<pista>
+					<id-dimension1>Minería</id-dimension1>
+					<id-valor1>bauxita</id-valor1>
+					<id-dimension2>Industria</id-dimension2>
+					<id-valor2>maquinaria</id-valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+	</pistas-del-juego>
+</juego>
