@@ -2,6 +2,8 @@ package uy.com.uma.logicgame.persistencia.inter;
 
 import java.util.Collection;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -18,6 +20,8 @@ import uy.com.uma.logicgame.persistencia.UtilHibernate;
  * @author Santiago Dalchiele
  */
 public class ManejadorAdminInternacionalizacion implements IManejadorAdminInternacionalizacion {
+
+	private static final Logger log = LogManager.getLogger(ManejadorAdminInternacionalizacion.class.getName());
 	
 	/** session factory */
 	private SessionFactory sessions = SessionFactoryUtil.getSessionFactory();
@@ -33,6 +37,7 @@ public class ManejadorAdminInternacionalizacion implements IManejadorAdminIntern
 		Transaction tx = null;
 		
 		try {
+			log.debug("Seteando el idioma id=[" + id + "], nombre=[" + nombre + "], icono=[" + icono + "]");
 			tx = session.beginTransaction();
 			Idioma idioma = (Idioma) session.get(Idioma.class, id);
 			

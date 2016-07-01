@@ -1,9 +1,8 @@
--como usar github con eclipse? -> setear las variables HTTPS_PROXY y HTTP_PROXY y re-arrancar eclipse
--subir a github logicgame y logicgame-fe ?
-
--limpiar las aplicaciones creadas en heroku
-
 -subir a heroku logicgame-fe	
+
+-migrar a maven comunide?
+-migrar a maven lgide?
+-borrar la carpeta git
 
 -Como ejecutar los comandos sql en heroku? --> no hay manera todo lo que se necesite hay que incluirlo en la aplicación
 
@@ -13,10 +12,6 @@
 
 -Llevar nueva versión del .war a casa
 -Ver sugerencias de Sabrina
-
--migrar a maven comunide
--migrar a maven lgide
--borrar la carpeta git
 
 -cambiar los identificadores de la UI para poder "incrustar" la pagina web en otra, usar algún prefijo tipo "lg."
 	
@@ -100,6 +95,8 @@
 -TomEE, tomcat + J2EE
 
 -Cursos gratis: https://miriadax.net/web/general-navigation/cursos
+
+-Maven: C:\santiago\cursos\OReilly.Maven.The.Definitive.Guide.Oct.2008.ISBN.0596517335.pdf
 
 -Estudiar Java Server Faces (JSF), ver combinación de AJAX con JSF
 

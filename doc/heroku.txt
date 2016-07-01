@@ -1,18 +1,3 @@
-Para leer de heroku	
-		
-	
-	
--------------------------------------------------------------------------------------------------------------------------------------
-Heroku vs tomcat:
-https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat
-	(esto lo logré implementar en el proyecto first-tomcat)
-	
-Deployar un war en heroku -> no entendí nada y no andubo	
-	https://devcenter.heroku.com/articles/war-deployment
-		heroku deploy:war --war lgweb.war --app primera-aplicacion
-		
-			
--------------------------------------------------------------------------------------------------------------------------------------
 abrir una ventana de comandos DOS
 ejecutar:
 	set HTTP_PROXY=http://d0172:nidO.978@proxy:8080
@@ -27,7 +12,7 @@ heroku apps:create [NOMBRE_DE_LA_APLICACION]
 
 git push heroku master
 
-heroku ps:scale web=1
+heroku ps:scale web=1 --app logicgame
 
 heroku open								/** abre la aplicación remota */
 
@@ -45,3 +30,29 @@ heroku open hello						/** abrir la aplicacion remota */
 
 Para limpiar todo por si da errores:
 heroku update	
+
+
+heroku config:set LOGICGAME_HOME=conf
+
+heroku logs --tail
+
+https://logicgame.herokuapp.com/admlg.html
+
+------------------------------------------------------------------------------------------------
+Para instalar un repositorio de maven local
+https://devcenter.heroku.com/articles/local-maven-dependencies
+
+mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../comun/target/comun-0.0.1.jar -DgroupId=uy.com.uma -DartifactId=comun -Dpackaging=jar -Dversion=0.0.1
+mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../logicgame/target/logicgame-0.0.1.jar -DgroupId=uy.com.uma -DartifactId=logicgame -Dpackaging=jar -Dversion=0.0.1
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Heroku vs tomcat:
+https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat
+	(esto lo logré implementar en el proyecto first-tomcat)
+	
+Deployar un war en heroku -> no entendí nada y no andubo	
+	https://devcenter.heroku.com/articles/war-deployment
+		heroku deploy:war --war lgweb.war --app primera-aplicacion
+		
+			
+-------------------------------------------------------------------------------------------------------------------------------------
