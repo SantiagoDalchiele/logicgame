@@ -38,12 +38,15 @@ heroku logs --tail
 
 https://logicgame.herokuapp.com/admlg.html
 
+Para obtener el repositorio remoto:
+heroku git:clone -a [myapp]
+
 ------------------------------------------------------------------------------------------------
 Para instalar un repositorio de maven local
 https://devcenter.heroku.com/articles/local-maven-dependencies
 
-mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../comun/target/comun-0.0.1.jar -DgroupId=uy.com.uma -DartifactId=comun -Dpackaging=jar -Dversion=0.0.1
-mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../logicgame/target/logicgame-0.0.1.jar -DgroupId=uy.com.uma -DartifactId=logicgame -Dpackaging=jar -Dversion=0.0.1
+mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../comun/target/comun-0.0.2.jar -DgroupId=uy.com.uma -DartifactId=comun -Dpackaging=jar -Dversion=0.0.2
+mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../logicgame/target/logicgame-0.0.3.jar -DgroupId=uy.com.uma -DartifactId=logicgame -Dpackaging=jar -Dversion=0.0.3
 
 -------------------------------------------------------------------------------------------------------------------------------------
 Heroku vs tomcat:

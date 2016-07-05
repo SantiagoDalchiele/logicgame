@@ -10,6 +10,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.persistencia.IManejadorInternacionalizacion;
 import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
 import uy.com.uma.logicgame.persistencia.UtilHibernate;
@@ -35,6 +36,7 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 	 */
 	@Override
 	public long internacionalizar(String idioma, String texto) throws PersistenceException {
+		texto = UtilString.reemplazarLetrasEspeciales(texto);
 		long id = findByTexto(idioma, texto);
 		
 		if (id == -1)
@@ -63,7 +65,7 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 				if (lit == null)
 					throw new PersistenceException("No existe un literal con el identificador [" + id + "] para el idioma [" + idiomaId + "]");
 				else
-					return lit.getTexto();
+					return UtilString.quitarLetrasEspeciales(lit.getTexto());
 			}
 		} finally {
 			UtilHibernate.closeSession(session);

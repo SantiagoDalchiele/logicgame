@@ -10,7 +10,6 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -57,7 +56,7 @@ public class CargadorRecursos implements ICargadorRecursos {
 	
 	
 	/** Idioma usado para persistir los juegos */
-	private String idioma = Locale.getDefault().getLanguage();
+	private String idioma = "es";
 	
 	/** Archivos .csv con 2 columnas con datos de idioms */
 	private Map<String, String> idiomas = new HashMap<String, String>();
@@ -120,6 +119,17 @@ public class CargadorRecursos implements ICargadorRecursos {
 	
 	
 	/**
+	 * Vacia las colecciones de archivos a procesar, de idiomas, literales y juegos
+	 */
+	public void init() {
+		idiomas.clear();
+		literales.clear();
+		juegos.clear();
+	}
+
+
+	
+	/**
 	 * Carga en los mapeos los archivos incluidos en InputStream de un archivo .zip
 	 * @param is InputStream de un archivo .zip
 	 */
@@ -139,6 +149,7 @@ public class CargadorRecursos implements ICargadorRecursos {
 		try {
 			zis = new ZipInputStream(is);		        
 	        ZipEntry entry;
+	        init();
 	        
             while((entry = zis.getNextEntry()) != null) {
             	Reader r = new BufferedReader (new InputStreamReader (zis/*, cs*/));
@@ -197,12 +208,10 @@ public class CargadorRecursos implements ICargadorRecursos {
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | ConfiguracionException | IOException | 
 				PersistenciaException | JAXBException e) {
 			throw new LogicGameException("Error al cargar los recursos en la base de datos", e);
-		} finally {
-			SessionFactoryUtil.shutdown();
 		}
 	}
 	
-
+	
 	
 	/**
 	 * Carga los idiomas
@@ -258,6 +267,7 @@ public class CargadorRecursos implements ICargadorRecursos {
     	Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		
 		for (final String arch : juegos.keySet()) {
+			log.info("Procesando el archivo: " + arch);
 			final String contenido = juegos.get(arch);
 			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(new StringReader(contenido));
 			

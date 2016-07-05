@@ -1,21 +1,10 @@
--subir a heroku logicgame-fe	
+-pantalla donde visualizar los juegos cargados en el sistema (tipo trabajar con)
+	
+-Ver el tema de los tildes en la versión heroku
 
--migrar a maven comunide?
--migrar a maven lgide?
--borrar la carpeta git
-
--Como ejecutar los comandos sql en heroku? --> no hay manera todo lo que se necesite hay que incluirlo en la aplicación
-
--Otros sitios de free-hosting (getupcloud es de unos brazucas, openshift parece mas serio)			
-	www.openshift.com
-	getupcloud.com
-
--Llevar nueva versión del .war a casa
 -Ver sugerencias de Sabrina
 
 -cambiar los identificadores de la UI para poder "incrustar" la pagina web en otra, usar algún prefijo tipo "lg."
-	
--pantalla donde visualizar los juegos cargados en el sistema (tipo trabajar con)
 	
 -Mejorar la interface de administración
 	hacer el upload con javascript?
@@ -112,3 +101,7 @@ http://cvc.cervantes.es/aula/pasatiempos/pasatiempos1/
 
 -aplicaciones responsivas
 	http://www.lingulo.com/tutorials/css/how-to-build-a-html5-website-from-scratch	
+	
+-Otros sitios de free-hosting (getupcloud es de unos brazucas, openshift parece mas serio)			
+	www.openshift.com
+	getupcloud.com	

@@ -177,19 +177,6 @@ public class ConfiguracionLoadHelper implements IConfiguracionConstantes {
 	
 	
 	/**
-	 * Claves de los roles en la base de datos
-	 * Utilizados cuando la estructura de la base se crea por programa y no directamente por un script (Heroku)
-	 */
-	public String getClaveRolAdm() {
-		return conf.getClaveRolAdm();
-	}	
-	public String getClaveRolWeb() {
-		return conf.getClaveRolWeb();
-	}
-	
-	
-	
-	/**
 	 * Carga la configuración del sistema
 	 */
 	private void cargaConfiguracion() throws ConfiguracionException {

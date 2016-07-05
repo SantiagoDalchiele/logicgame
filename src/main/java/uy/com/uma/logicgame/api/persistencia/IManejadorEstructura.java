@@ -9,14 +9,14 @@ package uy.com.uma.logicgame.api.persistencia;
 public interface IManejadorEstructura {
 
 	
-	/** Crea los roles usados por el sistema logic-game */
-	void crearRoles() throws PersistenciaException;
-	
 	/** Crea la estructura de las tablas y sus indices */
 	void crearTablas() throws PersistenciaException;
 	
-	/** Asigna los permisos para cada tabla y rol */
-	void asignarPermisos() throws PersistenciaException;
+	/** Borra la estructura de las tablas creadas */
+	void borrarTablas() throws PersistenciaException;
+	
+	/** Borra todos los registros de todas las tablas del sistema */
+	void borrarDatos() throws PersistenciaException;
 	
 	/** Crea la ruta por defecto a asignarle a los usuarios cuando recien son creados */
 	void crearRutaXDefecto() throws PersistenciaException;

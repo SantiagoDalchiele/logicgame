@@ -11,6 +11,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.bean.ParametrosJuego;
 import uy.com.uma.logicgame.api.persistencia.IManejadorJuegoWeb;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
@@ -46,6 +47,7 @@ public class ManejadorJuegoWeb implements IManejadorJuegoWeb {
 		Session session = sessions.openSession();
 		
 		try {
+			String def = null;
 			JuegoXIdioma ji = (JuegoXIdioma) session.get(JuegoXIdioma.class, new JuegoXIdiomaPK(id, idioma));
 			
 			if (ji == null) {
@@ -65,11 +67,13 @@ public class ManejadorJuegoWeb implements IManejadorJuegoWeb {
 						if (result.isEmpty())
 							throw new PersistenciaException("No se ha definido el juego " + id);
 						else
-							return result.get(0).getDefJuego();
+							def = result.get(0).getDefJuego();
 					} else
-						return ji.getDefJuego();
+						def = ji.getDefJuego();
 			} else
-				return ji.getDefJuego();
+				def = ji.getDefJuego();
+			
+			return UtilString.quitarCaracteresEspeciales(def);
 		} catch (PersistenceException e) {
 			throw new PersistenciaException("Error al obtener la definicion del juego " + id, e);
 		}

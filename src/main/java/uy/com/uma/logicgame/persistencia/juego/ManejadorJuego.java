@@ -2,7 +2,6 @@ package uy.com.uma.logicgame.persistencia.juego;
 
 import java.math.BigInteger;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 import javax.persistence.PersistenceException;
@@ -13,6 +12,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.persistencia.IManejadorInternacionalizacion;
 import uy.com.uma.logicgame.api.persistencia.IManejadorJuego;
@@ -41,7 +41,7 @@ public class ManejadorJuego implements IManejadorJuego {
 	private static final Logger log = LogManager.getLogger(ManejadorJuego.class.getName());
 	
 	/** Idioma por defecto */
-	private final static String IDIOMA = Locale.getDefault().getLanguage();
+	private final static String IDIOMA = "es";
 	
 	/** session factory */
 	private SessionFactory sessions = SessionFactoryUtil.getSessionFactory();
@@ -98,6 +98,7 @@ public class ManejadorJuego implements IManejadorJuego {
 	 */
 	public Juego obtener (int id, String idioma) throws PersistenciaException {
 		Session session = sessions.openSession();
+		log.debug("Obteniendo el juego " + id + " para el idioma " + idioma);
 		
 		try {
 			uy.com.uma.logicgame.persistencia.juego.Juego j = (uy.com.uma.logicgame.persistencia.juego.Juego) 
@@ -168,7 +169,8 @@ public class ManejadorJuego implements IManejadorJuego {
 	 */
 	public void persistir (Juego juego, String idioma) throws PersistenciaException {
 		Session session = sessions.openSession();
-		Transaction tx = null;
+		Transaction tx = null;		
+		log.debug("Persistiendo el juego " + juego.getId() + " " + juego.getTitulo() + " para el idioma [" + idioma + "]");
 		dimensiones.clear();
 		valores.clear();
 		uy.com.uma.logicgame.persistencia.juego.Juego j = new uy.com.uma.logicgame.persistencia.juego.Juego();
@@ -177,8 +179,7 @@ public class ManejadorJuego implements IManejadorJuego {
 		j.setTexto(inter.internacionalizar(idioma, juego.getTexto()));
 		j.setCosto(juego.getCosto().intValue());
 		
-		try {
-			log.debug("Persistiendo el juego " + juego.getId() + " " + juego.getTitulo());
+		try {			
 			tx = session.beginTransaction();
 			session.save(j);
 			persistirDimensiones(tx, session, juego, idioma);
@@ -194,8 +195,8 @@ public class ManejadorJuego implements IManejadorJuego {
 		
 	}
 
-	
-	
+
+
 	/**
 	 * Borra de la base de datos el juego dado su identificador
 	 */
@@ -204,8 +205,7 @@ public class ManejadorJuego implements IManejadorJuego {
 		Session session = sessions.openSession();
 		Transaction tx = null;
 		
-		try {
-		
+		try {		
 			uy.com.uma.logicgame.persistencia.juego.Juego juego = (uy.com.uma.logicgame.persistencia.juego.Juego) 
 					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(id));
 			
@@ -249,8 +249,8 @@ public class ManejadorJuego implements IManejadorJuego {
 				else {					
 					short cantDims = (short) j.getDimensiones().size();
 					short cantValores = (short) j.getDimensiones().get(0).getValores().size();
-					Juego juego = obtener(id);					
-					Resolucion r = Resolucion.resolver(juego);
+					Juego juego = obtener(id);		
+					Resolucion r = Resolucion.resolver(juego);				
 					j.setCantDims(cantDims);
 					j.setCantValores(cantValores);
 					j.setSolucion(r.getSolucion());
@@ -259,7 +259,7 @@ public class ManejadorJuego implements IManejadorJuego {
 					for (String idioma : inter.getIdsIdiomas()) {
 						try {
 							juego = obtener(id, idioma);
-							String defJuego = DefJuegoBuilder.construir(juego);
+							String defJuego = UtilString.reemplazarLetrasEspeciales(DefJuegoBuilder.construir(juego));
 							JuegoXIdiomaPK pk = new JuegoXIdiomaPK(id, idioma);
 							JuegoXIdioma jxi = (JuegoXIdioma) session.get(JuegoXIdioma.class, pk);
 							
