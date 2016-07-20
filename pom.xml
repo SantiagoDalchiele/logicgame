@@ -2,7 +2,7 @@
   	<modelVersion>4.0.0</modelVersion>
   	<groupId>uy.com.uma</groupId>
   	<artifactId>logicgame</artifactId>
-  	<version>0.0.3</version>
+  	<version>0.0.5</version>
   	<name>logicgame</name>
   	<description>Nucleo central de la implementación del juego de lógica (logicgame)</description>
   	<properties>

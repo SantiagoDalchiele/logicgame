@@ -11,8 +11,8 @@
 	<target name="delete-lgide">
 		<delete file="lgide-${version}"/>
 	</target>
-	<target name="delete-lgweb">
-		<delete file="lgweb-${version}"/>
+	<target name="delete-logicgame-fe">
+		<delete file="logicgame-fe-${version}"/>
 	</target>
 	<target name="delete-logicgame">
 		<delete file="logicgame-${version}"/>
@@ -22,7 +22,7 @@
 		<zip destfile="comun-${version}">
 			<zipfileset dir="comun/src" prefix="comun/src"/>			
 			<zipfileset dir="comun" prefix="comun">
-				<include name="pack.xml"/>
+				<include name="pom.xml"/>
 			</zipfileset>
 		</zip>
 	</target>
@@ -43,6 +43,7 @@
 			<zipfileset dir="lgide/src" prefix="lgide/src"/>			
 			<zipfileset dir="lgide/icons" prefix="lgide/icons"/>
 			<zipfileset dir="lgide/META-INF" prefix="lgide/META-INF"/>
+			<zipfileset dir="lgide/META-INF-PROD" prefix="lgide/META-INF-PROD"/>
 			<zipfileset dir="lgide" prefix="lgide">
 				<include name="build.properties"/>
 				<include name="pack.xml"/>
@@ -51,28 +52,26 @@
 		</zip>
 	</target>
 	
-	<target name="pack-lgweb" depends="delete-lgweb">
-		<zip destfile="lgweb-${version}">
-			<zipfileset dir="lgweb/src" prefix="lgweb/src"/>			
-			<zipfileset dir="lgweb/conf" prefix="lgweb/conf"/>
-			<zipfileset dir="lgweb/WebContent" prefix="lgweb/WebContent"/>
-			<zipfileset dir="lgweb" prefix="lgweb">
-				<include name="pack.xml"/>
-			</zipfileset>
-		</zip>
-	</target>
-		
 	<target name="pack-logicgame" depends="delete-logicgame">
 		<zip destfile="logicgame-${version}">
 			<zipfileset dir="logicgame/src" prefix="logicgame/src"/>			
-			<zipfileset dir="logicgame/conf" prefix="logicgame/conf"/>
 			<zipfileset dir="logicgame/doc" prefix="logicgame/doc"/>
 			<zipfileset dir="logicgame/recursos" prefix="logicgame/recursos"/>
 			<zipfileset dir="logicgame" prefix="logicgame">
-				<include name="pack.xml"/>
+				<include name="pom.xml"/>
 			</zipfileset>
 		</zip>
 	</target>
 		
-	<target name="pack" depends="pack-comun,pack-comunide,pack-lgide,pack-lgweb,pack-logicgame"/>
+	<target name="pack-logicgame-fe" depends="delete-logicgame-fe">
+		<zip destfile="logicgame-fe-${version}">
+			<zipfileset dir="logicgame-fe/src" prefix="logicgame-fe/src"/>			
+			<zipfileset dir="logicgame-fe/conf" prefix="logicgame-fe/conf"/>
+			<zipfileset dir="logicgame-fe" prefix="logicgame-fe">
+				<include name="pom.xml"/>
+			</zipfileset>
+		</zip>
+	</target>
+		
+	<target name="pack" depends="pack-comun,pack-comunide,pack-lgide,pack-logicgame-fe,pack-logicgame"/>
 </project>

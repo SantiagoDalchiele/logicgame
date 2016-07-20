@@ -2,7 +2,7 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>8</id>
 	<titulo>Mascotas</titulo>
-	<texto>Roberto, Daniel, Isabel, Mónica y Patricia son amantes de las mascotas.  Descubre que mascota tiene cada uno, que nombre les pusieron y de que color es cada una</texto>
+	<texto>Roberto, Daniel, Isabel, M\u00F3nica y Patricia son amantes de las mascotas.  Descubre que mascota tiene cada uno, que nombre les pusieron y de que color es cada una</texto>
 	<costo>126</costo>
 	<dimensiones>
 		<dimension>
@@ -11,7 +11,7 @@
 				<valor>Roberto</valor>
 				<valor>Daniel</valor>
 				<valor>Isabel</valor>
-				<valor>Mónica</valor>
+				<valor>M\u00F3nica</valor>
 				<valor>Patricia</valor>
 			</valores>
 		</dimension>
@@ -28,9 +28,9 @@
 		<dimension>
 			<id>Nombre de la mascota</id>
 			<valores>
-				<valor>Guiñitos</valor>
-				<valor>Pompón</valor>
-				<valor>Óscar</valor>
+				<valor>Gui\u00F1itos</valor>
+				<valor>Pomp\u00F3n</valor>
+				<valor>\u00D3scar</valor>
 				<valor>Ka</valor>
 				<valor>Zara</valor>
 			</valores>
@@ -39,7 +39,7 @@
 			<id>Color</id>
 			<valores>
 				<valor>negro</valor>
-				<valor>marrón</valor>
+				<valor>marr\u00F3n</valor>
 				<valor>gris</valor>
 				<valor>rojo</valor>
 				<valor>blanco</valor>
@@ -48,25 +48,25 @@
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Pompón no es un perro. No es gris. Su dueña no es Isabel</texto>
+			<texto>Pomp\u00F3n no es un perro. No es gris. Su due\u00F1a no es Isabel</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Pompón</id-valor1>
+					<id-valor1>Pomp\u00F3n</id-valor1>
 					<id-dimension2>Mascota</id-dimension2>
 					<id-valor2>perro</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Pompón</id-valor1>
+					<id-valor1>Pomp\u00F3n</id-valor1>
 					<id-dimension2>Color</id-dimension2>
 					<id-valor2>gris</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Pompón</id-valor1>
+					<id-valor1>Pomp\u00F3n</id-valor1>
 					<id-dimension2>Nombre</id-dimension2>
 					<id-valor2>Isabel</id-valor2>
 					<afirma-niega>false</afirma-niega>
@@ -74,7 +74,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Una niña tiene una serpiente. Es de color marrón. Pero no se llama Zara</texto>
+			<texto>Una ni\u00F1a tiene una serpiente. Es de color marr\u00F3n. Pero no se llama Zara</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Mascota</id-dimension1>
@@ -94,7 +94,7 @@
 					<id-dimension1>Mascota</id-dimension1>
 					<id-valor1>serpiente</id-valor1>
 					<id-dimension2>Color</id-dimension2>
-					<id-valor2>marrón</id-valor2>
+					<id-valor2>marr\u00F3n</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
@@ -107,25 +107,25 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La mascota de Daniel se llama Guiñitos. Es negro. No es una cobaya</texto>
+			<texto>La mascota de Daniel se llama Gui\u00F1itos. Es negro. No es una cobaya</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Daniel</id-valor1>
 					<id-dimension2>Nombre de la mascota</id-dimension2>
-					<id-valor2>Guiñitos</id-valor2>
+					<id-valor2>Gui\u00F1itos</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Guiñitos</id-valor1>
+					<id-valor1>Gui\u00F1itos</id-valor1>
 					<id-dimension2>Color</id-dimension2>
 					<id-valor2>negro</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Guiñitos</id-valor1>
+					<id-valor1>Gui\u00F1itos</id-valor1>
 					<id-dimension2>Mascota</id-dimension2>
 					<id-valor2>cobaya</id-valor2>
 					<afirma-niega>false</afirma-niega>
@@ -178,18 +178,18 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Óscar es roja. Pero no es un perro</texto>
+			<texto>\u00D3scar es roja. Pero no es un perro</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Óscar</id-valor1>
+					<id-valor1>\u00D3scar</id-valor1>
 					<id-dimension2>Color</id-dimension2>
 					<id-valor2>rojo</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre de la mascota</id-dimension1>
-					<id-valor1>Óscar</id-valor1>
+					<id-valor1>\u00D3scar</id-valor1>
 					<id-dimension2>Mascota</id-dimension2>
 					<id-valor2>perro</id-valor2>
 					<afirma-niega>false</afirma-niega>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>4</id>
-	<titulo>Esotérico</titulo>
-	<texto>A pesar del misterio que rodea a la vidente Virginia, su jornada laboral se puede deducir leyendo cinco apuntes - los de abajo - sacados de su agenda.  Relacione los datos en el gráfico y adivine la hora de cita de los clientes, los temas de sus consultas y las herramientas mágicas que piensa utilizar</texto>
+	<titulo>Esot\u00E9rico</titulo>
+	<texto>A pesar del misterio que rodea a la vidente Virginia, su jornada laboral se puede deducir leyendo cinco apuntes - los de abajo - sacados de su agenda.  Relacione los datos en el gr\u00E1fico y adivine la hora de cita de los clientes, los temas de sus consultas y las herramientas m\u00E1gicas que piensa utilizar</texto>
 	<costo>105</costo>
 	<dimensiones>
 		<dimension>
@@ -10,7 +10,7 @@
 			<valores>
 				<valor>Amalia</valor>
 				<valor>Benito</valor>
-				<valor>José</valor>
+				<valor>Jos\u00E9</valor>
 				<valor>Matilde</valor>
 			</valores>
 		</dimension>
@@ -44,7 +44,7 @@
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>En la cita concertada con Matilde, indagaré sobre sus futuros amores</texto>
+			<texto>En la cita concertada con Matilde, indagar\u00E9 sobre sus futuros amores</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Cliente</id-dimension1>
@@ -56,7 +56,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Para la entrevista de las 17:00 horas, me serviré de la bola de cristal</texto>
+			<texto>Para la entrevista de las 17:00 horas, me servir\u00E9 de la bola de cristal</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Hora</id-dimension1>
@@ -68,13 +68,13 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El tarot lo utilizaré antes de atender a José y después de responder al cliente preocupado por cuestiones de dinero</texto>
+			<texto>El tarot lo utilizar\u00E9 antes de atender a Jos\u00E9 y despu\u00E9s de responder al cliente preocupado por cuestiones de dinero</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Herramienta</id-dimension1>
 					<id-valor1>Tarot</id-valor1>
 					<id-dimension2>Cliente</id-dimension2>
-					<id-valor2>José</id-valor2>
+					<id-valor2>Jos\u00E9</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
@@ -86,21 +86,21 @@
 				</pista>
 				<pista>
 					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>José</id-valor1>
+					<id-valor1>Jos\u00E9</id-valor1>
 					<id-dimension2>Hora</id-dimension2>
 					<id-valor2>16:00</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>José</id-valor1>
+					<id-valor1>Jos\u00E9</id-valor1>
 					<id-dimension2>Hora</id-dimension2>
 					<id-valor2>16:30</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>José</id-valor1>
+					<id-valor1>Jos\u00E9</id-valor1>
 					<id-dimension2>Temas</id-dimension2>
 					<id-valor2>Dinero</id-valor2>
 					<afirma-niega>false</afirma-niega>
@@ -136,7 +136,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Para responder a las preguntas de quien acude por temas de familia, recurriré a las velas</texto>
+			<texto>Para responder a las preguntas de quien acude por temas de familia, recurrir\u00E9 a las velas</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Temas</id-dimension1>
@@ -148,7 +148,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Benito viene por motivos de salud. No le atenderé a las 16:30</texto>
+			<texto>Benito viene por motivos de salud. No le atender\u00E9 a las 16:30</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Cliente</id-dimension1>

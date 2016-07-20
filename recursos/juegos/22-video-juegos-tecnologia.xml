@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>22</id>
-	<titulo>Video juegos y tecnología</titulo>
-	<texto>5 jovenes de distintas nacionalidades son fanáticos de los video juegos, sus consolas, los celulares y las redes sociales.  Descubre la nacionalidad de cada uno de ellos, su video juego y consola favorita, el celular de su preferencia y en que red social prefiere pasar su tiempo libre</texto>
+	<titulo>Video juegos y tecnolog\u00EDa</titulo>
+	<texto>5 jovenes de distintas nacionalidades son fan\u00E1ticos de los video juegos, sus consolas, los celulares y las redes sociales.  Descubre la nacionalidad de cada uno de ellos, su video juego y consola favorita, el celular de su preferencia y en que red social prefiere pasar su tiempo libre</texto>
 	<costo>524</costo>
 	<dimensiones>
 		<dimension>
@@ -19,10 +19,10 @@
 			<id>Nacionalidad</id>
 			<valores>
 				<valor>estadounidense</valor>
-				<valor>inglés</valor>
+				<valor>ingl\u00E9s</valor>
 				<valor>canadiense</valor>
 				<valor>australiano</valor>
-				<valor>neozelandés</valor>
+				<valor>neozeland\u00E9s</valor>
 			</valores>
 		</dimension>
 		<dimension>
@@ -80,7 +80,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Liam, quien prefiere un celular Sony, es fanático de la red social facebook</texto>
+			<texto>Liam, quien prefiere un celular Sony, es fan\u00E1tico de la red social facebook</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Marca de celular</id-dimension1>
@@ -118,7 +118,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El estadounidense es fanático de "Call of duty"</texto>
+			<texto>El estadounidense es fan\u00E1tico de "Call of duty"</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Video juego</id-dimension1>
@@ -182,7 +182,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Andrew, el australiano, es fanático de la consola Nintendo</texto>
+			<texto>Andrew, el australiano, es fan\u00E1tico de la consola Nintendo</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
@@ -302,7 +302,7 @@
 				</pista>
 				<pista>
 					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>neozelandés</id-valor1>
+					<id-valor1>neozeland\u00E9s</id-valor1>
 					<id-dimension2>Red social</id-dimension2>
 					<id-valor2>instagram</id-valor2>
 					<afirma-niega>false</afirma-niega>
@@ -393,7 +393,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien prefiere la red social google+ usa un celular Windows Phone, es neozelandés, pero no le gusta la consola XBox ni Nintendo</texto>
+			<texto>Quien prefiere la red social google+ usa un celular Windows Phone, es neozeland\u00E9s, pero no le gusta la consola XBox ni Nintendo</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Red social</id-dimension1>
@@ -420,7 +420,7 @@
 					<id-dimension1>Red social</id-dimension1>
 					<id-valor1>google+</id-valor1>
 					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>neozelandés</id-valor2>
+					<id-valor2>neozeland\u00E9s</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

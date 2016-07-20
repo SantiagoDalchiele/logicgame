@@ -2,7 +2,7 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>18</id>
 	<titulo>Comensales</titulo>
-	<texto>Descubre que comió y que bebida tomó cada uno de los comensales, y en que lugar disfrutaron de sus alimentos</texto>
+	<texto>Descubre que comi\u00F3 y que bebida tom\u00F3 cada uno de los comensales, y en que lugar disfrutaron de sus alimentos</texto>
 	<costo>95</costo>
 	<dimensiones>
 		<dimension>
@@ -44,7 +44,7 @@
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Quien prefirió las papas fritas no lo hizo en un restaurant</texto>
+			<texto>Quien prefiri\u00F3 las papas fritas no lo hizo en un restaurant</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Lugar</id-dimension1>
@@ -56,7 +56,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Julia disfrutó de su comida en su propia casa</texto>
+			<texto>Julia disfrut\u00F3 de su comida en su propia casa</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
@@ -80,7 +80,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien comió papas fritas no lo acompañó con Coca-Cola</texto>
+			<texto>Quien comi\u00F3 papas fritas no lo acompa\u00F1\u00F3 con Coca-Cola</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Bebida</id-dimension1>
@@ -92,7 +92,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien disfrutó de la lasagna lo hizo con una copa de vino</texto>
+			<texto>Quien disfrut\u00F3 de la lasagna lo hizo con una copa de vino</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Bebida</id-dimension1>
@@ -104,7 +104,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Natalia bebió cerveza, pero no fue ni en un bar ni en un restaurant</texto>
+			<texto>Natalia bebi\u00F3 cerveza, pero no fue ni en un bar ni en un restaurant</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Bebida</id-dimension1>
@@ -130,7 +130,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Luciana optó por comer arroz con pollo</texto>
+			<texto>Luciana opt\u00F3 por comer arroz con pollo</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Comida</id-dimension1>
@@ -142,7 +142,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Miguel no comió lasagna</texto>
+			<texto>Miguel no comi\u00F3 lasagna</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Comida</id-dimension1>

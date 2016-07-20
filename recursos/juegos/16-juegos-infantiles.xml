@@ -2,23 +2,23 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>16</id>
 	<titulo>Juegos infantiles</titulo>
-	<texto>Descubre cual es el juguete preferido de cada niño, de que color es y donde le gusta jugar</texto>
+	<texto>Descubre cual es el juguete preferido de cada ni\u00F1o, de que color es y donde le gusta jugar</texto>
 	<costo>50</costo>
 	<dimensiones>
 		<dimension>
 			<id>Nombre</id>
 			<valores>
 				<valor>Luis</valor>
-				<valor>Matías</valor>
+				<valor>Mat\u00EDas</valor>
 				<valor>Renzo</valor>
 			</valores>
 		</dimension>
 		<dimension>
 			<id>Juguete</id>
 			<valores>
-				<valor>Camión</valor>
+				<valor>Cami\u00F3n</valor>
 				<valor>Pelota</valor>
-				<valor>Muñeco</valor>
+				<valor>Mu\u00F1eco</valor>
 			</valores>
 		</dimension>
 		<dimension>
@@ -52,11 +52,11 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Matías prefiere el juguete de color verde</texto>
+			<texto>Mat\u00EDas prefiere el juguete de color verde</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Matías</id-valor1>
+					<id-valor1>Mat\u00EDas</id-valor1>
 					<id-dimension2>Color</id-dimension2>
 					<id-valor2>Verde</id-valor2>
 					<afirma-niega>true</afirma-niega>
@@ -64,11 +64,11 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien prefiere el muñeco (que es de color rojo), no le gusta jugar en el dormitorio</texto>
+			<texto>Quien prefiere el mu\u00F1eco (que es de color rojo), no le gusta jugar en el dormitorio</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Juguete</id-dimension1>
-					<id-valor1>Muñeco</id-valor1>
+					<id-valor1>Mu\u00F1eco</id-valor1>
 					<id-dimension2>Color</id-dimension2>
 					<id-valor2>Rojo</id-valor2>
 					<afirma-niega>true</afirma-niega>
@@ -77,13 +77,13 @@
 					<id-dimension1>Lugar</id-dimension1>
 					<id-valor1>Dormitorio</id-valor1>
 					<id-dimension2>Juguete</id-dimension2>
-					<id-valor2>Muñeco</id-valor2>
+					<id-valor2>Mu\u00F1eco</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El niño que juega en el patio prefiere hacerlo con su pelota</texto>
+			<texto>El ni\u00F1o que juega en el patio prefiere hacerlo con su pelota</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Juguete</id-dimension1>

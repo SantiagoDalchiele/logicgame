@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>14</id>
-	<titulo>Ríos y banderas</titulo>
-	<texto>Seguramente que ya sabes muchas cosas sobre países de Hispanoamérica, pero siempre se puede aprender más. En el juego de hoy tienes que relacionar los ríos Loa, Negro, Pilcomayo y Guayas con sus países respectivos (Paraguay, Chile, Ecuador y Uruguay), así como con	los símbolos de sus banderas (sol, estrella, pájaro y símbolo circular).</texto>
+	<titulo>R\u00EDos y banderas</titulo>
+	<texto>Seguramente que ya sabes muchas cosas sobre pa\u00EDses de Hispanoam\u00E9rica, pero siempre se puede aprender m\u00E1s. En el juego de hoy tienes que relacionar los r\u00EDos Loa, Negro, Pilcomayo y Guayas con sus pa\u00EDses respectivos (Paraguay, Chile, Ecuador y Uruguay), as\u00ED como con	los s\u00EDmbolos de sus banderas (sol, estrella, p\u00E1jaro y s\u00EDmbolo circular).</texto>
 	<costo>20</costo>
 	<dimensiones>
 		<dimension>
-			<id>País</id>
+			<id>Pa\u00EDs</id>
 			<valores>
 				<valor>Paraguay</valor>
 				<valor>Chile</valor>
@@ -19,12 +19,12 @@
 			<valores>
 				<valor>sol</valor>
 				<valor>estrella</valor>
-				<valor>pájaro</valor>
-				<valor>símbolo circular</valor>
+				<valor>p\u00E1jaro</valor>
+				<valor>s\u00EDmbolo circular</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Río</id>
+			<id>R\u00EDo</id>
 			<valores>
 				<valor>Loa</valor>
 				<valor>Negro</valor>
@@ -35,119 +35,119 @@
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>El sol no está en la bandera de Ecuador</texto>
+			<texto>El sol no est\u00E1 en la bandera de Ecuador</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Bandera</id-dimension1>
 					<id-valor1>sol</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Ecuador</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>En Paraguay está el río Pilcomayo</texto>
+			<texto>En Paraguay est\u00E1 el r\u00EDo Pilcomayo</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>País</id-dimension1>
+					<id-dimension1>Pa\u00EDs</id-dimension1>
 					<id-valor1>Paraguay</id-valor1>
-					<id-dimension2>Río</id-dimension2>
+					<id-dimension2>R\u00EDo</id-dimension2>
 					<id-valor2>Pilcomayo</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>En la bandera de Uruguay no hay una estrella ni un símbolo
+			<texto>En la bandera de Uruguay no hay una estrella ni un s\u00EDmbolo
 				circular</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>País</id-dimension1>
+					<id-dimension1>Pa\u00EDs</id-dimension1>
 					<id-valor1>Uruguay</id-valor1>
 					<id-dimension2>Bandera</id-dimension2>
 					<id-valor2>estrella</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>País</id-dimension1>
+					<id-dimension1>Pa\u00EDs</id-dimension1>
 					<id-valor1>Uruguay</id-valor1>
 					<id-dimension2>Bandera</id-dimension2>
-					<id-valor2>símbolo circular</id-valor2>
+					<id-valor2>s\u00EDmbolo circular</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El río Negro no está en Ecuador ni en Chile</texto>
+			<texto>El r\u00EDo Negro no est\u00E1 en Ecuador ni en Chile</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Río</id-dimension1>
+					<id-dimension1>R\u00EDo</id-dimension1>
 					<id-valor1>Negro</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Ecuador</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Río</id-dimension1>
+					<id-dimension1>R\u00EDo</id-dimension1>
 					<id-valor1>Negro</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Chile</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La estrella está en la bandera de Chile</texto>
+			<texto>La estrella est\u00E1 en la bandera de Chile</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Bandera</id-dimension1>
 					<id-valor1>estrella</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Chile</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El río Loa no está en Ecuador</texto>
+			<texto>El r\u00EDo Loa no est\u00E1 en Ecuador</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Río</id-dimension1>
+					<id-dimension1>R\u00EDo</id-dimension1>
 					<id-valor1>Loa</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Ecuador</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El pájaro no está en la bandera de Paraguay ni en la de
+			<texto>El p\u00E1jaro no est\u00E1 en la bandera de Paraguay ni en la de
 				Uruguay</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Bandera</id-dimension1>
-					<id-valor1>pájaro</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-valor1>p\u00E1jaro</id-valor1>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Paraguay</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Bandera</id-dimension1>
-					<id-valor1>pájaro</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-valor1>p\u00E1jaro</id-valor1>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Uruguay</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El río Guayas no está en Chile</texto>
+			<texto>El r\u00EDo Guayas no est\u00E1 en Chile</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Río</id-dimension1>
+					<id-dimension1>R\u00EDo</id-dimension1>
 					<id-valor1>Guayas</id-valor1>
-					<id-dimension2>País</id-dimension2>
+					<id-dimension2>Pa\u00EDs</id-dimension2>
 					<id-valor2>Chile</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>

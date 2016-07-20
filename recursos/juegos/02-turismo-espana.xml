@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>2</id>
-	<titulo>Turismo por España</titulo>
-	<texto>Tres estudiantes hispanoamericanos de distintos países visitan España. Descubre la nacionalidad de cada uno y también la ciudad y el monumento que quieren visitar</texto>
+	<titulo>Turismo por Espa\u00F1a</titulo>
+	<texto>Tres estudiantes hispanoamericanos de distintos pa\u00EDses visitan Espa\u00F1a. Descubre la nacionalidad de cada uno y tambi\u00E9n la ciudad y el monumento que quieren visitar</texto>
 	<costo>26</costo>
 	<dimensiones>
 		<dimension>
@@ -18,7 +18,7 @@
 			<valores>
 				<valor>Mejicano</valor>
 				<valor>Argentino</valor>
-				<valor>Puertoriqueño</valor>
+				<valor>Puertorique\u00F1o</valor>
 			</valores>
 		</dimension>
 		<dimension>
@@ -32,7 +32,7 @@
 		<dimension>
 			<id>Monumento</id>
 			<valores>
-				<valor>Casa Milá</valor>
+				<valor>Casa Mil\u00E1</valor>
 				<valor>Palacio Real</valor>
 				<valor>La Giralda</valor>
 			</valores>
@@ -67,7 +67,7 @@
 					<id-dimension1>Ciudad</id-dimension1>
 					<id-valor1>Barcelona</id-valor1>
 					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>Casa Milá</id-valor2>
+					<id-valor2>Casa Mil\u00E1</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
@@ -80,7 +80,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La argentina quiere ver la Casa Milá</texto>
+			<texto>La argentina quiere ver la Casa Mil\u00E1</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
@@ -93,7 +93,7 @@
 					<id-dimension1>Nacionalidad</id-dimension1>
 					<id-valor1>Argentino</id-valor1>
 					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>Casa Milá</id-valor2>
+					<id-valor2>Casa Mil\u00E1</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
@@ -111,7 +111,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Belén quiere ir a Barcelona</texto>
+			<texto>Bel\u00E9n quiere ir a Barcelona</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
@@ -135,11 +135,11 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El que quiere visitar Madrid es puertorriqueño</texto>
+			<texto>El que quiere visitar Madrid es puertorrique\u00F1o</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>Puertoriqueño</id-valor1>
+					<id-valor1>Puertorique\u00F1o</id-valor1>
 					<id-dimension2>Ciudad</id-dimension2>
 					<id-valor2>Madrid</id-valor2>
 					<afirma-niega>true</afirma-niega>

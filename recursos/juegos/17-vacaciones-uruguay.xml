@@ -2,7 +2,7 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>17</id>
 	<titulo>Vacaciones en Uruguay</titulo>
-	<texto>Juan, Pedro y Manuel pasarán sus vacaciones en balnearios de Uruguay, descubre en que balneario pasará sus vacaciones cada uno y cuál es su deporte preferido</texto>
+	<texto>Juan, Pedro y Manuel pasar\u00E1n sus vacaciones en balnearios de Uruguay, descubre en que balneario pasar\u00E1 sus vacaciones cada uno y cu\u00E1l es su deporte preferido</texto>
 	<costo>12</costo>
 	<dimensiones>
 		<dimension>
@@ -17,7 +17,7 @@
 			<id>Balneario</id>
 			<valores>
 				<valor>Punta del Este</valor>
-				<valor>Piriápolis</valor>
+				<valor>Piri\u00E1polis</valor>
 				<valor>La Paloma</valor>
 			</valores>
 		</dimension>
@@ -25,26 +25,26 @@
 			<id>Deporte</id>
 			<valores>
 				<valor>surf</valor>
-				<valor>fútbol</valor>
+				<valor>f\u00FAtbol</valor>
 				<valor>volleyball</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>A Juan no le gusta el fútbol</texto>
+			<texto>A Juan no le gusta el f\u00FAtbol</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Juan</id-valor1>
 					<id-dimension2>Deporte</id-dimension2>
-					<id-valor2>fútbol</id-valor2>
+					<id-valor2>f\u00FAtbol</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Pedro pasará sus vacaciones en Punta del Este</texto>
+			<texto>Pedro pasar\u00E1 sus vacaciones en Punta del Este</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>

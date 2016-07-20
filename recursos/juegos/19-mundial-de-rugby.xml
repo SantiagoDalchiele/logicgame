@@ -2,11 +2,11 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>19</id>
 	<titulo>Mundial de Rugby</titulo>
-	<texto>Descubre el color de la camiseta de cada selección, en que ciudad enfrenta a su rival y cuál es su capitán</texto>
+	<texto>Descubre el color de la camiseta de cada selecci\u00F3n, en que ciudad enfrenta a su rival y cu\u00E1l es su capit\u00E1n</texto>
 	<costo>244</costo>
 	<dimensiones>
 		<dimension>
-			<id>Selección</id>
+			<id>Selecci\u00F3n</id>
 			<valores>
 				<valor>Inglaterra</valor>
 				<valor>Australia</valor>
@@ -35,14 +35,14 @@
 		<dimension>
 			<id>Rival</id>
 			<valores>
-				<valor>Japón</valor>
+				<valor>Jap\u00F3n</valor>
 				<valor>Tonga</valor>
 				<valor>Uruguay</valor>
 				<valor>Fiyi</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Capitán</id>
+			<id>Capit\u00E1n</id>
 			<valores>
 				<valor>Dylan Hartley</valor>
 				<valor>Fourie du Preez</valor>
@@ -63,7 +63,7 @@
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Selección</id-dimension1>
+					<id-dimension1>Selecci\u00F3n</id-dimension1>
 					<id-valor1>Nueva Zelanda</id-valor1>
 					<id-dimension2>Camiseta</id-dimension2>
 					<id-valor2>negra</id-valor2>
@@ -72,36 +72,36 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La selección que tiene como rival a Japón, juega en la ciudad de Brighton pero su capitán no es Stephen Moore</texto>
+			<texto>La selecci\u00F3n que tiene como rival a Jap\u00F3n, juega en la ciudad de Brighton pero su capit\u00E1n no es Stephen Moore</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Rival</id-dimension1>
-					<id-valor1>Japón</id-valor1>
+					<id-valor1>Jap\u00F3n</id-valor1>
 					<id-dimension2>Ciudad</id-dimension2>
 					<id-valor2>Brighton</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Capitán</id-dimension1>
+					<id-dimension1>Capit\u00E1n</id-dimension1>
 					<id-valor1>Stephen Moore</id-valor1>
 					<id-dimension2>Rival</id-dimension2>
-					<id-valor2>Japón</id-valor2>
+					<id-valor2>Jap\u00F3n</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La selección de Australia no juega su partido en la ciudad de Brighton y su camiseta no es blanca</texto>
+			<texto>La selecci\u00F3n de Australia no juega su partido en la ciudad de Brighton y su camiseta no es blanca</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Selección</id-dimension1>
+					<id-dimension1>Selecci\u00F3n</id-dimension1>
 					<id-valor1>Australia</id-valor1>
 					<id-dimension2>Ciudad</id-dimension2>
 					<id-valor2>Brighton</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Selección</id-dimension1>
+					<id-dimension1>Selecci\u00F3n</id-dimension1>
 					<id-valor1>Australia</id-valor1>
 					<id-dimension2>Camiseta</id-dimension2>
 					<id-valor2>blanca</id-valor2>
@@ -110,7 +110,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien juega su partido en la ciudad de Newcastle no enfrenta a Uruguay ni su capitán es Stephen Moore</texto>
+			<texto>Quien juega su partido en la ciudad de Newcastle no enfrenta a Uruguay ni su capit\u00E1n es Stephen Moore</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Ciudad</id-dimension1>
@@ -120,7 +120,7 @@
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Capitán</id-dimension1>
+					<id-dimension1>Capit\u00E1n</id-dimension1>
 					<id-valor1>Stephen Moore</id-valor1>
 					<id-dimension2>Ciudad</id-dimension2>
 					<id-valor2>Newcastle</id-valor2>
@@ -129,17 +129,17 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Dylan Hartley es el capitán de la selección de Inglaterra que disputa su partido en Londres, pero no es contra Uruguay</texto>
+			<texto>Dylan Hartley es el capit\u00E1n de la selecci\u00F3n de Inglaterra que disputa su partido en Londres, pero no es contra Uruguay</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Capitán</id-dimension1>
+					<id-dimension1>Capit\u00E1n</id-dimension1>
 					<id-valor1>Dylan Hartley</id-valor1>
-					<id-dimension2>Selección</id-dimension2>
+					<id-dimension2>Selecci\u00F3n</id-dimension2>
 					<id-valor2>Inglaterra</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Capitán</id-dimension1>
+					<id-dimension1>Capit\u00E1n</id-dimension1>
 					<id-valor1>Dylan Hartley</id-valor1>
 					<id-dimension2>Rival</id-dimension2>
 					<id-valor2>Uruguay</id-valor2>
@@ -148,19 +148,19 @@
 				<pista>
 					<id-dimension1>Ciudad</id-dimension1>
 					<id-valor1>Londres</id-valor1>
-					<id-dimension2>Capitán</id-dimension2>
+					<id-dimension2>Capit\u00E1n</id-dimension2>
 					<id-valor2>Dylan Hartley</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Fourie du Preez es el capitán de la selección que usa camiseta verde</texto>
+			<texto>Fourie du Preez es el capit\u00E1n de la selecci\u00F3n que usa camiseta verde</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Camiseta</id-dimension1>
 					<id-valor1>verde</id-valor1>
-					<id-dimension2>Capitán</id-dimension2>
+					<id-dimension2>Capit\u00E1n</id-dimension2>
 					<id-valor2>Fourie du Preez</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>

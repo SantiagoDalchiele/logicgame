@@ -15,71 +15,71 @@
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Profesión</id>
+			<id>Profesi\u00F3n</id>
 			<valores>
 				<valor>Empresario</valor>
 				<valor>Jardinero</valor>
-				<valor>Mecánico</valor>
-				<valor>Médico</valor>
+				<valor>Mec\u00E1nico</valor>
+				<valor>M\u00E9dico</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Género</id>
+			<id>G\u00E9nero</id>
 			<valores>
 				<valor>Cuentos</valor>
 				<valor>Novela</valor>
-				<valor>Poesía</valor>
+				<valor>Poes\u00EDa</valor>
 				<valor>Teatro</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>El médico no se llama Carlos y no le gusta la poesía</texto>
+			<texto>El m\u00E9dico no se llama Carlos y no le gusta la poes\u00EDa</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Profesión</id-dimension1>
-					<id-valor1>Médico</id-valor1>
+					<id-dimension1>Profesi\u00F3n</id-dimension1>
+					<id-valor1>M\u00E9dico</id-valor1>
 					<id-dimension2>Nombre</id-dimension2>
 					<id-valor2>Carlos</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Profesión</id-dimension1>
-					<id-valor1>Médico</id-valor1>
-					<id-dimension2>Género</id-dimension2>
-					<id-valor2>Poesía</id-valor2>
+					<id-dimension1>Profesi\u00F3n</id-dimension1>
+					<id-valor1>M\u00E9dico</id-valor1>
+					<id-dimension2>G\u00E9nero</id-dimension2>
+					<id-valor2>Poes\u00EDa</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Luis no es médico ni empresario</texto>
+			<texto>Luis no es m\u00E9dico ni empresario</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Luis</id-valor1>
-					<id-dimension2>Profesión</id-dimension2>
-					<id-valor2>Médico</id-valor2>
+					<id-dimension2>Profesi\u00F3n</id-dimension2>
+					<id-valor2>M\u00E9dico</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Luis</id-valor1>
-					<id-dimension2>Profesión</id-dimension2>
+					<id-dimension2>Profesi\u00F3n</id-dimension2>
 					<id-valor2>Empresario</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Al que le gustan los cuentos no es mecánico</texto>
+			<texto>Al que le gustan los cuentos no es mec\u00E1nico</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Género</id-dimension1>
+					<id-dimension1>G\u00E9nero</id-dimension1>
 					<id-valor1>Cuentos</id-valor1>
-					<id-dimension2>Profesión</id-dimension2>
-					<id-valor2>Mecánico</id-valor2>
+					<id-dimension2>Profesi\u00F3n</id-dimension2>
+					<id-valor2>Mec\u00E1nico</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
@@ -90,26 +90,26 @@
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Arturo</id-valor1>
-					<id-dimension2>Profesión</id-dimension2>
+					<id-dimension2>Profesi\u00F3n</id-dimension2>
 					<id-valor2>Jardinero</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Arturo</id-valor1>
-					<id-dimension2>Género</id-dimension2>
+					<id-dimension2>G\u00E9nero</id-dimension2>
 					<id-valor2>Teatro</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Al médico le gustan los cuentos</texto>
+			<texto>Al m\u00E9dico le gustan los cuentos</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Profesión</id-dimension1>
-					<id-valor1>Médico</id-valor1>
-					<id-dimension2>Género</id-dimension2>
+					<id-dimension1>Profesi\u00F3n</id-dimension1>
+					<id-valor1>M\u00E9dico</id-valor1>
+					<id-dimension2>G\u00E9nero</id-dimension2>
 					<id-valor2>Cuentos</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
@@ -119,9 +119,9 @@
 			<texto>Al empresario le encanta la novela</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Profesión</id-dimension1>
+					<id-dimension1>Profesi\u00F3n</id-dimension1>
 					<id-valor1>Empresario</id-valor1>
-					<id-dimension2>Género</id-dimension2>
+					<id-dimension2>G\u00E9nero</id-dimension2>
 					<id-valor2>Novela</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>

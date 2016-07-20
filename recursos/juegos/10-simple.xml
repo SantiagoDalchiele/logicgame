@@ -2,22 +2,22 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>10</id>
 	<titulo>Nombres, apellidos y apodos</titulo>
-	<texto>¿Cuál es el apellido y el apodo de cada uno?</texto>
+	<texto>\u00BFCu\u00E1l es el apellido y el apodo de cada uno?</texto>
 	<costo>12</costo>
 	<dimensiones>
 		<dimension>
 			<id>Nombre</id>
 			<valores>
 				<valor>Juan</valor>
-				<valor>José</valor>
+				<valor>Jos\u00E9</valor>
 				<valor>Francisco</valor>
 			</valores>
 		</dimension>
 		<dimension>
 			<id>Apellido</id>
 			<valores>
-				<valor>Pérez</valor>
-				<valor>González</valor>
+				<valor>P\u00E9rez</valor>
+				<valor>Gonz\u00E1lez</valor>
 				<valor>Silva</valor>
 			</valores>
 		</dimension>
@@ -51,13 +51,13 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El apellido de Francisco es González y no Pérez, y no le dicen Pepe</texto>
+			<texto>El apellido de Francisco es Gonz\u00E1lez y no P\u00E9rez, y no le dicen Pepe</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Francisco</id-valor1>
 					<id-dimension2>Apellido</id-dimension2>
-					<id-valor2>González</id-valor2>
+					<id-valor2>Gonz\u00E1lez</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>

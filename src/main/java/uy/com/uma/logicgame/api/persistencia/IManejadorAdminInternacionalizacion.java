@@ -2,6 +2,7 @@ package uy.com.uma.logicgame.api.persistencia;
 
 import java.util.Collection;
 
+import uy.com.uma.logicgame.api.bean.DatosIdioma;
 import uy.com.uma.logicgame.api.bean.LiteralBean;
 
 /**
@@ -19,4 +20,7 @@ public interface IManejadorAdminInternacionalizacion {
 	
 	/** Inserta o actualiza varios literales */
 	void setLiterales (Collection<LiteralBean> literales) throws PersistenciaException;
+	
+	/** Retorna la colección de idiomas persistidos en la base de datos */
+	Collection<DatosIdioma> getIdiomas() throws PersistenciaException;
 }

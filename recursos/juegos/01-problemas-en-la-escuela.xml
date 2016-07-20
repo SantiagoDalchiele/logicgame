@@ -25,7 +25,7 @@
 			<id>Estaba</id>
 			<valores>
 				<valor>Patio</valor>
-				<valor>Baño</valor>
+				<valor>Ba\u00F1o</valor>
 				<valor>Aula</valor>
 			</valores>
 		</dimension>
@@ -40,11 +40,11 @@
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Todo comenzó porque hubo roturas en el baño</texto>
+			<texto>Todo comenz\u00F3 porque hubo roturas en el ba\u00F1o</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Estaba</id-dimension1>
-					<id-valor1>Baño</id-valor1>
+					<id-valor1>Ba\u00F1o</id-valor1>
 					<id-dimension2>Que hizo</id-dimension2>
 					<id-valor2>Rompio</id-valor2>
 					<afirma-niega>true</afirma-niega>
@@ -83,7 +83,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>"Nela" recibió un reto del preceptor por estar dibujando en su mesa corazones</texto>
+			<texto>"Nela" recibi\u00F3 un reto del preceptor por estar dibujando en su mesa corazones</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Apodo</id-dimension1>
@@ -109,7 +109,7 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Una profesora comentó que en una evaluación de Daniela estaba escrito varias veces el sobrenombre "Nela &amp; Ricardo" / "Richard &amp; Daniela"</texto>
+			<texto>Una profesora coment\u00F3 que en una evaluaci\u00F3n de Daniela estaba escrito varias veces el sobrenombre "Nela &amp; Ricardo" / "Richard &amp; Daniela"</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>

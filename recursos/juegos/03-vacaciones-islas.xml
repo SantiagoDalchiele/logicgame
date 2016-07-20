@@ -2,7 +2,7 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>3</id>
 	<titulo>Vacaciones en las islas</titulo>
-	<texto>Descubre a que isla viajará cada una de las 4 amigas, en que compañía aérea y cuantos días durará su estadía</texto>
+	<texto>Descubre a que isla viajar\u00E1 cada una de las 4 amigas, en que compa\u00F1\u00EDa a\u00E9rea y cuantos d\u00EDas durar\u00E1 su estad\u00EDa</texto>
 	<costo>156</costo>
 	<dimensiones>
 		<dimension>
@@ -11,7 +11,7 @@
 				<valor>Carolina</valor>
 				<valor>Diana</valor>
 				<valor>Luisa</valor>
-				<valor>María</valor>
+				<valor>Mar\u00EDa</valor>
 			</valores>
 		</dimension>
 		<dimension>
@@ -24,7 +24,7 @@
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Compañia</id>
+			<id>Compa\u00F1ia</id>
 			<valores>
 				<valor>Air France</valor>
 				<valor>Iberia</valor>
@@ -33,7 +33,7 @@
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Días</id>
+			<id>D\u00EDas</id>
 			<valores>
 				<valor>7</valor>
 				<valor>10</valor>
@@ -56,22 +56,22 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La que va a volar con Sabena pasará siete días en su isla elegida</texto>
+			<texto>La que va a volar con Sabena pasar\u00E1 siete d\u00EDas en su isla elegida</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compañia</id-dimension1>
+					<id-dimension1>Compa\u00F1ia</id-dimension1>
 					<id-valor1>Sabena</id-valor1>
-					<id-dimension2>Días</id-dimension2>
+					<id-dimension2>D\u00EDas</id-dimension2>
 					<id-valor2>7</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Lufthansa es la compañía elegida por la que viajará a Tenerife</texto>
+			<texto>Lufthansa es la compa\u00F1\u00EDa elegida por la que viajar\u00E1 a Tenerife</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compañia</id-dimension1>
+					<id-dimension1>Compa\u00F1ia</id-dimension1>
 					<id-valor1>Lufthansa</id-valor1>
 					<id-dimension2>Isla</id-dimension2>
 					<id-valor2>Tenerife</id-valor2>
@@ -80,43 +80,43 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien volará con Air France cuenta con 15 días de descanso</texto>
+			<texto>Quien volar\u00E1 con Air France cuenta con 15 d\u00EDas de descanso</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compañia</id-dimension1>
+					<id-dimension1>Compa\u00F1ia</id-dimension1>
 					<id-valor1>Air France</id-valor1>
-					<id-dimension2>Días</id-dimension2>
+					<id-dimension2>D\u00EDas</id-dimension2>
 					<id-valor2>15</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Carolina se tomará diez días de relax</texto>
+			<texto>Carolina se tomar\u00E1 diez d\u00EDas de relax</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
 					<id-valor1>Carolina</id-valor1>
-					<id-dimension2>Días</id-dimension2>
+					<id-dimension2>D\u00EDas</id-dimension2>
 					<id-valor2>10</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien viajará con Iberia se ha reservado más días que quien viajará a Mallorca</texto>
+			<texto>Quien viajar\u00E1 con Iberia se ha reservado m\u00E1s d\u00EDas que quien viajar\u00E1 a Mallorca</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compañia</id-dimension1>
+					<id-dimension1>Compa\u00F1ia</id-dimension1>
 					<id-valor1>Iberia</id-valor1>
-					<id-dimension2>Días</id-dimension2>
+					<id-dimension2>D\u00EDas</id-dimension2>
 					<id-valor2>7</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Isla</id-dimension1>
 					<id-valor1>Mallorca</id-valor1>
-					<id-dimension2>Días</id-dimension2>
+					<id-dimension2>D\u00EDas</id-dimension2>
 					<id-valor2>15</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
@@ -135,19 +135,19 @@
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>María (que no visitará Tenerife) tiene programados 14 días de ocio</texto>
+			<texto>Mar\u00EDa (que no visitar\u00E1 Tenerife) tiene programados 14 d\u00EDas de ocio</texto>
 			<pistas>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>María</id-valor1>
+					<id-valor1>Mar\u00EDa</id-valor1>
 					<id-dimension2>Isla</id-dimension2>
 					<id-valor2>Tenerife</id-valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
 					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>María</id-valor1>
-					<id-dimension2>Días</id-dimension2>
+					<id-valor1>Mar\u00EDa</id-valor1>
+					<id-dimension2>D\u00EDas</id-dimension2>
 					<id-valor2>14</id-valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
