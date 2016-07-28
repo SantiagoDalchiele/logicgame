@@ -1,5 +1,8 @@
 package uy.com.uma.logicgame.api.persistencia;
 
+import java.util.Collection;
+
+import uy.com.uma.logicgame.api.bean.JuegoDO;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
 
 /**
@@ -17,6 +20,9 @@ public interface IManejadorJuego {
 	
 	/** Retorna un juego dado su identificador */
 	Juego obtener (int id, String idioma) throws PersistenciaException;
+	
+	/** Retorna los juegos persistidos en la base de datos, según el idioma setea la definición del mismo */
+	Collection<JuegoDO> getJuegos (String idioma) throws PersistenciaException;
 	
 	/** Persiste (inserta) un juego en la base de datos con el idioma por defecto del Locale */
 	void persistir (Juego juego) throws PersistenciaException;

@@ -14,7 +14,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import uy.com.uma.logicgame.api.bean.DatosUsuario;
+import uy.com.uma.logicgame.api.bean.RutaDO;
+import uy.com.uma.logicgame.api.bean.UsuarioDO;
 import uy.com.uma.logicgame.api.conf.ConfiguracionLoadHelper;
 import uy.com.uma.logicgame.api.persistencia.IManejadorSeguridad;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
@@ -258,7 +259,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad, IConstantesValid
 	 * Retorna datos del usuario 
 	 */
 	@Override
-	public DatosUsuario getDatosUsuario(String idUsuario) throws PersistenciaException {
+	public UsuarioDO getDatosUsuario(String idUsuario) throws PersistenciaException {
 		UtilValidacionParametros.validarIdUsuario(idUsuario);
 		Session session = sessions.openSession();
 		
@@ -356,12 +357,12 @@ public class ManejadorSeguridad implements IManejadorSeguridad, IConstantesValid
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public Collection<DatosUsuario> getRanking(String idUsuario, int cant) throws PersistenciaException {
+	public Collection<UsuarioDO> getRanking(String idUsuario, int cant) throws PersistenciaException {
 		UtilValidacionParametros.validarIdUsuario(idUsuario);
 		Session session = sessions.openSession();
 		
 		try {
-			ArrayList<DatosUsuario> ret = new ArrayList<DatosUsuario>();
+			ArrayList<UsuarioDO> ret = new ArrayList<UsuarioDO>();
 			boolean incluyeUsuario = false;
 			Usuario usuario = getUsuario(session, idUsuario);
 			Query sel = session.createQuery("FROM Usuario WHERE ruta = :rutaId ORDER BY nivel DESC");
@@ -431,7 +432,53 @@ public class ManejadorSeguridad implements IManejadorSeguridad, IConstantesValid
 		}
 	}
 
+	
+	
+	/** 
+	 * Retorna todos los usuarios del sistema ordenados por id 
+	 */
+	@Override
+	public Collection<UsuarioDO> getUsuarios() throws PersistenciaException {
+		log.debug("Obteniendo todos los usuarios del sistema");
+		Collection<UsuarioDO> col = new ArrayList<UsuarioDO>();
+		Session session = sessions.openSession();
+		
+		try {
+			Query query = session.createQuery("FROM " + Usuario.class.getName() + " ORDER BY id");
+			
+			for (Object o : query.list())
+				col.add(Usuario.getDatosUsuario((Usuario) o));
+			
+			return col;
+		} finally {
+			UtilHibernate.closeSession(session);
+		}
+	}
+	
+	
+	
+	/** 
+	 * Retorna las rutas persistidas en la base de datos (cada ruta con su nivel y su id de juego) 
+	 */
+	@Override
+	public Collection<RutaDO> getRutas() throws PersistenciaException {
+		log.debug("Obteniendo todas la rutas del sistema");
+		Collection<RutaDO> col = new ArrayList<RutaDO>();		
+		Session session = sessions.openSession();
+		
+		try {
+			Query query = session.createQuery("FROM " + Ruta.class.getName() + " ORDER BY id");
+			
+			for (Object o : query.list())
+				col.add(Ruta.getRuta((Ruta) o));
+			
+			return col;
+		} finally {
+			UtilHibernate.closeSession(session);
+		}
+	}
 
+	
 	
 	/**
 	 * Obtiene el usuario dado su identificador

@@ -25,7 +25,7 @@ import uy.com.uma.comun.util.UtilFormato;
 import uy.com.uma.comun.util.UtilIO;
 import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.LogicGameException;
-import uy.com.uma.logicgame.api.bean.LiteralBean;
+import uy.com.uma.logicgame.api.bean.LiteralDO;
 import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.persistencia.ICargadorRecursos;
 import uy.com.uma.logicgame.api.persistencia.IManejadorAdminInternacionalizacion;
@@ -243,12 +243,12 @@ public class CargadorRecursos implements ICargadorRecursos {
 			final String contenido = literales.get(arch);
 			BufferedReader br = new BufferedReader(new StringReader(contenido));
 			String line;
-			Collection<LiteralBean> literales = new ArrayList<LiteralBean>();
+			Collection<LiteralDO> literales = new ArrayList<LiteralDO>();
 			log.info("Procesando el archivo: " + arch);
 			
 			while (br.ready() && ((line = br.readLine()) != null)) {
 				final String [] datos = line.split(SEP_CSV);
-				literales.add(new LiteralBean(Long.parseLong(datos[0]), datos[1], datos[2]));
+				literales.add(new LiteralDO(Long.parseLong(datos[0]), datos[1], datos[2]));
 			}			
 			
 			mai.setLiterales(literales);
@@ -270,12 +270,6 @@ public class CargadorRecursos implements ICargadorRecursos {
 			log.info("Procesando el archivo: " + arch);
 			final String contenido = juegos.get(arch);
 			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(new StringReader(contenido));
-			
-			if (mj.existe(juego.getId().intValue())) {
-				log.warn("Borrando la definición anterior del juego " + juego.getId());
-				mj.borrar(juego.getId().intValue());
-			}
-			
 			mj.persistir(juego, idioma);
 			mj.actualizarRedundancias(juego.getId().intValue());
 			log.info(arch + " procesado OK");

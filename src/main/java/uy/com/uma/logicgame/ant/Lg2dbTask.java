@@ -95,11 +95,6 @@ public class Lg2dbTask extends LgAbstractTask {
 		if (existe && (!overwrite))
 			log(Messages.getString("Lg2dbTask.error_id_existente") + juego.getId(), Project.MSG_ERR); //$NON-NLS-1$
 		else {
-			if (existe) {
-				log(Messages.getString("Lg2dbTask.warn_id_existente"), Project.MSG_WARN); //$NON-NLS-1$
-				mj.borrar(juego.getId().intValue());
-			}
-			
 			mj.persistir(juego);
 			mj.actualizarRedundancias(juego.getId().intValue());
 			files.add(file);

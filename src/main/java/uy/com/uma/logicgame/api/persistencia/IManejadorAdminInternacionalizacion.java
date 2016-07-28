@@ -2,8 +2,8 @@ package uy.com.uma.logicgame.api.persistencia;
 
 import java.util.Collection;
 
-import uy.com.uma.logicgame.api.bean.DatosIdioma;
-import uy.com.uma.logicgame.api.bean.LiteralBean;
+import uy.com.uma.logicgame.api.bean.IdiomaDO;
+import uy.com.uma.logicgame.api.bean.LiteralDO;
 
 /**
  * Metodos para la administración de la internacionalización
@@ -19,8 +19,8 @@ public interface IManejadorAdminInternacionalizacion {
 	void setLiteral (long id, String idioma, String texto) throws PersistenciaException;
 	
 	/** Inserta o actualiza varios literales */
-	void setLiterales (Collection<LiteralBean> literales) throws PersistenciaException;
+	void setLiterales (Collection<LiteralDO> literales) throws PersistenciaException;
 	
 	/** Retorna la colección de idiomas persistidos en la base de datos */
-	Collection<DatosIdioma> getIdiomas() throws PersistenciaException;
+	Collection<IdiomaDO> getIdiomas() throws PersistenciaException;
 }

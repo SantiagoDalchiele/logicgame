@@ -11,6 +11,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
+import uy.com.uma.logicgame.api.bean.JuegoDO;
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
+import uy.com.uma.logicgame.api.persistencia.IManejadorInternacionalizacion;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaFactory;
 import uy.com.uma.logicgame.persistencia.seguridad.Ruta;
 
 /**
@@ -59,6 +64,35 @@ public class Juego {
 	@OneToMany(mappedBy="juego", cascade=CascadeType.ALL)
 	private List<Ruta> rutas = new ArrayList<Ruta>();
 
+	
+	
+	
+	/**
+	 * Retorna los datos del juego en una clase "liviana"
+	 */
+	public static JuegoDO getJuego (String idioma, Juego j) throws PersistenciaException, InstantiationException, IllegalAccessException, ClassNotFoundException, ConfiguracionException {
+		IManejadorInternacionalizacion mi = PersistenciaFactory.getInstancia().getManejadorInternacionalizacion();
+		JuegoDO ret = new JuegoDO();
+		ret.setCantDims(j.getCantDims());
+		ret.setCantValores(j.getCantValores());
+		ret.setCosto(j.getCosto());
+		ret.setId(j.getId());
+		ret.setSolucion(j.getSolucion());
+		ret.setTexto(mi.getTexto(idioma, j.getTexto()));
+		ret.setTitulo(mi.getTexto(idioma, j.getTitulo()));
+		
+		for (JuegoXIdioma ji : j.getJuegosXIdioma()) {
+			ret.getIdiomas().add(ji.getId().getIdioma());
+			
+			if (ji.getId().getIdioma().equalsIgnoreCase(idioma))
+				ret.setDefinicion(ji.getDefJuego());
+			else if (ret.getDefinicion() == null)
+				ret.setDefinicion(ji.getDefJuego());
+		}
+		
+		return ret;
+	}
+	
 	
 	
 	public Integer getId() {

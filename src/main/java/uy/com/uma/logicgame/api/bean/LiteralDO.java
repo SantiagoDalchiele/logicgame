@@ -5,7 +5,7 @@ package uy.com.uma.logicgame.api.bean;
  *
  * @author Santiago Dalchiele
  */
-public class LiteralBean {
+public class LiteralDO {
 
 	private long id;
 	private String idioma;
@@ -13,10 +13,10 @@ public class LiteralBean {
 	
 	
 	
-	public LiteralBean() {		
+	public LiteralDO() {		
 	}	
 	
-	public LiteralBean(long id, String idioma, String texto) {
+	public LiteralDO(long id, String idioma, String texto) {
 		super();
 		this.id = id;
 		this.idioma = idioma;

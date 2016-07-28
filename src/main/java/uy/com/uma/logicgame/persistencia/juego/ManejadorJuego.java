@@ -1,6 +1,8 @@
 package uy.com.uma.logicgame.persistencia.juego;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,16 +10,19 @@ import javax.persistence.PersistenceException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import uy.com.uma.comun.util.UtilString;
+import uy.com.uma.logicgame.api.bean.JuegoDO;
 import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.persistencia.IManejadorInternacionalizacion;
 import uy.com.uma.logicgame.api.persistencia.IManejadorJuego;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaFactory;
+import uy.com.uma.logicgame.api.validacion.UtilValidacionParametros;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension;
@@ -156,6 +161,34 @@ public class ManejadorJuego implements IManejadorJuego {
 	
 	
 	/** 
+	 * Retorna los juegos persistidos en la base de datos, según el idioma setea la definición del mismo 
+	 */
+	public Collection<JuegoDO> getJuegos (String idioma) throws PersistenciaException {
+		UtilValidacionParametros.validarIdIdioma(idioma);
+		log.debug("Obteniendo todos los juegos del sistema");
+		Collection<JuegoDO> col = new ArrayList<JuegoDO>();
+		Session session = sessions.openSession();
+		
+		try {
+			final String table = uy.com.uma.logicgame.persistencia.juego.Juego.class.getName();
+			Query query = session.createQuery("FROM " + table + " j ORDER BY j.id");
+			
+			for (Object o : query.list()) {
+				col.add(uy.com.uma.logicgame.persistencia.juego.Juego.getJuego(idioma, 
+										(uy.com.uma.logicgame.persistencia.juego.Juego) o));				
+			}
+			
+			return col;
+		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | ConfiguracionException e) {
+			throw new PersistenciaException("Error al obtener los juegos del sistema" , e);
+		} finally {
+			UtilHibernate.closeSession(session);
+		}	
+	}
+	
+	
+	
+	/** 
 	 * Persiste (inserta) un juego en la base de datos con el idioma por defecto del Locale 
 	 */
 	public void persistir (Juego juego) throws PersistenciaException {
@@ -165,22 +198,38 @@ public class ManejadorJuego implements IManejadorJuego {
 	
 	
 	/** 
-	 * Persiste (inserta) un juego en la base de datos 
+	 * Persiste (inserta) un juego en la base de datos.  Si ya existe modifica su definición previa
 	 */
 	public void persistir (Juego juego, String idioma) throws PersistenciaException {
 		Session session = sessions.openSession();
 		Transaction tx = null;		
 		log.debug("Persistiendo el juego " + juego.getId() + " " + juego.getTitulo() + " para el idioma [" + idioma + "]");
 		dimensiones.clear();
-		valores.clear();
-		uy.com.uma.logicgame.persistencia.juego.Juego j = new uy.com.uma.logicgame.persistencia.juego.Juego();
-		j.setId(juego.getId().intValue());
-		j.setTitulo(inter.internacionalizar(idioma, juego.getTitulo()));
-		j.setTexto(inter.internacionalizar(idioma, juego.getTexto()));
-		j.setCosto(juego.getCosto().intValue());
+		valores.clear();		
 		
 		try {			
 			tx = session.beginTransaction();
+			uy.com.uma.logicgame.persistencia.juego.Juego j = (uy.com.uma.logicgame.persistencia.juego.Juego) 
+					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(juego.getId().intValue()));
+			
+			if (j == null) {
+				j = new uy.com.uma.logicgame.persistencia.juego.Juego();
+				j.setId(juego.getId().intValue());
+			} else {
+				log.warn("Ya existe el juego " + juego.getId() + " " + juego.getTitulo());			
+			}						
+
+			for (PistaJuego pj : j.getPistas())
+				session.delete(pj);
+
+			for (uy.com.uma.logicgame.persistencia.juego.Dimension d : j.getDimensiones())
+				session.delete(d);			
+			
+			j.setTitulo(inter.internacionalizar(idioma, juego.getTitulo()));
+			j.setTexto(inter.internacionalizar(idioma, juego.getTexto()));
+			j.setCosto(juego.getCosto().intValue());
+			j.getPistas().clear();
+			j.getDimensiones().clear();			
 			session.save(j);
 			persistirDimensiones(tx, session, juego, idioma);
 			persistirPistas(tx, session, juego, idioma);		

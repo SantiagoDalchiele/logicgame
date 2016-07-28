@@ -86,7 +86,7 @@ public abstract class UtilValidacionParametros implements IConstantesValidacionP
 	
 	
 	/**
-	 * Tira excepción si el identificador de usuario no tiene un valor válido
+	 * Tira excepción si el identificador del idioma no tiene un valor válido
 	 */
 	public static void validarIdIdioma (String idIdioma) throws ValidacionParametrosException {
 		if (!esValidoIdIdioma(idIdioma))

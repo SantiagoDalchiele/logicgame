@@ -1,20 +1,7 @@
--subir el timeout de session
-
 -Ver sugerencias de Sabrina
 
--Que la edición de un juego se pueda hacer a pesar de estar en una ruta del usuario
-
--ver el tema del enter por defecto en la administracion en el ingreso de clave
-
--pantalla donde visualizar los juegos cargados en el sistema (tipo trabajar con)
-
--cambiar los identificadores de la UI para poder "incrustar" la pagina web en otra, usar algún prefijo tipo "lg."
-	
--Mejorar la interface de administración
-	hacer el upload con javascript?
-	visualizar las cosas de forma mas coqueta
-	
 -Repensar el tema de la internacionalización, si no incluirla dentro del xsd del juego y que cada literal tenga asociado un idioma
+	validar que el xml sea consistente, osea si tiene un literal para un idioma, tiene que tenerlos para todos
 
 -Usar cache para las hojas de estilos levantadas en el web-server (http://www.ehcache.org/)
 
@@ -22,8 +9,6 @@
 	https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet
 
 -Poder visualizar TODAS las pistas en un panel por encima o al costado
-
--Probar en casa la instalación de logic-game y su administracion
 
 -Seguridad		
 	Controles de abuso de uso de servicios (ataques)

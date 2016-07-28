@@ -11,8 +11,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import uy.com.uma.comun.util.UtilString;
-import uy.com.uma.logicgame.api.bean.DatosIdioma;
-import uy.com.uma.logicgame.api.bean.LiteralBean;
+import uy.com.uma.logicgame.api.bean.IdiomaDO;
+import uy.com.uma.logicgame.api.bean.LiteralDO;
 import uy.com.uma.logicgame.api.persistencia.IManejadorAdminInternacionalizacion;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
@@ -98,14 +98,14 @@ public class ManejadorAdminInternacionalizacion implements IManejadorAdminIntern
 	 * Inserta o actualiza varios literales 
 	 */
 	@Override
-	public void setLiterales (Collection<LiteralBean> literales) throws PersistenciaException {
+	public void setLiterales (Collection<LiteralDO> literales) throws PersistenciaException {
 		Session session = sessions.openSession();
 		Transaction tx = null;
 		
 		try {
 			tx = session.beginTransaction();
 			
-			for (LiteralBean litbean : literales) {
+			for (LiteralDO litbean : literales) {
 				Idioma idioma = (Idioma) session.get(Idioma.class, litbean.getIdioma());
 				LiteralPK pk = new LiteralPK(litbean.getId(), idioma);
 				Literal lit = (Literal) session.get(Literal.class, pk);
@@ -133,16 +133,16 @@ public class ManejadorAdminInternacionalizacion implements IManejadorAdminIntern
 	 * Retorna la colección de idiomas persistidos en la base de datos 
 	 */
 	@Override
-	public Collection<DatosIdioma> getIdiomas() throws PersistenciaException {
+	public Collection<IdiomaDO> getIdiomas() throws PersistenciaException {
 		log.debug("Obteniendo los idiomas del sistema");
-		Collection<DatosIdioma> col = new ArrayList<DatosIdioma>();
+		Collection<IdiomaDO> col = new ArrayList<IdiomaDO>();
 		Session session = sessions.openSession();
 		
 		try {		
 			Query query = session.createQuery("FROM " + Idioma.class.getName());
 			
 			for (Object o : query.list()) {			
-				DatosIdioma di = Idioma.getDatos((Idioma) o); 
+				IdiomaDO di = Idioma.getDatos((Idioma) o); 
 				col.add(di);
 				log.debug("Procesando el idioma id=[" + di.getId() + "], nombre=[" + di.getNombre() + "], icono=[" + di.getIcono() + "]");
 			}

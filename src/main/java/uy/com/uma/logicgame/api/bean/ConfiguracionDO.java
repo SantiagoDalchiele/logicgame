@@ -8,23 +8,23 @@ import java.util.Collection;
  * 
  * @author Santiago Dalchiele
  */
-public class DatosConfiguracion {
+public class ConfiguracionDO {
 
-	private DatosUsuario datosUsuario;
-	private Collection<DatosIdioma> idiomas = new ArrayList<DatosIdioma>();
+	private UsuarioDO datosUsuario;
+	private Collection<IdiomaDO> idiomas = new ArrayList<IdiomaDO>();
 	
 	
 	
-	public DatosUsuario getDatosUsuario() {
+	public UsuarioDO getDatosUsuario() {
 		return datosUsuario;
 	}
-	public void setDatosUsuario(DatosUsuario datosUsuario) {
+	public void setDatosUsuario(UsuarioDO datosUsuario) {
 		this.datosUsuario = datosUsuario;
 	}
-	public Collection<DatosIdioma> getIdiomas() {
+	public Collection<IdiomaDO> getIdiomas() {
 		return idiomas;
 	}
-	public void setIdiomas(Collection<DatosIdioma> idiomas) {
+	public void setIdiomas(Collection<IdiomaDO> idiomas) {
 		this.idiomas = idiomas;
 	}	
 }

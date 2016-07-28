@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import uy.com.uma.logicgame.api.bean.DatosUsuario;
+import uy.com.uma.logicgame.api.bean.UsuarioDO;
 import uy.com.uma.logicgame.persistencia.inter.Idioma;
 
 /**
@@ -55,8 +55,8 @@ class Usuario {
 	/**
 	 * Retorna una clase "liviana" con los datos del usuario
 	 */
-	public static DatosUsuario getDatosUsuario(Usuario usuario) {
-		DatosUsuario du = new DatosUsuario();
+	public static UsuarioDO getDatosUsuario(Usuario usuario) {
+		UsuarioDO du = new UsuarioDO();
 		du.setAlias (usuario.getAlias());
 		du.setIdioma (usuario.getIdioma().getId());
 		du.setIdJuego (usuario.getRutaNivel().getJuego().getId());
@@ -64,6 +64,8 @@ class Usuario {
 		du.setLogeado (usuario.getLogeado());
 		du.setNivel (usuario.getRutaNivel().getId().getNivel());
 		du.setEstado (usuario.getEstado());
+		du.setCorreo (usuario.getCorreo());
+		du.setRuta (usuario.getRutaNivel().getId().getId());
 		return du;
 	}
 	

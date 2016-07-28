@@ -2,7 +2,8 @@ package uy.com.uma.logicgame.api.persistencia;
 
 import java.util.Collection;
 
-import uy.com.uma.logicgame.api.bean.DatosUsuario;
+import uy.com.uma.logicgame.api.bean.RutaDO;
+import uy.com.uma.logicgame.api.bean.UsuarioDO;
 
 /**
  * Metodos a implementar por el manejador de la seguridad
@@ -39,7 +40,7 @@ public interface IManejadorSeguridad {
 	short registro (String idioma, String idUsuario, String correo, String clave) throws PersistenciaException;
 	
 	/** Retorna datos del usuario */
-	DatosUsuario getDatosUsuario (String idUsuario) throws PersistenciaException;
+	UsuarioDO getDatosUsuario (String idUsuario) throws PersistenciaException;
 	
 	/** Retorna el idioma del usuario */
 	String getIdioma (String idUsuario) throws PersistenciaException;
@@ -51,11 +52,17 @@ public interface IManejadorSeguridad {
 	void incNivel (String idUsuario) throws PersistenciaException;
 	
 	/** Retorna el ranking de los primeros N usuarios (incluidos el pasado como parámetro) para la ruta del usuario */
-	Collection<DatosUsuario> getRanking (String idUsuario, int cant) throws PersistenciaException;
+	Collection<UsuarioDO> getRanking (String idUsuario, int cant) throws PersistenciaException;
 	
 	/** Setea el estado del juego actual del usuario */
 	void setEstado (String idUsuario, String estado) throws PersistenciaException;	
 	
 	/** Retorna la hoja de estilos de la ruta + nivel actual del usuario, si es que tiene */
 	String getRutaHojaEstilo (String idUsuario) throws PersistenciaException;
+	
+	/** Retorna todos los usuarios del sistema ordenados por id */
+	Collection<UsuarioDO> getUsuarios() throws PersistenciaException;
+	
+	/** Retorna las rutas persistidas en la base de datos (cada ruta con su nivel y su id de juego) */
+	Collection<RutaDO> getRutas() throws PersistenciaException;	
 }

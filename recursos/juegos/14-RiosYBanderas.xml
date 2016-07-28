@@ -2,7 +2,7 @@
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>14</id>
 	<titulo>R\u00EDos y banderas</titulo>
-	<texto>Seguramente que ya sabes muchas cosas sobre pa\u00EDses de Hispanoam\u00E9rica, pero siempre se puede aprender m\u00E1s. En el juego de hoy tienes que relacionar los r\u00EDos Loa, Negro, Pilcomayo y Guayas con sus pa\u00EDses respectivos (Paraguay, Chile, Ecuador y Uruguay), as\u00ED como con	los s\u00EDmbolos de sus banderas (sol, estrella, p\u00E1jaro y s\u00EDmbolo circular).</texto>
+	<texto>Seguramente que ya sabes muchas cosas sobre pa\u00EDses de Hispanoam\u00E9rica, pero siempre se puede aprender m\u00E1s. En el juego de hoy tienes que relacionar los r\u00EDos Loa, Negro, Pilcomayo y Guayas con sus pa\u00EDses respectivos (Paraguay, Chile, Ecuador y Uruguay), as\u00ED como con los s\u00EDmbolos de sus banderas (sol, estrella, p\u00E1jaro y s\u00EDmbolo circular).</texto>
 	<costo>20</costo>
 	<dimensiones>
 		<dimension>

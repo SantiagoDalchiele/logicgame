@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import uy.com.uma.comun.util.UtilString;
-import uy.com.uma.logicgame.api.bean.DatosIdioma;
+import uy.com.uma.logicgame.api.bean.IdiomaDO;
 
 /**
  * Representa la tabla idiomas
@@ -43,8 +43,8 @@ public class Idioma {
 	/**
 	 * Retorna una clase "liviana" con los datos del idioma
 	 */
-	public static DatosIdioma getDatos (Idioma idioma) {
-		DatosIdioma di = new DatosIdioma();
+	public static IdiomaDO getDatos (Idioma idioma) {
+		IdiomaDO di = new IdiomaDO();
 		di.setId(idioma.getId());
 		di.setNombre(UtilString.quitarLetrasEspeciales(idioma.getNombre()));
 		di.setIcono(idioma.getIcono());

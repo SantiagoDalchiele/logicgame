@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import uy.com.uma.logicgame.api.bean.RutaDO;
 import uy.com.uma.logicgame.persistencia.juego.Juego;
 
 /**
@@ -29,6 +30,18 @@ public class Ruta {
 	private String hojaEstilo;
 
 	
+	
+	/**
+	 * Retorna los datos de la ruta en una clase "liviana"
+	 */
+	public static RutaDO getRuta (Ruta r) {
+		RutaDO ret = new RutaDO();
+		ret.setId(r.getId().getId());
+		ret.setNivel(r.getId().getNivel());
+		ret.setIdJuego(r.getJuego().getId());
+		ret.setHojaEstilo(r.getHojaEstilo());
+		return ret;		
+	}
 	
 	public RutaPK getId() {
 		return id;

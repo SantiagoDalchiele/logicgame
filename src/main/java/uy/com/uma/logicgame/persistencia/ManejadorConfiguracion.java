@@ -4,7 +4,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import uy.com.uma.logicgame.api.bean.DatosConfiguracion;
+import uy.com.uma.logicgame.api.bean.ConfiguracionDO;
 import uy.com.uma.logicgame.api.persistencia.IManejadorConfiguracion;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.api.validacion.UtilValidacionParametros;
@@ -26,12 +26,12 @@ public class ManejadorConfiguracion implements IManejadorConfiguracion {
 	/**
 	 * Resuelve en un único metodo la logica de los datos del usuario y los idiomas persistidos en la base de datos
 	 */
-	public DatosConfiguracion getDatosConfiguracion (String idUsuario) throws PersistenciaException {
+	public ConfiguracionDO getDatosConfiguracion (String idUsuario) throws PersistenciaException {
 		UtilValidacionParametros.validarIdUsuario(idUsuario);
 		Session session = sessions.openSession();
 		
 		try {
-			DatosConfiguracion dc = new DatosConfiguracion();
+			ConfiguracionDO dc = new ConfiguracionDO();
 			idUsuario = idUsuario.toLowerCase();
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);
 				
