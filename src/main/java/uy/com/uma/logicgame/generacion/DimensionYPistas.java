@@ -28,6 +28,12 @@ class DimensionYPistas {
 	public static String key (String idDim, String idVal) {
 		return idDim + "|" + idVal;
 	}
+	
+	public static String key (short nroDim, short nroVal) {
+		return nroDim + "|" + nroVal;
+	}
+	
+	
 	public String getId() {
 		return id;
 	}

@@ -15,7 +15,12 @@ public interface IManejadorInternacionalizacion {
 	 * @param idioma identificador del idioma (2 letras)
 	 * @param texto texto a internacionalizar
 	 */
-	long internacionalizar (String idioma, String texto) throws PersistenciaException;
+	long internacionalizar (String idioma, String texto) throws PersistenciaException;	
+	
+	/**
+	 * Crea un registro para el idioma, identificador y texto en la internacionalización (tabla literales, clase Literal)
+	 */
+	void internacionalizar (long id, String idioma, String texto) throws PersistenciaException;
 	
 
 	/** Dados el idioma y el identificador retorna el texto */
@@ -23,4 +28,7 @@ public interface IManejadorInternacionalizacion {
 	
 	/** Retorna los identificadores de todos los idiomas registrados en el sistema */
 	Collection<String> getIdsIdiomas() throws PersistenciaException;
+	
+	/** Retorna los idiomas para los cuales esta definido el literal cuyo identificador se pasa como parametro */
+	String [] getIdiomasXId (long id) throws PersistenciaException;
 }

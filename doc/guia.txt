@@ -1,7 +1,9 @@
 -Ver sugerencias de Sabrina
 
--Repensar el tema de la internacionalización, si no incluirla dentro del xsd del juego y que cada literal tenga asociado un idioma
-	validar que el xml sea consistente, osea si tiene un literal para un idioma, tiene que tenerlos para todos
+-internacionalización, Probar:	
+	resolverJuego
+	generarJuego
+-obtener todos los juegos con la nueva estructura del xml
 
 -Usar cache para las hojas de estilos levantadas en el web-server (http://www.ehcache.org/)
 
@@ -69,6 +71,8 @@
 	ionicframework.com
 	
 -Node JS, MEAN
+
+-JSF
 	
 -TomEE, tomcat + J2EE
 

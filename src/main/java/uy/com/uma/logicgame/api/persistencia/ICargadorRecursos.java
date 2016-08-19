@@ -18,9 +18,6 @@ public interface ICargadorRecursos {
 	/** Setea el input stream con el archivo .zip */
 	void setInputStream (InputStream is) throws IOException;
 	
-	/** Setea el idioma */
-	void setIdioma(String idioma);
-	
 	/** Carga en la base de datos los datos incluidos dentro del zip */
 	void cargar() throws LogicGameException;
 	

@@ -26,6 +26,7 @@ public class MatrizDecision implements IValoresCuadroDecision {
 	private List<Dimension> dimsXCols = new ArrayList<Dimension>();
 	private CuadroDecision [][] matriz;
 	private int cantValores = 0;
+	private Map<Short, Dimension> dimensionesXNro = new HashMap<Short, Dimension>();
 	
 	
 	
@@ -38,6 +39,7 @@ public class MatrizDecision implements IValoresCuadroDecision {
 		for (Dimension d : dimsXFila) {
 			dimensionesXFila.put(d.getId(), d);
 			this.dimsXFila.add(d);
+			this.dimensionesXNro.put(d.getNro(), d);
 			
 			if (this.cantValores == 0)
 				this.cantValores = d.getValores().size();
@@ -46,6 +48,9 @@ public class MatrizDecision implements IValoresCuadroDecision {
 		for (Dimension d : dimsXCols) {
 			dimensionesXCols.put(d.getId(), d);
 			this.dimsXCols.add(d);
+			
+			if (! this.dimensionesXNro.containsKey(d.getNro()))
+				this.dimensionesXNro.put(d.getNro(), d);
 		}
 	
 		int cantCols = dimsXFila.size();
@@ -72,6 +77,9 @@ public class MatrizDecision implements IValoresCuadroDecision {
 	}
 	public Dimension getPrimerDimensionXCols() {
 		return dimsXCols.get(0);
+	}
+	public Dimension getDimensionXNro (short nro) {
+		return dimensionesXNro.get(nro);
 	}
 
 	

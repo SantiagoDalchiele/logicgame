@@ -55,9 +55,6 @@ public class CargadorRecursos implements ICargadorRecursos {
 	private static final String SEP_CSV = ";";
 	
 	
-	/** Idioma usado para persistir los juegos */
-	private String idioma = "es";
-	
 	/** Archivos .csv con 2 columnas con datos de idioms */
 	private Map<String, String> idiomas = new HashMap<String, String>();
 	
@@ -185,15 +182,8 @@ public class CargadorRecursos implements ICargadorRecursos {
 		return archivosProcesados.toArray(new String[]{});
 	}
 	
-	public String getIdioma() {
-		return idioma;
-	}
-	public void setIdioma(String idioma) {
-		this.idioma = idioma;
-	}
 
-
-
+	
 	/**
 	 * Carga en la base de datos los datos incluidos dentro del zip
 	 */
@@ -270,7 +260,7 @@ public class CargadorRecursos implements ICargadorRecursos {
 			log.info("Procesando el archivo: " + arch);
 			final String contenido = juegos.get(arch);
 			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(new StringReader(contenido));
-			mj.persistir(juego, idioma);
+			mj.persistir(juego);
 			mj.actualizarRedundancias(juego.getId().intValue());
 			log.info(arch + " procesado OK");
 			archivosProcesados.add(arch);

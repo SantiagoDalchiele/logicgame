@@ -12,6 +12,7 @@ import org.hibernate.Transaction;
 
 import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.persistencia.IManejadorInternacionalizacion;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
 import uy.com.uma.logicgame.persistencia.UtilHibernate;
 
@@ -45,6 +46,37 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 		return id;
 	}
 
+	
+	/**
+	 * Crea un registro para el idioma, identificador y texto en la internacionalización (tabla literales, clase Literal)
+	 */
+	@Override
+	public void internacionalizar (long id, String idiomaId, String texto) throws PersistenciaException {
+		Session session = sessions.openSession();
+		Transaction tx = null;
+		
+		try {
+			tx = session.beginTransaction();
+			Idioma idioma = (Idioma) session.get(Idioma.class, idiomaId);			
+			LiteralPK pk = new LiteralPK();
+			pk.setId(id);
+			pk.setIdioma(idioma);
+			
+			Literal lit = (Literal) session.get(Literal.class, pk);
+			
+			if (lit == null) {
+				lit = new Literal();
+				lit.setId(pk);
+			}			
+			
+			lit.setTexto(texto);
+			session.save(lit);
+			tx.commit();
+		} finally {
+			UtilHibernate.closeSession(session);
+		}
+	}
+	
 	
 	
 	/** 
@@ -82,7 +114,7 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 		Session session = sessions.openSession();
 		
 		try {
-			Query query = session.createQuery("from " + Idioma.class.getName());
+			Query query = session.createQuery("FROM " + Idioma.class.getName());
 			
 			for (Object o : query.list())
 				ids.add(((Idioma) o).getId());
@@ -91,6 +123,29 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 		}
 		
 		return ids;
+	}
+	
+	
+	
+	/** 
+	 * Retorna los idiomas para los cuales esta definido el literal cuyo identificador se pasa como parametro 
+	 */
+	@Override
+	public String [] getIdiomasXId (long id) throws PersistenciaException {				
+		Session session = sessions.openSession();
+		
+		try {
+			Collection<String> idiomas = new ArrayList<String>();
+			Query query = session.createQuery("FROM " + Literal.class.getName() + " WHERE id.id = :idL");
+			query.setLong("idL", id);
+			
+			for (Object o : query.list())
+				idiomas.add(((Literal) o).getId().getIdioma().getId());
+			
+			return UtilString.col2ArrayOfString(idiomas);
+		} finally {
+			UtilHibernate.closeSession(session);		
+		}
 	}
 	
 	

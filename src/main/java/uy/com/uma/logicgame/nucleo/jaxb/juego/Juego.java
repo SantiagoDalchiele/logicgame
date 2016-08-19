@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2015.08.27 a las 03:36:46 PM UYT 
+// Generado el: 2016.08.18 a las 10:46:59 AM UYT 
 //
 
 
@@ -29,8 +29,8 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}integer"/&gt;
- *         &lt;element name="titulo" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="texto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="titulo" type="{}literal"/&gt;
+ *         &lt;element name="texto" type="{}literal"/&gt;
  *         &lt;element name="costo" type="{http://www.w3.org/2001/XMLSchema}integer"/&gt;
  *         &lt;element name="dimensiones"&gt;
  *           &lt;complexType&gt;
@@ -42,13 +42,25 @@ import javax.xml.bind.annotation.XmlType;
  *                       &lt;complexContent&gt;
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                           &lt;sequence&gt;
- *                             &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+ *                             &lt;element name="id" type="{}literal"/&gt;
  *                             &lt;element name="valores"&gt;
  *                               &lt;complexType&gt;
  *                                 &lt;complexContent&gt;
  *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                                     &lt;sequence maxOccurs="unbounded"&gt;
- *                                       &lt;element name="valor" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                                       &lt;element name="valor"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+ *                                                 &lt;element name="id" type="{}literal"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
  *                                     &lt;/sequence&gt;
  *                                   &lt;/restriction&gt;
  *                                 &lt;/complexContent&gt;
@@ -74,7 +86,7 @@ import javax.xml.bind.annotation.XmlType;
  *                       &lt;complexContent&gt;
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                           &lt;sequence&gt;
- *                             &lt;element name="texto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="texto" type="{}literal"/&gt;
  *                             &lt;element name="pistas"&gt;
  *                               &lt;complexType&gt;
  *                                 &lt;complexContent&gt;
@@ -85,10 +97,10 @@ import javax.xml.bind.annotation.XmlType;
  *                                           &lt;complexContent&gt;
  *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                                               &lt;sequence&gt;
- *                                                 &lt;element name="id-dimension1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                                                 &lt;element name="id-valor1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                                                 &lt;element name="id-dimension2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *                                                 &lt;element name="id-valor2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                                                 &lt;element name="dimension1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+ *                                                 &lt;element name="valor1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+ *                                                 &lt;element name="dimension2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+ *                                                 &lt;element name="valor2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
  *                                                 &lt;element name="afirma-niega" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *                                               &lt;/sequence&gt;
  *                                             &lt;/restriction&gt;
@@ -133,9 +145,9 @@ public class Juego {
     @XmlElement(required = true)
     protected BigInteger id;
     @XmlElement(required = true)
-    protected String titulo;
+    protected Literal titulo;
     @XmlElement(required = true)
-    protected String texto;
+    protected Literal texto;
     @XmlElement(required = true)
     protected BigInteger costo;
     @XmlElement(required = true)
@@ -172,10 +184,10 @@ public class Juego {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Literal }
      *     
      */
-    public String getTitulo() {
+    public Literal getTitulo() {
         return titulo;
     }
 
@@ -184,10 +196,10 @@ public class Juego {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Literal }
      *     
      */
-    public void setTitulo(String value) {
+    public void setTitulo(Literal value) {
         this.titulo = value;
     }
 
@@ -196,10 +208,10 @@ public class Juego {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Literal }
      *     
      */
-    public String getTexto() {
+    public Literal getTexto() {
         return texto;
     }
 
@@ -208,10 +220,10 @@ public class Juego {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Literal }
      *     
      */
-    public void setTexto(String value) {
+    public void setTexto(Literal value) {
         this.texto = value;
     }
 
@@ -303,13 +315,25 @@ public class Juego {
      *             &lt;complexContent&gt;
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *                 &lt;sequence&gt;
-     *                   &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+     *                   &lt;element name="id" type="{}literal"/&gt;
      *                   &lt;element name="valores"&gt;
      *                     &lt;complexType&gt;
      *                       &lt;complexContent&gt;
      *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *                           &lt;sequence maxOccurs="unbounded"&gt;
-     *                             &lt;element name="valor" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                             &lt;element name="valor"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+     *                                       &lt;element name="id" type="{}literal"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
      *                           &lt;/sequence&gt;
      *                         &lt;/restriction&gt;
      *                       &lt;/complexContent&gt;
@@ -377,13 +401,25 @@ public class Juego {
          *   &lt;complexContent&gt;
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
          *       &lt;sequence&gt;
-         *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+         *         &lt;element name="id" type="{}literal"/&gt;
          *         &lt;element name="valores"&gt;
          *           &lt;complexType&gt;
          *             &lt;complexContent&gt;
          *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
          *                 &lt;sequence maxOccurs="unbounded"&gt;
-         *                   &lt;element name="valor" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *                   &lt;element name="valor"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+         *                             &lt;element name="id" type="{}literal"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
          *                 &lt;/sequence&gt;
          *               &lt;/restriction&gt;
          *             &lt;/complexContent&gt;
@@ -399,25 +435,43 @@ public class Juego {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
+            "nro",
             "id",
             "valores"
         })
         public static class Dimension {
 
+            protected short nro;
             @XmlElement(required = true)
-            protected String id;
+            protected Literal id;
             @XmlElement(required = true)
             protected Juego.Dimensiones.Dimension.Valores valores;
+
+            /**
+             * Obtiene el valor de la propiedad nro.
+             * 
+             */
+            public short getNro() {
+                return nro;
+            }
+
+            /**
+             * Define el valor de la propiedad nro.
+             * 
+             */
+            public void setNro(short value) {
+                this.nro = value;
+            }
 
             /**
              * Obtiene el valor de la propiedad id.
              * 
              * @return
              *     possible object is
-             *     {@link String }
+             *     {@link Literal }
              *     
              */
-            public String getId() {
+            public Literal getId() {
                 return id;
             }
 
@@ -426,10 +480,10 @@ public class Juego {
              * 
              * @param value
              *     allowed object is
-             *     {@link String }
+             *     {@link Literal }
              *     
              */
-            public void setId(String value) {
+            public void setId(Literal value) {
                 this.id = value;
             }
 
@@ -468,7 +522,18 @@ public class Juego {
              *   &lt;complexContent&gt;
              *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
              *       &lt;sequence maxOccurs="unbounded"&gt;
-             *         &lt;element name="valor" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+             *         &lt;element name="valor"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+             *                   &lt;element name="id" type="{}literal"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
              *       &lt;/sequence&gt;
              *     &lt;/restriction&gt;
              *   &lt;/complexContent&gt;
@@ -484,7 +549,7 @@ public class Juego {
             public static class Valores {
 
                 @XmlElement(required = true)
-                protected List<String> valor;
+                protected List<Juego.Dimensiones.Dimension.Valores.Valor> valor;
 
                 /**
                  * Gets the value of the valor property.
@@ -504,15 +569,89 @@ public class Juego {
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
-                 * {@link String }
+                 * {@link Juego.Dimensiones.Dimension.Valores.Valor }
                  * 
                  * 
                  */
-                public List<String> getValor() {
+                public List<Juego.Dimensiones.Dimension.Valores.Valor> getValor() {
                     if (valor == null) {
-                        valor = new ArrayList<String>();
+                        valor = new ArrayList<Juego.Dimensiones.Dimension.Valores.Valor>();
                     }
                     return this.valor;
+                }
+
+
+                /**
+                 * <p>Clase Java para anonymous complex type.
+                 * 
+                 * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+                 * 
+                 * <pre>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="nro" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+                 *         &lt;element name="id" type="{}literal"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * </pre>
+                 * 
+                 * 
+                 */
+                @XmlAccessorType(XmlAccessType.FIELD)
+                @XmlType(name = "", propOrder = {
+                    "nro",
+                    "id"
+                })
+                public static class Valor {
+
+                    protected short nro;
+                    @XmlElement(required = true)
+                    protected Literal id;
+
+                    /**
+                     * Obtiene el valor de la propiedad nro.
+                     * 
+                     */
+                    public short getNro() {
+                        return nro;
+                    }
+
+                    /**
+                     * Define el valor de la propiedad nro.
+                     * 
+                     */
+                    public void setNro(short value) {
+                        this.nro = value;
+                    }
+
+                    /**
+                     * Obtiene el valor de la propiedad id.
+                     * 
+                     * @return
+                     *     possible object is
+                     *     {@link Literal }
+                     *     
+                     */
+                    public Literal getId() {
+                        return id;
+                    }
+
+                    /**
+                     * Define el valor de la propiedad id.
+                     * 
+                     * @param value
+                     *     allowed object is
+                     *     {@link Literal }
+                     *     
+                     */
+                    public void setId(Literal value) {
+                        this.id = value;
+                    }
+
                 }
 
             }
@@ -537,7 +676,7 @@ public class Juego {
      *             &lt;complexContent&gt;
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *                 &lt;sequence&gt;
-     *                   &lt;element name="texto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="texto" type="{}literal"/&gt;
      *                   &lt;element name="pistas"&gt;
      *                     &lt;complexType&gt;
      *                       &lt;complexContent&gt;
@@ -548,10 +687,10 @@ public class Juego {
      *                                 &lt;complexContent&gt;
      *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *                                     &lt;sequence&gt;
-     *                                       &lt;element name="id-dimension1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *                                       &lt;element name="id-valor1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *                                       &lt;element name="id-dimension2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-     *                                       &lt;element name="id-valor2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                                       &lt;element name="dimension1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+     *                                       &lt;element name="valor1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+     *                                       &lt;element name="dimension2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+     *                                       &lt;element name="valor2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
      *                                       &lt;element name="afirma-niega" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
      *                                     &lt;/sequence&gt;
      *                                   &lt;/restriction&gt;
@@ -625,7 +764,7 @@ public class Juego {
          *   &lt;complexContent&gt;
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
          *       &lt;sequence&gt;
-         *         &lt;element name="texto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="texto" type="{}literal"/&gt;
          *         &lt;element name="pistas"&gt;
          *           &lt;complexType&gt;
          *             &lt;complexContent&gt;
@@ -636,10 +775,10 @@ public class Juego {
          *                       &lt;complexContent&gt;
          *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
          *                           &lt;sequence&gt;
-         *                             &lt;element name="id-dimension1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-         *                             &lt;element name="id-valor1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-         *                             &lt;element name="id-dimension2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-         *                             &lt;element name="id-valor2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *                             &lt;element name="dimension1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+         *                             &lt;element name="valor1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+         *                             &lt;element name="dimension2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+         *                             &lt;element name="valor2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
          *                             &lt;element name="afirma-niega" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
          *                           &lt;/sequence&gt;
          *                         &lt;/restriction&gt;
@@ -667,7 +806,7 @@ public class Juego {
         public static class PistaDelJuego {
 
             @XmlElement(required = true)
-            protected String texto;
+            protected Literal texto;
             @XmlElement(required = true)
             protected Juego.PistasDelJuego.PistaDelJuego.Pistas pistas;
 
@@ -676,10 +815,10 @@ public class Juego {
              * 
              * @return
              *     possible object is
-             *     {@link String }
+             *     {@link Literal }
              *     
              */
-            public String getTexto() {
+            public Literal getTexto() {
                 return texto;
             }
 
@@ -688,10 +827,10 @@ public class Juego {
              * 
              * @param value
              *     allowed object is
-             *     {@link String }
+             *     {@link Literal }
              *     
              */
-            public void setTexto(String value) {
+            public void setTexto(Literal value) {
                 this.texto = value;
             }
 
@@ -735,10 +874,10 @@ public class Juego {
              *             &lt;complexContent&gt;
              *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
              *                 &lt;sequence&gt;
-             *                   &lt;element name="id-dimension1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-             *                   &lt;element name="id-valor1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-             *                   &lt;element name="id-dimension2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-             *                   &lt;element name="id-valor2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+             *                   &lt;element name="dimension1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+             *                   &lt;element name="valor1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+             *                   &lt;element name="dimension2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+             *                   &lt;element name="valor2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
              *                   &lt;element name="afirma-niega" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
              *                 &lt;/sequence&gt;
              *               &lt;/restriction&gt;
@@ -802,10 +941,10 @@ public class Juego {
                  *   &lt;complexContent&gt;
                  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
                  *       &lt;sequence&gt;
-                 *         &lt;element name="id-dimension1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-                 *         &lt;element name="id-valor1" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-                 *         &lt;element name="id-dimension2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
-                 *         &lt;element name="id-valor2" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+                 *         &lt;element name="dimension1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+                 *         &lt;element name="valor1" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+                 *         &lt;element name="dimension2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
+                 *         &lt;element name="valor2" type="{http://www.w3.org/2001/XMLSchema}short"/&gt;
                  *         &lt;element name="afirma-niega" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
                  *       &lt;/sequence&gt;
                  *     &lt;/restriction&gt;
@@ -817,119 +956,83 @@ public class Juego {
                  */
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
-                    "idDimension1",
-                    "idValor1",
-                    "idDimension2",
-                    "idValor2",
+                    "dimension1",
+                    "valor1",
+                    "dimension2",
+                    "valor2",
                     "afirmaNiega"
                 })
                 public static class Pista {
 
-                    @XmlElement(name = "id-dimension1", required = true)
-                    protected String idDimension1;
-                    @XmlElement(name = "id-valor1", required = true)
-                    protected String idValor1;
-                    @XmlElement(name = "id-dimension2", required = true)
-                    protected String idDimension2;
-                    @XmlElement(name = "id-valor2", required = true)
-                    protected String idValor2;
+                    protected short dimension1;
+                    protected short valor1;
+                    protected short dimension2;
+                    protected short valor2;
                     @XmlElement(name = "afirma-niega")
                     protected boolean afirmaNiega;
 
                     /**
-                     * Obtiene el valor de la propiedad idDimension1.
+                     * Obtiene el valor de la propiedad dimension1.
                      * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
                      */
-                    public String getIdDimension1() {
-                        return idDimension1;
+                    public short getDimension1() {
+                        return dimension1;
                     }
 
                     /**
-                     * Define el valor de la propiedad idDimension1.
+                     * Define el valor de la propiedad dimension1.
                      * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
                      */
-                    public void setIdDimension1(String value) {
-                        this.idDimension1 = value;
+                    public void setDimension1(short value) {
+                        this.dimension1 = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad idValor1.
+                     * Obtiene el valor de la propiedad valor1.
                      * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
                      */
-                    public String getIdValor1() {
-                        return idValor1;
+                    public short getValor1() {
+                        return valor1;
                     }
 
                     /**
-                     * Define el valor de la propiedad idValor1.
+                     * Define el valor de la propiedad valor1.
                      * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
                      */
-                    public void setIdValor1(String value) {
-                        this.idValor1 = value;
+                    public void setValor1(short value) {
+                        this.valor1 = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad idDimension2.
+                     * Obtiene el valor de la propiedad dimension2.
                      * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
                      */
-                    public String getIdDimension2() {
-                        return idDimension2;
+                    public short getDimension2() {
+                        return dimension2;
                     }
 
                     /**
-                     * Define el valor de la propiedad idDimension2.
+                     * Define el valor de la propiedad dimension2.
                      * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
                      */
-                    public void setIdDimension2(String value) {
-                        this.idDimension2 = value;
+                    public void setDimension2(short value) {
+                        this.dimension2 = value;
                     }
 
                     /**
-                     * Obtiene el valor de la propiedad idValor2.
+                     * Obtiene el valor de la propiedad valor2.
                      * 
-                     * @return
-                     *     possible object is
-                     *     {@link String }
-                     *     
                      */
-                    public String getIdValor2() {
-                        return idValor2;
+                    public short getValor2() {
+                        return valor2;
                     }
 
                     /**
-                     * Define el valor de la propiedad idValor2.
+                     * Define el valor de la propiedad valor2.
                      * 
-                     * @param value
-                     *     allowed object is
-                     *     {@link String }
-                     *     
                      */
-                    public void setIdValor2(String value) {
-                        this.idValor2 = value;
+                    public void setValor2(short value) {
+                        this.valor2 = value;
                     }
 
                     /**

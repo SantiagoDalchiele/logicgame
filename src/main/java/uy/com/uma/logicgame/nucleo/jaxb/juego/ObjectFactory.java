@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2015.08.27 a las 03:36:46 PM UYT 
+// Generado el: 2016.08.18 a las 10:46:59 AM UYT 
 //
 
 
@@ -85,6 +85,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Juego.Dimensiones.Dimension.Valores }
+     * 
+     */
+    public Juego.Dimensiones.Dimension.Valores createJuegoDimensionesDimensionValores() {
+        return new Juego.Dimensiones.Dimension.Valores();
+    }
+
+    /**
+     * Create an instance of {@link Literal }
+     * 
+     */
+    public Literal createLiteral() {
+        return new Literal();
+    }
+
+    /**
      * Create an instance of {@link Juego.PistasDelJuego.PistaDelJuego.Pistas.Pista }
      * 
      */
@@ -93,11 +109,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Juego.Dimensiones.Dimension.Valores }
+     * Create an instance of {@link Juego.Dimensiones.Dimension.Valores.Valor }
      * 
      */
-    public Juego.Dimensiones.Dimension.Valores createJuegoDimensionesDimensionValores() {
-        return new Juego.Dimensiones.Dimension.Valores();
+    public Juego.Dimensiones.Dimension.Valores.Valor createJuegoDimensionesDimensionValoresValor() {
+        return new Juego.Dimensiones.Dimension.Valores.Valor();
+    }
+
+    /**
+     * Create an instance of {@link Literal.Traduccion }
+     * 
+     */
+    public Literal.Traduccion createLiteralTraduccion() {
+        return new Literal.Traduccion();
     }
 
 }

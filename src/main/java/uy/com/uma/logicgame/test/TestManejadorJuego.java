@@ -23,9 +23,11 @@ import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
  * @author Santiago Dalchiele
  */
 public class TestManejadorJuego {
+	
+	private static final String BASE_PATH = "c:/santiago/lg/logicgame/src/main/resources/";
 
 	static {
-		System.setProperty(XmlConfigurationFactory.CONFIGURATION_FILE_PROPERTY, "c:/santiago/git/logicgame/conf/log4j2.xml");
+		System.setProperty(XmlConfigurationFactory.CONFIGURATION_FILE_PROPERTY, BASE_PATH + "log4j2.xml");
 	}
 
 	private static final Logger log = LogManager.getLogger(TestManejadorJuego.class.getName());
@@ -38,7 +40,7 @@ public class TestManejadorJuego {
 		try {			
 			log.info("Inicio de la aplicación");
 			
-			String hibernatePropsFilePath = "c:/santiago/git/logicgame/conf/hibernate.cfg.xml";
+			String hibernatePropsFilePath = BASE_PATH + "hibernate.cfg.xml";
 			File hibernatePropsFile = new File(hibernatePropsFilePath);
 			Configuration configuration = new Configuration(); 
 			configuration.configure(hibernatePropsFile);

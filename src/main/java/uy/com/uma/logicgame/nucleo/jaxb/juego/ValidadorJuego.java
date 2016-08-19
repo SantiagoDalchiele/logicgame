@@ -7,10 +7,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import uy.com.uma.comun.util.UtilCollection;
 import uy.com.uma.comun.util.UtilFormato;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension.Valores.Valor;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego.Pistas.Pista;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.Literal.Traduccion;
 
 /**
  * Valida la consistencia de la clase Juego, todas las dimensiones tienen la misma cantidad de valores, etc
@@ -21,6 +25,12 @@ public class ValidadorJuego {
 
 	/** Mapea las dimensiones por su id con sus valores */
 	private Map<String, Map<String,String>> dims = new HashMap<String, Map<String,String>>();
+	
+	/** Mapea las dimensiones por su nro y sus valores por nro */
+	private Map<Short, Map<Short,Valor>> dimsXNro = new HashMap<Short, Map<Short,Valor>>();
+	
+	/** Enumera los idiomas a los que se traduce cada literal */
+	private Collection<String> idiomas = new ArrayList<String>();
 	
 	
 	
@@ -61,6 +71,7 @@ public class ValidadorJuego {
 		Collection<String> msgs = new ArrayList<String>();
 		
 		dims.clear();
+		dimsXNro.clear();
 		
 		if (juego == null) 
 			msgs.add("Error el juego es nulo");
@@ -77,6 +88,7 @@ public class ValidadorJuego {
 					if (juego.getPistasDelJuego().getPistaDelJuego().size() < 1)
 						msgs.add("Debe definir al menos 1 pista");		
 			
+					validarTraducciones(juego, msgs);
 					validarDimensiones(juego.getDimensiones().getDimension(), msgs);
 					validarPistas(juego.getPistasDelJuego().getPistaDelJuego(), msgs);
 				}
@@ -89,40 +101,145 @@ public class ValidadorJuego {
 	
 	
 	/**
-	 * Valida las dimensiones
+	 * Toma como válidos los idiomas de la traducción del título y en base a estos todas las restantes 
+	 * traducciones del juego deben contener exactamente los mismos idiomas.
+	 * Osea en todos los literales ya sea del juego, las dimensiones, sus valores o las pistas deben tener
+	 * traducciones a los mismos idiomas
 	 */
-	private void validarDimensiones (List<Dimension> dim, Collection<String> msgs) {	
+	private void validarTraducciones (Juego juego, Collection<String> msgs) {
+		idiomas = UtilJuego.getIdiomas(juego.getTitulo());
 		
-		int cont = 1;
-		int cantValores = -1;
+		if (idiomas.isEmpty()) {
+			msgs.add("Debe definir al menos un idioma");
+			return;
+		}
 		
-		for (Iterator<Dimension> it = dim.iterator(); it.hasNext(); cont++) {
-			Dimension d = it.next();
+		for (String idioma : idiomas)
+			if (UtilFormato.esNulo(idioma)) {
+				msgs.add("Al menos un idioma es nulo");
+				return;
+			}				
+		
+		Collection<String> idm = UtilJuego.getIdiomas(juego.getTexto());		
+		
+		if (!UtilCollection.equals(idiomas, idm))
+			msgs.add("Debe definir la traduccion para todos los idiomas en el texto del juego");
+		
+		validarLiteral(juego.getTexto(), msgs);
+		validarLiteral(juego.getTitulo(), msgs);
+		
+		for (Dimension d : juego.getDimensiones().getDimension()) {
+			idm = UtilJuego.getIdiomas(d.getId());		
+			validarLiteral(d.getId(), msgs);
 			
-			if (UtilFormato.esNulo(d.getId()))
-				msgs.add("Debe definir el identificador de cada dimensión (" + cont + ")");
-			else
-				if (dims.containsKey(d.getId()))
-					msgs.add("Cada dimensión debe tener un identificador único (" + d.getId() + ") (" + cont + ")");
+			if (!UtilCollection.equals(idiomas, idm))
+				msgs.add("Debe definir la traduccion para todos los idiomas en cada dimension del juego, dimension nro " + d.getNro());
+			
+			for (Valor v : d.getValores().getValor()) {
+				if ((v == null) || (v.getId() == null))
+					msgs.add("Valor nulo en la dimension nro " + d.getNro());
 				else {
-					dims.put(d.getId(), new HashMap<String, String>());
-			
-					if (cantValores == -1) {
-						if ((d.getValores().getValor().size() < 3) && (cont == 1))
-							msgs.add("Debe definir al menos 3 valores para cada dimensión");
-						else				
-							cantValores = d.getValores().getValor().size();
-					}
-		
-					if (d.getValores().getValor().size() != cantValores)
-						msgs.add("Cada dimensión debe tener " + cantValores + " valores definidos (" + cont + ")");
+					idm = UtilJuego.getIdiomas(v.getId());
+					validarLiteral(v.getId(), msgs);
 					
-					validarValores(d.getId(), d.getValores().getValor(), msgs);
+					if (!UtilCollection.equals(idiomas, idm))
+						msgs.add("Debe definir la traduccion para todos los idiomas en cada dimension y cada valor del juego, dimension nro " + d.getNro() + " valor nro " + v.getNro());
 				}
+			}
+		}
+		
+		int nroPista = 1;
+		
+		for (PistaDelJuego pista : juego.getPistasDelJuego().getPistaDelJuego()) {
+			idm = UtilJuego.getIdiomas(pista.getTexto());
+			validarLiteral(pista.getTexto(), msgs);
+			
+			if (!UtilCollection.equals(idiomas, idm))
+				msgs.add("Debe definir la traduccion para todos los idiomas en cada pista del juego, pista nro " + nroPista);			
+			
+			nroPista++;
 		}
 	}
 	
 	
+	
+	/**
+	 * Valida que todas las traducciones del literal tengan un idioma y un texto no nulo
+	 */
+	private void validarLiteral (Literal l, Collection<String> msgs) {
+		for (Traduccion t : l.getTraduccion()) {
+			if (UtilFormato.esNulo(t.getIdioma()))
+				msgs.add("Idioma nulo para el literal " + l);
+			
+			if (UtilFormato.esNulo(t.getTexto()))
+				msgs.add("Texto nulo para el literal " + l);					
+		}
+	}
+	
+	
+	
+	/**
+	 * Valida las dimensiones
+	 */
+	private void validarDimensiones (List<Dimension> dim, Collection<String> msgs) {		
+		int cantValores = -1;
+		
+		for (Dimension d : dim) {
+			if (dimsXNro.containsKey(d.getNro()))
+				msgs.add("Cada dimensión debe tener un numero unico (" + d.getNro() + ")");
+			else
+				dimsXNro.put(d.getNro(), new HashMap<Short, Valor>());
+			
+			validarValoresXNro(d.getNro(), d.getValores().getValor(), msgs);
+			
+			for (Traduccion t : d.getId().getTraduccion()) {
+				if (UtilFormato.esNulo(d.getId()))
+					msgs.add("Debe definir el identificador de cada dimensión (" + d.getNro() + ")");
+				else {
+					String clave = claveXIdioma(t.getIdioma(), t.getTexto());					
+					
+					if (dims.containsKey(clave))
+						msgs.add("Cada dimensión debe tener un identificador unico (" + clave + "), (" + d.getNro() + ")");
+					else {
+						dims.put(clave, new HashMap<String, String>());
+						
+				
+						if (cantValores == -1) {
+							if ((d.getValores().getValor().size() < 3) && (d.getNro() == 1))
+								msgs.add("Debe definir al menos 3 valores para cada dimensión");
+							else				
+								cantValores = d.getValores().getValor().size();
+						}
+			
+						if (d.getValores().getValor().size() != cantValores)
+							msgs.add("Cada dimensión debe tener " + cantValores + " valores definidos (" + d.getNro() + ")");
+						
+						validarValores(t.getTexto(), t.getIdioma(), d.getValores().getValor(), msgs);
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	/**
+	 * Valida que los numeros de valores no se repitan
+	 */
+	private void validarValoresXNro (Short nroDim, List<Valor> vals, Collection<String> msgs) {
+		Map<Short, Valor> mapXNro = dimsXNro.get(nroDim);
+		
+		for (Valor v : vals) {
+			if ((v != null) && (v.getId() != null)) {
+				if (mapXNro.containsKey(v.getNro()))
+					msgs.add("La dimension nro " + nroDim + " repite el valor nro " + v.getNro());
+				else
+					mapXNro.put(v.getNro(), v);
+			}
+		}
+	}
+	
+
 	
 	/**
 	 * Valida los valores de una dimensión
@@ -130,14 +247,25 @@ public class ValidadorJuego {
 	 * @param vals Lista de valores registrados en el archivo xml
 	 * @param msgs colección de mensajes de error
 	 */
-	private void validarValores (String idDim, List<String> vals, Collection<String> msgs) {
-		Map<String,String> mapVal = dims.get(idDim);
+	private void validarValores (String idDim, String idioma, List<Valor> vals, Collection<String> msgs) {
+		Map<String, String> mapVal = dims.get(claveXIdioma(idioma, idDim));
 		
-		for (String valor : vals)			
-			if (mapVal.containsKey(valor))
-				msgs.add("La dimensión " + idDim + " repite el valor " + valor);
-			else
-				mapVal.put(valor, valor);
+		for (Valor v : vals) {
+			if ((v != null) && (v.getId() != null)) {
+				for (Traduccion t : v.getId().getTraduccion()) {
+					try {
+						String valor = claveXIdioma(t.getIdioma(), UtilJuego.getTextoXIdioma(t.getIdioma(), v.getId()));
+					
+						if (mapVal.containsKey(valor))
+							msgs.add("La dimension " + idDim + " repite el valor " + valor + " para el idioma " + t.getIdioma());
+						else
+							mapVal.put(valor, valor);
+					} catch (PersistenciaException e) {
+						msgs.add(e.getMessage());
+					}
+				}
+			}
+		}
 	}
 	
 	
@@ -158,26 +286,35 @@ public class ValidadorJuego {
 				msgs.add("Debe definir un texto para cada pista (" + cont + ")");
 			
 			if (pista.getPistas().getPista().size() < 1)
-				msgs.add("Debe definir al menos una relación entre dimensiones y valores para cada pista (" + cont + ")");
+				msgs.add("Debe definir al menos una relación entre dimensiones y valores para cada pista (" + cont + ")");			
 			
-			for (Pista p : pista.getPistas().getPista()) {			
-				if (!dims.containsKey(p.getIdDimension1()))
-					msgs.add("La dimensión " + p.getIdDimension1() + " definida en una pista, no hace referencia a una dimensión definida (" + cont + ")");
+			for (Pista p : pista.getPistas().getPista()) {
+				if (!dimsXNro.containsKey(p.getDimension1()))
+					msgs.add("La dimension " + p.getDimension1() + " definida en una pista, no hace referencia a una dimensión definida (" + cont + ")");
 				else {
-					if (!dims.get(p.getIdDimension1()).containsKey(p.getIdValor1()))
-						msgs.add("El valor " + p.getIdValor1() + " no está definido para la dimensión " + p.getIdDimension1() + "  (" + cont + ")");
+					if (!dimsXNro.get(p.getDimension1()).containsKey(p.getValor1()))
+						msgs.add("El valor " + p.getValor1() + " no esta definido para la dimension " + p.getDimension1() + "  (" + cont + ")");
 				}
 				
-				if (!dims.containsKey(p.getIdDimension2()))
-					msgs.add("La dimensión " + p.getIdDimension2() + " definida en una pista, no hace referencia a una dimensión definida (" + cont + ")");
+				if (!dimsXNro.containsKey(p.getDimension2()))
+					msgs.add("La dimension " + p.getDimension2() + " definida en una pista, no hace referencia a una dimension definida (" + cont + ")");
 				else {
-					if (p.getIdDimension2().equals(p.getIdDimension1()))
-						msgs.add("La pista no puede relacionar dos dimensiones iguales (" + p.getIdDimension1() + ") - (" + cont + ")");
+					if (p.getDimension1() == p.getDimension2())
+						msgs.add("La pista no puede relacionar dos dimensiones iguales (" + p.getDimension1() + ") - (" + cont + ")");
 					
-					if (!dims.get(p.getIdDimension2()).containsKey(p.getIdValor2()))
-						msgs.add("El valor " + p.getIdValor2() + " no está definido para la dimensión " + p.getIdDimension2() + "  (" + cont + ")");
+					if (!dimsXNro.get(p.getDimension2()).containsKey(p.getValor2()))
+						msgs.add("El valor " + p.getValor2() + " no está definido para la dimensión " + p.getDimension2() + "  (" + cont + ")");
 				}
 			}
 		}
+	}
+	
+	
+	
+	/**
+	 * Retorna una clave única por idioma e identificador
+	 */
+	private static String claveXIdioma (String idioma, String id) {
+		return idioma + "|" + id;
 	}
 }

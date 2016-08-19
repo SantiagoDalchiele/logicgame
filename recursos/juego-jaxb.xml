@@ -10,5 +10,5 @@
 		</classpath>
 	</taskdef>
 	
-	<xjc schema="${esquema}" destdir="src" package="${paquete}"/>
+	<xjc schema="${esquema}" destdir="src/main/java" package="${paquete}"/>
 </project>

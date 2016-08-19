@@ -1,10 +1,11 @@
 package uy.com.uma.logicgame.resolucion;
 
+import uy.com.uma.logicgame.api.IValoresCuadroDecision;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego.Pistas.Pista;
-import uy.com.uma.logicgame.api.IValoresCuadroDecision;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuego;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
 import uy.com.uma.logicgame.resolucion.modelo.CuadroDecision;
 import uy.com.uma.logicgame.resolucion.modelo.Dimension;
 import uy.com.uma.logicgame.resolucion.modelo.MatrizDecision;
@@ -38,14 +39,18 @@ class AsignadorPistas implements IValoresCuadroDecision {
 	 * 
 	 * @param p pistas
 	 */
-	public void asignar (PistasDelJuego p) {
+	public void asignar (String idiomaXDefecto, PistasDelJuego p) throws ValidadorJuegoException {
 		for (PistaDelJuego pj : p.getPistaDelJuego())
 			for (Pista pista : pj.getPistas().getPista()) {
-				String idDim1 = pista.getIdDimension1();
-				String idDim2 = pista.getIdDimension2();
+				Dimension dim1 = matriz.getDimensionXNro(pista.getDimension1());
+				Dimension dim2 = matriz.getDimensionXNro(pista.getDimension2());
+				String idDim1 =  dim1.getId();
+				String idDim2 = dim2.getId();
+				String idVal1 = dim1.getValorXNro((short) (pista.getValor1()-1));
+				String idVal2 = dim2.getValorXNro((short) (pista.getValor2()-1));
 				CuadroDecision c = getCuadroXPista(idDim1, idDim2);
-				ValorDimension vf = getValorFila(idDim1, idDim2, pista.getIdValor1(), pista.getIdValor2());
-				ValorDimension vc = getValorColumna(idDim1, idDim2, pista.getIdValor1(), pista.getIdValor2());
+				ValorDimension vf = getValorFila(idDim1, idDim2, idVal1, idVal2);
+				ValorDimension vc = getValorColumna(idDim1, idDim2, idVal1, idVal2);
 				matriz.setValor(c.getDimensionXFila(), c.getDimensionXColumna(), vf, vc, (pista.isAfirmaNiega() ? AFIRMA : NIEGA));
 			}		
 	}

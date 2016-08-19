@@ -12,10 +12,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import uy.com.uma.logicgame.api.IValoresCuadroDecision;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension.Valores.Valor;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.UtilJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
-import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension;
 import uy.com.uma.logicgame.resolucion.modelo.ArbolValores;
 import uy.com.uma.logicgame.resolucion.modelo.CuadroDecision;
 import uy.com.uma.logicgame.resolucion.modelo.DatoCuadroDecision;
@@ -50,6 +53,9 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 	/** La solución es única */
 	private boolean solucionUnica = true;
 	
+	/** Idioma por defecto del juego */
+	private String idiomaXDefecto;
+	
 	
 	
 	/**
@@ -58,12 +64,13 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 	 * @throws ValidadorJuegoException
 	 */
 	public RazonadorXProgDinamica (Juego juego) throws ValidadorJuegoException {
+		this.idiomaXDefecto =  UtilJuego.getIdiomaXDefecto(juego);
 		new ValidadorJuego().validarJuego(juego);
-		this.matrizInicial = MatrizDecisionBuilder.construir(juego.getDimensiones());
-		this.matrizActual = MatrizDecisionBuilder.construir(juego.getDimensiones());
+		this.matrizInicial = MatrizDecisionBuilder.construir(idiomaXDefecto, juego.getDimensiones());
+		this.matrizActual = MatrizDecisionBuilder.construir(idiomaXDefecto, juego.getDimensiones());
 		this.dimensiones = juego.getDimensiones().getDimension();
 		AsignadorPistas ap = new AsignadorPistas(this.matrizInicial);
-		ap.asignar(juego.getPistasDelJuego());
+		ap.asignar(this.idiomaXDefecto, juego.getPistasDelJuego());
 		log.debug("Resolviendo por programacion dinamica el juego " + juego.getId());
 		/*log.debug("Matriz inicial con las pistas asignadas:");
 		log.debug(matrizInicial);*/
@@ -175,8 +182,15 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 		arboles = new ArbolValores[primerDim.getValores().getValor().size()];
 		int i = 0;
 		
-		for (Iterator<String> it = primerDim.getValores().getValor().iterator(); it.hasNext(); i++)
-			arboles[i] = construirNodo(it.next(), 1);
+		for (Valor v : primerDim.getValores().getValor()) {
+			try {
+				arboles[i] = construirNodo(UtilJuego.getTextoXIdioma(idiomaXDefecto, v.getId()), 1);
+			} catch (PersistenciaException e) {
+				log.error("Error inesperado, no se encuentra el texto del valor " + v.getId() + " para el idioma " + idiomaXDefecto);
+			}
+			
+			i++;
+		}
 	}
 	
 	
@@ -191,8 +205,14 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 		ArbolValores a = new ArbolValores(valor);
 		
 		if (nroDim < dimensiones.size())
-			for (String val : dimensiones.get(nroDim).getValores().getValor())
-				a.hijos().add(construirNodo(val, nroDim+1));
+			for (Valor v : dimensiones.get(nroDim).getValores().getValor()) {
+				try {
+					String val = UtilJuego.getTextoXIdioma(idiomaXDefecto, v.getId());
+					a.hijos().add(construirNodo(val, nroDim+1));
+				} catch (PersistenciaException e) {
+					log.error("Error inesperado, no se encuentra el texto del valor " + v.getId() + " para el idioma " + idiomaXDefecto);
+				}				
+			}
 				
 		return a;
 	}
@@ -289,53 +309,57 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 	 */
 	private boolean setearRelacion (List<String> candidato, Collection<DatoCuadroDecision> cambios) {		
 		if (candidato.size() > 1) {
-			short ultimaDim = (short) (candidato.size() - 1);
-			String idUltDim = dimensiones.get(ultimaDim).getId();
-			uy.com.uma.logicgame.resolucion.modelo.Dimension ultimaDimXCol = matrizActual.getDimensionesXCols().get(idUltDim);
-			uy.com.uma.logicgame.resolucion.modelo.Dimension ultimaDimXFila = matrizActual.getDimensionesXFila().get(idUltDim);
-			String valorUltDim = candidato.get(ultimaDim);
-			
-			for (short dim = 0; dim < ultimaDim; dim++) {
-				CuadroDecision cuadro;
-				String valorDim = candidato.get(dim);				
+			try {
+				short ultimaDim = (short) (candidato.size() - 1);
+				String idUltDim = UtilJuego.getTextoXIdioma(idiomaXDefecto, dimensiones.get(ultimaDim).getId());
+				uy.com.uma.logicgame.resolucion.modelo.Dimension ultimaDimXCol = matrizActual.getDimensionesXCols().get(idUltDim);
+				uy.com.uma.logicgame.resolucion.modelo.Dimension ultimaDimXFila = matrizActual.getDimensionesXFila().get(idUltDim);
+				String valorUltDim = candidato.get(ultimaDim);
 				
-				if (dim == 0) {
-					cuadro = matrizActual.getCuadro(dim, (short) (ultimaDim-1));
-					short fila = cuadro.getDimensionXFila().getValores().get(valorDim).getSec();
-					short col = cuadro.getDimensionXColumna().getValores().get(valorUltDim).getSec();
+				for (short dim = 0; dim < ultimaDim; dim++) {
+					CuadroDecision cuadro;
+					String valorDim = candidato.get(dim);				
 					
-					if (! afirmarCandidato(fila, col, cuadro, cambios))
-						return false;					
-				} else if (dim == 1) {					
-					cuadro = matrizActual.getCuadro(ultimaDimXFila.getFila(), (short) (dim-1));
-					short fila = cuadro.getDimensionXFila().getValores().get(valorUltDim).getSec();
-					short col = cuadro.getDimensionXColumna().getValores().get(valorDim).getSec();
-					
-					if (! afirmarCandidato(fila, col, cuadro, cambios))
-						return false;
-				} else {
-					String idDim = dimensiones.get(dim).getId();				
-					uy.com.uma.logicgame.resolucion.modelo.Dimension dimXFila = matrizActual.getDimensionesXFila().get(idDim);
-					cuadro = matrizActual.getCuadro(ultimaDimXFila.getFila(), (short) (dim-1));
-					
-					if (cuadro != null) {
+					if (dim == 0) {
+						cuadro = matrizActual.getCuadro(dim, (short) (ultimaDim-1));
+						short fila = cuadro.getDimensionXFila().getValores().get(valorDim).getSec();
+						short col = cuadro.getDimensionXColumna().getValores().get(valorUltDim).getSec();
+						
+						if (! afirmarCandidato(fila, col, cuadro, cambios))
+							return false;					
+					} else if (dim == 1) {					
+						cuadro = matrizActual.getCuadro(ultimaDimXFila.getFila(), (short) (dim-1));
 						short fila = cuadro.getDimensionXFila().getValores().get(valorUltDim).getSec();
 						short col = cuadro.getDimensionXColumna().getValores().get(valorDim).getSec();
 						
 						if (! afirmarCandidato(fila, col, cuadro, cambios))
 							return false;
-					}
-					
-					cuadro = matrizActual.getCuadro(dimXFila.getFila(), ultimaDimXCol.getCol());
-					
-					if (cuadro != null) {
-						short fila = cuadro.getDimensionXFila().getValores().get(valorDim).getSec();
-						short col = cuadro.getDimensionXColumna().getValores().get(valorUltDim).getSec();
+					} else {
+						String idDim = UtilJuego.getTextoXIdioma(idiomaXDefecto, dimensiones.get(dim).getId());				
+						uy.com.uma.logicgame.resolucion.modelo.Dimension dimXFila = matrizActual.getDimensionesXFila().get(idDim);
+						cuadro = matrizActual.getCuadro(ultimaDimXFila.getFila(), (short) (dim-1));
 						
-						if (! afirmarCandidato(fila, col, cuadro, cambios))
-							return false;
+						if (cuadro != null) {
+							short fila = cuadro.getDimensionXFila().getValores().get(valorUltDim).getSec();
+							short col = cuadro.getDimensionXColumna().getValores().get(valorDim).getSec();
+							
+							if (! afirmarCandidato(fila, col, cuadro, cambios))
+								return false;
+						}
+						
+						cuadro = matrizActual.getCuadro(dimXFila.getFila(), ultimaDimXCol.getCol());
+						
+						if (cuadro != null) {
+							short fila = cuadro.getDimensionXFila().getValores().get(valorDim).getSec();
+							short col = cuadro.getDimensionXColumna().getValores().get(valorUltDim).getSec();
+							
+							if (! afirmarCandidato(fila, col, cuadro, cambios))
+								return false;
+						}
 					}
 				}
+			} catch (PersistenciaException e) {
+				log.error("Error inesperado, no se encuentra el texto para el idioma " + idiomaXDefecto);
 			}
 		}
 		

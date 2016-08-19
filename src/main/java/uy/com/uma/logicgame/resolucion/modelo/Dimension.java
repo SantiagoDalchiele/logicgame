@@ -3,7 +3,6 @@ package uy.com.uma.logicgame.resolucion.modelo;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -18,24 +17,24 @@ import java.util.Map;
 public class Dimension {
 
 	private String id;
+	private short nro;
 	private short fila;
 	private short columna;
 	private Map<String, ValorDimension> valores = new HashMap<String, ValorDimension>();
 	private List<ValorDimension> valoresXsec = new ArrayList<ValorDimension>();
+	private Map<Short, ValorDimension> valoresXNro = new HashMap<Short, ValorDimension>();
 		
 	
-	public Dimension(String id, short fila, short columna, Collection<String> valores) {
+	public Dimension (String id, short nro, short fila, short columna, Collection<ValorDimension> valores) {
 		this.id = id;
+		this.nro = nro;
 		this.fila = fila;
 		this.columna = columna;
 		
-		short sec = 0;
-		
-		for (Iterator<String> it = valores.iterator(); it.hasNext(); sec++) {
-			String val = it.next();
-			ValorDimension vd = new ValorDimension(val, sec);
-			this.valores.put(val, vd);
+		for (ValorDimension vd : valores) {
+			this.valores.put(vd.getId(), vd);
 			this.valoresXsec.add(vd);
+			this.valoresXNro.put(vd.getSec(), vd);
 		}		
 	}
 	
@@ -43,6 +42,9 @@ public class Dimension {
 	
 	public String getId() {
 		return id;
+	}
+	public short getNro() {
+		return this.nro;
 	}
 	public short getFila() {
 		return fila;
@@ -58,6 +60,9 @@ public class Dimension {
 	}
 	public List<ValorDimension> getValoresXSec() {
 		return this.valoresXsec;
+	}
+	public String getValorXNro(Short nro) {
+		return this.valoresXNro.get(nro).getId();
 	}
 	
 	@Override

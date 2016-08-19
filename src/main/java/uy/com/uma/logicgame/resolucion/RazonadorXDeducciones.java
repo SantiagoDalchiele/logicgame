@@ -13,6 +13,7 @@ import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.conf.ConfiguracionLoadHelper;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.UtilJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
 import uy.com.uma.logicgame.resolucion.estrategias.IEstrategia;
@@ -46,10 +47,11 @@ class RazonadorXDeducciones {
 	 */
 	public RazonadorXDeducciones (Juego juego) throws ValidadorJuegoException, ConfiguracionException {
 		estrategias = ConfiguracionLoadHelper.getInstancia().cargarEstrategias();
+		String idiomaXDefecto = UtilJuego.getIdiomaXDefecto(juego);
 		new ValidadorJuego().validarJuego(juego);
-		this.matriz = MatrizDecisionBuilder.construir(juego.getDimensiones());
+		this.matriz = MatrizDecisionBuilder.construir(idiomaXDefecto, juego.getDimensiones());
 		AsignadorPistas ap = new AsignadorPistas(this.matriz);
-		ap.asignar(juego.getPistasDelJuego());
+		ap.asignar (idiomaXDefecto, juego.getPistasDelJuego());
 		log.debug("Luego de asignar las pistas iniciales ---------------------------------------------------------");
 		log.debug(this.matriz);
 	}

@@ -3,6 +3,7 @@ package uy.com.uma.logicgame.generacion;
 import java.math.BigInteger;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Random;
 import java.util.Stack;
@@ -12,10 +13,12 @@ import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension.Valores;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension.Valores.Valor;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego.Pistas;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.PistasDelJuego.PistaDelJuego.Pistas.Pista;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.UtilJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
 import uy.com.uma.logicgame.resolucion.Resolucion;
 
@@ -30,6 +33,10 @@ public class GeneradorJuegos {
 	/** Literal de juego auto-generado */
 	public static final String JUEGO_AUTO_GEN = "juego auto-generado";
 	
+	/** Idioma por defecto */
+	private static String idiomaXDefecto = Locale.getDefault().getLanguage();
+	
+	
 	
 	/** Parametros a los efectos de la generación */
 	private ParametrosGeneracionJuego param;
@@ -38,7 +45,8 @@ public class GeneradorJuegos {
 	private Juego juego;
 	
 	/** Hora que arranca el proceso */
-	private long timeInicio;
+	private long timeInicio;	
+	
 
 	
 	
@@ -113,8 +121,8 @@ public class GeneradorJuegos {
 	 */
 	private void initJuego() {
 		juego = new Juego();
-		juego.setTitulo(JUEGO_AUTO_GEN);
-		juego.setTexto(JUEGO_AUTO_GEN);
+		juego.setTitulo(UtilJuego.getLiteral(idiomaXDefecto, JUEGO_AUTO_GEN));
+		juego.setTexto(UtilJuego.getLiteral(idiomaXDefecto, JUEGO_AUTO_GEN));
 		juego.setDimensiones(new Dimensiones());
 		juego.setPistasDelJuego(new PistasDelJuego());
 		juego.setCosto(BigInteger.valueOf(-1));
@@ -123,12 +131,15 @@ public class GeneradorJuegos {
 			String id = "dime" + (i < 10 ? "0" : "") + i;
 			String prefVal = "dim" + (i < 10 ? "0" : "") + i + "_val";
 			Dimension d = new Dimension();
-			d.setId(id);			
+			d.setId(UtilJuego.getLiteral(idiomaXDefecto, id));			
 			d.setValores(new Valores());
 			
-			for (int j = 1; j <= param.getCantValores(); j++) {
+			for (short j = 1; j <= param.getCantValores(); j++) {
 				String idV = prefVal + (j < 10 ? "0" : "") + j;
-				d.getValores().getValor().add(idV);
+				Valor v = new Valor();
+				v.setNro(j);
+				v.setId(UtilJuego.getLiteral(idiomaXDefecto, idV));
+				d.getValores().getValor().add(v);
 			}
 			
 			juego.getDimensiones().getDimension().add(d);			
@@ -143,13 +154,13 @@ public class GeneradorJuegos {
 	private PistaDelJuego pistaAlAzar() {
 		PistaDelJuego ret = new PistaDelJuego();
 		ret.setPistas(new Pistas());
-		ret.setTexto(JUEGO_AUTO_GEN);
+		ret.setTexto(UtilJuego.getLiteral(idiomaXDefecto, JUEGO_AUTO_GEN));
 		Pista p = new Pista();
 		Random azar = new Random();
 		int indDim1 = azar.nextInt(param.getCantDimensiones());
 		int indDim2 = azar.nextInt(param.getCantDimensiones());
-		int indVal1 = azar.nextInt(param.getCantValores());
-		int indVal2 = azar.nextInt(param.getCantValores());
+		short indVal1 = (short) (1 + azar.nextInt(param.getCantValores()));
+		short indVal2 = (short) (1 + azar.nextInt(param.getCantValores()));
 		int valorAfirma = azar.nextInt(100);
 		
 		while (indDim1 == indDim2)
@@ -157,10 +168,10 @@ public class GeneradorJuegos {
 		
 		Dimension d1 = juego.getDimensiones().getDimension().get(indDim1);
 		Dimension d2 = juego.getDimensiones().getDimension().get(indDim2);
-		p.setIdDimension1(d1.getId());
-		p.setIdDimension2(d2.getId());
-		p.setIdValor1(d1.getValores().getValor().get(indVal1));
-		p.setIdValor2(d2.getValores().getValor().get(indVal2));
+		p.setDimension1(d1.getNro());
+		p.setDimension2(d2.getNro());
+		p.setValor1(indVal1);
+		p.setValor2(indVal2);
 		p.setAfirmaNiega(valorAfirma <= param.getPorcAfirma());		
 		ret.getPistas().getPista().add(p);
 		return ret;
@@ -188,10 +199,10 @@ public class GeneradorJuegos {
 		
 		for (PistaDelJuego pj : pistas) {
 			Pista h = pj.getPistas().getPista().get(0);
-			boolean igualX1 = (p.getIdDimension1().equals(h.getIdDimension1())) && (p.getIdValor1().equals(h.getIdValor1()));
-			boolean igualX2 = (p.getIdDimension2().equals(h.getIdDimension2())) && (p.getIdValor2().equals(h.getIdValor2()));
-			boolean igualInv1 = (p.getIdDimension1().equals(h.getIdDimension2())) && (p.getIdValor1().equals(h.getIdValor2()));
-			boolean igualInv2 = (p.getIdDimension2().equals(h.getIdDimension1())) && (p.getIdValor2().equals(h.getIdValor1()));
+			boolean igualX1 = (p.getDimension1() == h.getDimension1()) && (p.getValor1() == h.getValor1());
+			boolean igualX2 = (p.getDimension2() == h.getDimension2()) && (p.getValor2() == h.getValor2());
+			boolean igualInv1 = (p.getDimension1() == h.getDimension2()) && (p.getValor1() == h.getValor2());
+			boolean igualInv2 = (p.getDimension2() == h.getDimension1()) && (p.getValor2() == h.getValor1());
 			
 			if ((igualX1 && igualX2) || (igualInv1 && igualInv2))
 				return true;
@@ -205,15 +216,15 @@ public class GeneradorJuegos {
 	/**
 	 * Agrupa las pistas que tienen las mismas dimensiones
 	 */
-	private static PistasDelJuego agrupar (Collection<PistaDelJuego> pistas) {
+	private static PistasDelJuego agrupar (Collection<PistaDelJuego> pistas) throws ValidadorJuegoException {
 		PistasDelJuego ret = new PistasDelJuego();
 		Map<String,DimensionYPistas> mapeo = new HashMap<String, DimensionYPistas>();
 		
 		for (PistaDelJuego pj : pistas) {
 			Pista p = pj.getPistas().getPista().get(0);
 			DimensionYPistas dim;
-			String key1 = DimensionYPistas.key(p.getIdDimension1(), p.getIdValor1());
-			String key2 = DimensionYPistas.key(p.getIdDimension2(), p.getIdValor2());
+			String key1 = DimensionYPistas.key(p.getDimension1(), p.getValor1());
+			String key2 = DimensionYPistas.key(p.getDimension2(), p.getValor2());
 			
 			if (mapeo.containsKey(key1))
 				dim = mapeo.get(key1);
@@ -229,7 +240,7 @@ public class GeneradorJuegos {
 		
 		for (DimensionYPistas dim : mapeo.values()) {
 			PistaDelJuego pj = new PistaDelJuego();
-			pj.setTexto(JUEGO_AUTO_GEN);
+			pj.setTexto(UtilJuego.getLiteral(idiomaXDefecto, JUEGO_AUTO_GEN));
 			pj.setPistas(dim.getPistas());
 			ret.getPistaDelJuego().add(pj);
 		}

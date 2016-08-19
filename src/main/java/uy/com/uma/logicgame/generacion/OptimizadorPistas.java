@@ -2,6 +2,7 @@ package uy.com.uma.logicgame.generacion;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Locale;
 
 import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
@@ -113,7 +114,7 @@ public class OptimizadorPistas {
 	 */
 	private static void agregarPista (Juego juego, Pista p) {
 		PistaDelJuego pj = new PistaDelJuego();
-		pj.setTexto(GeneradorJuegos.JUEGO_AUTO_GEN);
+		pj.setTexto(UtilJuego.getLiteral(Locale.getDefault().getLanguage(), GeneradorJuegos.JUEGO_AUTO_GEN));
 		pj.setPistas(new Pistas());
 		pj.getPistas().getPista().add(p);
 		juego.getPistasDelJuego().getPistaDelJuego().add(pj);
