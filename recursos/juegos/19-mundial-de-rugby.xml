@@ -1,167 +1,397 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>19</id>
-	<titulo>Mundial de Rugby</titulo>
-	<texto>Descubre el color de la camiseta de cada selecci\u00F3n, en que ciudad enfrenta a su rival y cu\u00E1l es su capit\u00E1n</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Mundial de Rugby</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Descubre el color de la camiseta de cada selección, en que ciudad enfrenta a su rival y cuál es su capitán</texto>
+		</traduccion>
+	</texto>
 	<costo>244</costo>
 	<dimensiones>
 		<dimension>
-			<id>Selecci\u00F3n</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Selección</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Inglaterra</valor>
-				<valor>Australia</valor>
-				<valor>Sudafrica</valor>
-				<valor>Nueva Zelanda</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Inglaterra</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Australia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Sudafrica</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Nueva Zelanda</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Camiseta</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Camiseta</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>negra</valor>
-				<valor>amarilla</valor>
-				<valor>verde</valor>
-				<valor>blanca</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>negra</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>amarilla</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>verde</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>blanca</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Ciudad</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Ciudad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Birmingham</valor>
-				<valor>Brighton</valor>
-				<valor>Newcastle</valor>
-				<valor>Londres</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Birmingham</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Brighton</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Newcastle</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Londres</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Rival</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Rival</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Jap\u00F3n</valor>
-				<valor>Tonga</valor>
-				<valor>Uruguay</valor>
-				<valor>Fiyi</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Japón</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Tonga</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Uruguay</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Fiyi</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Capit\u00E1n</id>
+			<nro>5</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Capitán</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Dylan Hartley</valor>
-				<valor>Fourie du Preez</valor>
-				<valor>Stephen Moore</valor>
-				<valor>Richie McCaw</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Dylan Hartley</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Fourie du Preez</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Stephen Moore</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Richie McCaw</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Nueva Zelanda que tiene como rival a Tonga, usa la camiseta negra</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nueva Zelanda que tiene como rival a Tonga, usa la camiseta negra</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Rival</id-dimension1>
-					<id-valor1>Tonga</id-valor1>
-					<id-dimension2>Camiseta</id-dimension2>
-					<id-valor2>negra</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Selecci\u00F3n</id-dimension1>
-					<id-valor1>Nueva Zelanda</id-valor1>
-					<id-dimension2>Camiseta</id-dimension2>
-					<id-valor2>negra</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>La selecci\u00F3n que tiene como rival a Jap\u00F3n, juega en la ciudad de Brighton pero su capit\u00E1n no es Stephen Moore</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Rival</id-dimension1>
-					<id-valor1>Jap\u00F3n</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Brighton</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Capit\u00E1n</id-dimension1>
-					<id-valor1>Stephen Moore</id-valor1>
-					<id-dimension2>Rival</id-dimension2>
-					<id-valor2>Jap\u00F3n</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>La selecci\u00F3n de Australia no juega su partido en la ciudad de Brighton y su camiseta no es blanca</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Selecci\u00F3n</id-dimension1>
-					<id-valor1>Australia</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Brighton</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Selecci\u00F3n</id-dimension1>
-					<id-valor1>Australia</id-valor1>
-					<id-dimension2>Camiseta</id-dimension2>
-					<id-valor2>blanca</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien juega su partido en la ciudad de Newcastle no enfrenta a Uruguay ni su capit\u00E1n es Stephen Moore</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Newcastle</id-valor1>
-					<id-dimension2>Rival</id-dimension2>
-					<id-valor2>Uruguay</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Capit\u00E1n</id-dimension1>
-					<id-valor1>Stephen Moore</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Newcastle</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Dylan Hartley es el capit\u00E1n de la selecci\u00F3n de Inglaterra que disputa su partido en Londres, pero no es contra Uruguay</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Capit\u00E1n</id-dimension1>
-					<id-valor1>Dylan Hartley</id-valor1>
-					<id-dimension2>Selecci\u00F3n</id-dimension2>
-					<id-valor2>Inglaterra</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Capit\u00E1n</id-dimension1>
-					<id-valor1>Dylan Hartley</id-valor1>
-					<id-dimension2>Rival</id-dimension2>
-					<id-valor2>Uruguay</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Londres</id-valor1>
-					<id-dimension2>Capit\u00E1n</id-dimension2>
-					<id-valor2>Dylan Hartley</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Fourie du Preez es el capit\u00E1n de la selecci\u00F3n que usa camiseta verde</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La selección que tiene como rival a Japón, juega en la ciudad de Brighton pero su capitán no es Stephen Moore</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Camiseta</id-dimension1>
-					<id-valor1>verde</id-valor1>
-					<id-dimension2>Capit\u00E1n</id-dimension2>
-					<id-valor2>Fourie du Preez</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La selección de Australia no juega su partido en la ciudad de Brighton y su camiseta no es blanca</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien juega su partido en la ciudad de Newcastle no enfrenta a Uruguay ni su capitán es Stephen Moore</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Dylan Hartley es el capitán de la selección de Inglaterra que disputa su partido en Londres, pero no es contra Uruguay</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>1</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>5</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Fourie du Preez es el capitán de la selección que usa camiseta verde</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>5</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

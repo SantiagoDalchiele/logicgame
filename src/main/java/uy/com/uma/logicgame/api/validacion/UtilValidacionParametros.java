@@ -1,5 +1,7 @@
 package uy.com.uma.logicgame.api.validacion;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,17 +14,40 @@ import java.util.regex.Pattern;
  */
 public abstract class UtilValidacionParametros implements IConstantesValidacionParametros {
 
+	/** Mapeo entre el texto del patron y el patron en si compilado, usado como cache en memoria */
+	private static Map<String, Pattern> patternCache = new HashMap<String, Pattern>(5);
+	
+	
+	/**
+	 * Carga los patrones por defecto utilizados
+	 */
+	static {
+		patternCache.put(PATRON_CLAVES, Pattern.compile(PATRON_CLAVES));
+		patternCache.put(PATRON_EMAILS, Pattern.compile(PATRON_EMAILS));
+		patternCache.put(PATRON_IDIOMAS, Pattern.compile(PATRON_IDIOMAS));
+		patternCache.put(PATRON_IDS, Pattern.compile(PATRON_IDS));
+		patternCache.put(PATRON_IDS_MATRIZ_JUEGO, Pattern.compile(PATRON_IDS_MATRIZ_JUEGO));
+	}
+	
+	
 	
 	
 	/**
 	 * Retorna TRUE si el dato "matchea" contra la expresión regular (patron) pasado como parámetro
-	 * TODO tener una estructura de Mapeo para cachear los Pattern's ?
 	 */
 	public static boolean esValido (String dato, String patron) {
 		if ((dato == null) || (patron == null))
 			return false;
 		else {
-			Pattern pat = Pattern.compile(patron);
+			Pattern pat = null;
+			
+			if (patternCache.containsKey(patron)) {
+				pat = patternCache.get(patron);
+			} else {
+				pat = Pattern.compile(patron);
+				patternCache.put(patron, pat);
+			}			
+			
 			Matcher mat = pat.matcher(dato);	    
 			return mat.matches();
 		}

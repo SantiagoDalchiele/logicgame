@@ -1,70 +1,244 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>10</id>
-	<titulo>Nombres, apellidos y apodos</titulo>
-	<texto>\u00BFCu\u00E1l es el apellido y el apodo de cada uno?</texto>
+	<titulo>
+		<traduccion>
+			<idioma>en</idioma>
+			<texto>Names, surnames and nicknames</texto>
+		</traduccion>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Nombres, apellidos y apodos</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>en</idioma>
+			<texto>What is the surname and the nickname of each?</texto>
+		</traduccion>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>¿Cuál es el apellido y el apodo de cada uno?</texto>
+		</traduccion>
+	</texto>
 	<costo>12</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>en</idioma>
+					<texto>Name</texto>
+				</traduccion>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Juan</valor>
-				<valor>Jos\u00E9</valor>
-				<valor>Francisco</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Robert</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Juan</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Joseph</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>José</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Franklin</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Francisco</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Apellido</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>en</idioma>
+					<texto>Surname</texto>
+				</traduccion>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Apellido</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>P\u00E9rez</valor>
-				<valor>Gonz\u00E1lez</valor>
-				<valor>Silva</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Smith</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pérez</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Johnson</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>González</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Williams</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Silva</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Apodo</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>en</idioma>
+					<texto>Nickname</texto>
+				</traduccion>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Apodo</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Pepe</valor>
-				<valor>Juancho</valor>
-				<valor>Pancho</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Joey</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pepe</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Bob</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Juancho</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>en</idioma>
+							<texto>Frank</texto>
+						</traduccion>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pancho</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>A Juan le dicen Juancho y no Pancho y su apellido no es Silva</texto>
+			<texto>
+				<traduccion>
+					<idioma>en</idioma>
+					<texto>Robert is called Bob and not Frank and his surname is not Williams</texto>
+				</traduccion>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>A Juan le dicen Juancho y no Pancho y su apellido no es Silva</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Juan</id-valor1>
-					<id-dimension2>Apodo</id-dimension2>
-					<id-valor2>Juancho</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Juan</id-valor1>
-					<id-dimension2>Apellido</id-dimension2>
-					<id-valor2>Silva</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El apellido de Francisco es Gonz\u00E1lez y no P\u00E9rez, y no le dicen Pepe</texto>
+			<texto>
+				<traduccion>
+					<idioma>en</idioma>
+					<texto>Franklin's surname is Johnson and not Smith, and is not called Joey</texto>
+				</traduccion>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El apellido de Francisco es González y no Pérez, y no le dicen Pepe</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Francisco</id-valor1>
-					<id-dimension2>Apellido</id-dimension2>
-					<id-valor2>Gonz\u00E1lez</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Francisco</id-valor1>
-					<id-dimension2>Apodo</id-dimension2>
-					<id-valor2>Pepe</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>

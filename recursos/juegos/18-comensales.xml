@@ -1,154 +1,356 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>18</id>
-	<titulo>Comensales</titulo>
-	<texto>Descubre que comi\u00F3 y que bebida tom\u00F3 cada uno de los comensales, y en que lugar disfrutaron de sus alimentos</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Comensales</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Descubre que comió y que bebida tomó cada uno de los comensales, y en que lugar disfrutaron de sus alimentos</texto>
+		</traduccion>
+	</texto>
 	<costo>95</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Miguel</valor>
-				<valor>Luciana</valor>
-				<valor>Julia</valor>
-				<valor>Natalia</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Miguel</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Luciana</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Julia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Natalia</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Comida</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Comida</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>lasagna</valor>
-				<valor>arroz con pollo</valor>
-				<valor>pescado</valor>
-				<valor>papas fritas</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>lasagna</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>arroz con pollo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>pescado</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>papas fritas</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Bebida</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Bebida</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Coca-Cola</valor>
-				<valor>agua mineral</valor>
-				<valor>vino</valor>
-				<valor>cerveza</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Coca-Cola</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>agua mineral</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>vino</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>cerveza</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Lugar</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Lugar</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>bar</valor>
-				<valor>restaurant</valor>
-				<valor>cantina</valor>
-				<valor>casa</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>bar</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>restaurant</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>cantina</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>casa</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Quien prefiri\u00F3 las papas fritas no lo hizo en un restaurant</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien prefirió las papas fritas no lo hizo en un restaurant</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Lugar</id-dimension1>
-					<id-valor1>restaurant</id-valor1>
-					<id-dimension2>Comida</id-dimension2>
-					<id-valor2>papas fritas</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Julia disfrut\u00F3 de su comida en su propia casa</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Julia disfrutó de su comida en su propia casa</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Julia</id-valor1>
-					<id-dimension2>Lugar</id-dimension2>
-					<id-valor2>casa</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>A Miguel no le gusta el pescado</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>A Miguel no le gusta el pescado</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Miguel</id-valor1>
-					<id-dimension2>Comida</id-dimension2>
-					<id-valor2>pescado</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien comi\u00F3 papas fritas no lo acompa\u00F1\u00F3 con Coca-Cola</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien comió papas fritas no lo acompañó con Coca-Cola</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Bebida</id-dimension1>
-					<id-valor1>Coca-Cola</id-valor1>
-					<id-dimension2>Comida</id-dimension2>
-					<id-valor2>papas fritas</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien disfrut\u00F3 de la lasagna lo hizo con una copa de vino</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien disfrutó de la lasagna lo hizo con una copa de vino</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Bebida</id-dimension1>
-					<id-valor1>vino</id-valor1>
-					<id-dimension2>Comida</id-dimension2>
-					<id-valor2>lasagna</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Natalia bebi\u00F3 cerveza, pero no fue ni en un bar ni en un restaurant</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Natalia bebió cerveza, pero no fue ni en un bar ni en un restaurant</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Bebida</id-dimension1>
-					<id-valor1>cerveza</id-valor1>
-					<id-dimension2>Lugar</id-dimension2>
-					<id-valor2>bar</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Bebida</id-dimension1>
-					<id-valor1>cerveza</id-valor1>
-					<id-dimension2>Lugar</id-dimension2>
-					<id-valor2>restaurant</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Natalia</id-valor1>
-					<id-dimension2>Bebida</id-dimension2>
-					<id-valor2>cerveza</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Luciana opt\u00F3 por comer arroz con pollo</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Luciana optó por comer arroz con pollo</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Comida</id-dimension1>
-					<id-valor1>arroz con pollo</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Luciana</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Miguel no comi\u00F3 lasagna</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Miguel no comió lasagna</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Comida</id-dimension1>
-					<id-valor1>lasagna</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Miguel</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>1</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>

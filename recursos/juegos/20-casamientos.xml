@@ -1,243 +1,528 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>20</id>
-	<titulo>Casamientos</titulo>
-	<texto>5 mujeres se casan con sus respectivos esposos, descubre que material resalta en sus joyas, de que color eligi\u00F3 su vestido y en que ciudad pasar\u00E1n su luna de miel</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Casamientos</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>5 mujeres se casan con sus respectivos esposos, descubre que material resalta en sus joyas, de que color eligió su vestido y en que ciudad pasarán su luna de miel</texto>
+		</traduccion>
+	</texto>
 	<costo>353</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>B\u00E1rbara</valor>
-				<valor>Pamela</valor>
-				<valor>Victoria</valor>
-				<valor>Claudia</valor>
-				<valor>Jimena</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Bárbara</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pamela</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Victoria</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Claudia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Jimena</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Marido</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Marido</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Maximiliano</valor>
-				<valor>Roberto</valor>
-				<valor>Ignacio</valor>
-				<valor>Renzo</valor>
-				<valor>Osvaldo</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Maximiliano</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Roberto</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Ignacio</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Renzo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Osvaldo</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Joya</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Joya</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>oro</valor>
-				<valor>plata</valor>
-				<valor>diamante</valor>
-				<valor>zafiro</valor>
-				<valor>esmeralda</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>oro</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>plata</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>diamante</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>zafiro</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>esmeralda</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Vestido</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Vestido</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>blanco</valor>
-				<valor>marfil</valor>
-				<valor>beige</valor>
-				<valor>champagne</valor>
-				<valor>crema</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>blanco</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>marfil</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>beige</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>champagne</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>crema</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Ciudad</id>
+			<nro>5</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Ciudad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Florencia</valor>
-				<valor>Venecia</valor>
-				<valor>Par\u00EDs</valor>
-				<valor>New York</valor>
-				<valor>Viena</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Florencia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Venecia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>París</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>New York</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Viena</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Victoria, quien se v\u00E1 de luna de miel a Viena, no tiene ni una esmeralda ni un zafiro en su joya</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Victoria, quien se vá de luna de miel a Viena, no tiene ni una esmeralda ni un zafiro en su joya</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Viena</id-valor1>
-					<id-dimension2>Joya</id-dimension2>
-					<id-valor2>esmeralda</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>5</valor1>
+					<dimension2>3</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Victoria</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Viena</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>5</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Viena</id-valor1>
-					<id-dimension2>Joya</id-dimension2>
-					<id-valor2>zafiro</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>5</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Claudia elige New York para su luna de miel y recibe un hermoso anillo de oro puro</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Claudia elige New York para su luna de miel y recibe un hermoso anillo de oro puro</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>New York</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Claudia</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Claudia</id-valor1>
-					<id-dimension2>Joya</id-dimension2>
-					<id-valor2>oro</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Pamela se niega a usar un vestido color champagne</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Vestido</id-dimension1>
-					<id-valor1>champagne</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Pamela</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>B\u00E1rbara, la del vestido beige, no se casa con Osvaldo</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>B\u00E1rbara</id-valor1>
-					<id-dimension2>Marido</id-dimension2>
-					<id-valor2>Osvaldo</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Vestido</id-dimension1>
-					<id-valor1>beige</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>B\u00E1rbara</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Pamela y su futuro marido Roberto no optaron por pasar su luna de miel en Par\u00EDs</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Pamela se niega a usar un vestido color champagne</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Pamela</id-valor1>
-					<id-dimension2>Marido</id-dimension2>
-					<id-valor2>Roberto</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Pamela</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Par\u00EDs</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Jimena sue\u00F1a con su luna de miel en Venecia, pero no le gusta el color marfil para su vestido, ni las esmeraldas</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Bárbara, la del vestido beige, no se casa con Osvaldo</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Venecia</id-valor1>
-					<id-dimension2>Joya</id-dimension2>
-					<id-valor2>esmeralda</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Venecia</id-valor1>
-					<id-dimension2>Vestido</id-dimension2>
-					<id-valor2>marfil</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Venecia</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Jimena</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien se casar\u00E1 con Renzo usa un vestido crema, pero no tiene la joya hecha en plata</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Pamela y su futuro marido Roberto no optaron por pasar su luna de miel en París</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Marido</id-dimension1>
-					<id-valor1>Renzo</id-valor1>
-					<id-dimension2>Joya</id-dimension2>
-					<id-valor2>plata</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Marido</id-dimension1>
-					<id-valor1>Renzo</id-valor1>
-					<id-dimension2>Vestido</id-dimension2>
-					<id-valor2>crema</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien usa la joya con una piedra de zafiro no usa el vestido de color beige ni marfil y no es Jimena</texto>
-			<pistas>
 				<pista>
-					<id-dimension1>Joya</id-dimension1>
-					<id-valor1>zafiro</id-valor1>
-					<id-dimension2>Vestido</id-dimension2>
-					<id-valor2>beige</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Joya</id-dimension1>
-					<id-valor1>zafiro</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Jimena</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Joya</id-dimension1>
-					<id-valor1>zafiro</id-valor1>
-					<id-dimension2>Vestido</id-dimension2>
-					<id-valor2>marfil</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>5</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Jimena quien se casa con Maximiliano no recibir\u00E1 la joya hecha en plata</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Jimena sueña con su luna de miel en Venecia, pero no le gusta el color marfil para su vestido, ni las esmeraldas</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Marido</id-dimension1>
-					<id-valor1>Maximiliano</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Jimena</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>1</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien se casará con Renzo usa un vestido crema, pero no tiene la joya hecha en plata</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa la joya con una piedra de zafiro no usa el vestido de color beige ni marfil y no es Jimena</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Jimena quien se casa con Maximiliano no recibirá la joya hecha en plata</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>1</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Marido</id-dimension1>
-					<id-valor1>Maximiliano</id-valor1>
-					<id-dimension2>Joya</id-dimension2>
-					<id-valor2>plata</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>

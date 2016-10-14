@@ -1,5 +1,7 @@
 package uy.com.uma.logicgame.test;
 
+import java.util.UUID;
+
 import uy.com.uma.logicgame.persistencia.seguridad.UtilSeguridad;
 
 /**
@@ -31,6 +33,12 @@ public class TestSeguridad {
 		clave = UtilSeguridad.getClaveEncriptada("Juan", "secret");
 		System.out.println(clave.length());
 		System.out.println("[" + clave + "]");
+		
+		String id1 = UUID.randomUUID().toString();
+		String id2 = UUID.randomUUID().toString();
+		String token = UtilSeguridad.getClaveEncriptada(id1, id2);
+		System.out.println("Identificadores: " + id1 + " " + id2);
+		System.out.println("Token: " + token);
 	}
 
 }

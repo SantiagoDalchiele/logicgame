@@ -56,7 +56,7 @@ public class SessionFactoryUtil {
 	/**
 	 * Resetea la session factory con una nueva configuracion
 	 */
-	public static void reset (String user, String password) {
+	public static void reset() {
 		Configuration configuration = ConfiguracionLoadHelper.loadHibernateConfiguration();
 		Properties p = configuration.getProperties(); 
 		
@@ -71,13 +71,13 @@ public class SessionFactoryUtil {
 				log.error("Error al intentar configurar la base de datos, mal formada la url o no existe el driver");
 				e.printStackTrace();
 			}
-		} else if ((!UtilFormato.esNulo(user)) && (!UtilFormato.esNulo(password))) {
-			p.setProperty("hibernate.connection.username", user);
-			p.setProperty("hibernate.connection.password", password);
+		} else {
+			log.fatal("Debe configurar la variable de ambiente DATABASE_URL");
+			System.err.println("Debe configurar la variable de ambiente DATABASE_URL");
 		}
 		
 		log.debug("Configurando hibernate url [" + p.getProperty("hibernate.connection.url") + "] user: " + p.getProperty("hibernate.connection.username"));
-		reset();
+		sessionFactory = null;
 		getSessionFactory(configuration);
 	}
 	
@@ -96,15 +96,6 @@ public class SessionFactoryUtil {
 			DBData dbData = new DBData(new URI(System.getenv("DATABASE_URL")));
 		    return DriverManager.getConnection(dbData.getUrl(), dbData.getUsername(), dbData.getPassword());
 		}
-	}
-	
-	
-	
-	/**
-	 * Setea a nulo la session factory
-	 */
-	public static void reset() {
-		sessionFactory = null;
 	}
 	
 	

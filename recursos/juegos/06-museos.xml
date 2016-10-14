@@ -1,192 +1,404 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>6</id>
-	<titulo>¡Vamos al museo!</titulo>
-	<texto>Anto\u00F1ito Desastres ha vuelto a casa despu\u00E9s de visitar varios museos. En todos ellos ha recogido folletos informativos, pero no los ha le\u00EDdo hasta llegar a su casa, durante el desayuno. Pero, claro, \u00E9l es un poco desastre y ha tirado todo el chocolate por la mesa, manchando los folletos. Ahora no puede leer las informaciones que necesita para su tesis en la universidad. \u00BFPuedes ayudarle a organizar correctamente los siguientes datos?</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>¡Vamos al museo!</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Antoñito Desastres ha vuelto a casa después de visitar varios museos. En todos ellos ha recogido folletos informativos, pero no los ha leído hasta llegar a su casa, durante el desayuno. Pero, claro, él es un poco desastre y ha tirado todo el chocolate por la mesa, manchando los folletos. Ahora no puede leer las informaciones que necesita para su tesis en la universidad. ¿Puedes ayudarle a organizar correctamente los siguientes datos?</texto>
+		</traduccion>
+	</texto>
 	<costo>50</costo>
 	<dimensiones>
 		<dimension>
-			<id>Museo</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Museo</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Centro Galego de Arte Contempor\u00E1nea</valor>
-				<valor>Museo Guggenheim</valor>
-				<valor>Museo Nacional de Arte Romano</valor>
-				<valor>Museu d´Art Contemporani</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Centro Galego de Arte Contemporánea</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Museo Guggenheim</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Museo Nacional de Arte Romano</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Museu d´Art Contemporani</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Ciudad</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Ciudad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Barcelona</valor>
-				<valor>Bilbao</valor>
-				<valor>M\u00E9rida</valor>
-				<valor>Santiago de Compostela</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Barcelona</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Bilbao</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mérida</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Santiago de Compostela</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Arquitecto</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Arquitecto</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>\u00C1lvaro Siza</valor>
-				<valor>Frank O. Gehry</valor>
-				<valor>Rafael Moneo</valor>
-				<valor>Richard Meier</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Álvaro Siza</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Frank O. Gehry</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Rafael Moneo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Richard Meier</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>A\u00F1o</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Año</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>1985</valor>
-				<valor>1990</valor>
-				<valor>1995</valor>
-				<valor>1997</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>1985</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>1990</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>1995</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>1997</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Moneo hizo en 1985 un museo en Espa\u00F1a</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Moneo hizo en 1985 un museo en España</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Arquitecto</id-dimension1>
-					<id-valor1>Rafael Moneo</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1985</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El museo que est\u00E1 en Bilbao se construy\u00F3 en 1997</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El museo que está en Bilbao se construyó en 1997</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Bilbao</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1997</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El Museu d´Art Contemporani de Barcelona se hizo en 1995</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El Museu d´Art Contemporani de Barcelona se hizo en 1995</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Museo</id-dimension1>
-					<id-valor1>Museu d´Art Contemporani</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Barcelona</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Museo</id-dimension1>
-					<id-valor1>Museu d´Art Contemporani</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1995</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Barcelona</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1995</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El Museo Guggenheim es el m\u00E1s nuevo</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El Museo Guggenheim es el más nuevo</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Museo</id-dimension1>
-					<id-valor1>Museo Guggenheim</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1997</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Richard Meier trabaj\u00F3 en Catalu\u00F1a</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Richard Meier trabajó en Cataluña</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Arquitecto</id-dimension1>
-					<id-valor1>Richard Meier</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Barcelona</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>En M\u00E9rida se encuentra el museo que hizo Rafael Moneo</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>En Mérida se encuentra el museo que hizo Rafael Moneo</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>M\u00E9rida</id-valor1>
-					<id-dimension2>Arquitecto</id-dimension2>
-					<id-valor2>Rafael Moneo</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El Centro Galego de Arte Contempor\u00E1nea se hizo en 1990</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El Centro Galego de Arte Contemporánea se hizo en 1990</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Museo</id-dimension1>
-					<id-valor1>Centro Galego de Arte Contempor\u00E1nea</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1990</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Frank O. Gehry trabaj\u00F3 en Bilbao</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Frank O. Gehry trabajó en Bilbao</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Arquitecto</id-dimension1>
-					<id-valor1>Frank O. Gehry</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Bilbao</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>De estos cuatro museos, el primero que se hizo fue el Museo Nacional de Arte Romano</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>De estos cuatro museos, el primero que se hizo fue el Museo Nacional de Arte Romano</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Museo</id-dimension1>
-					<id-valor1>Museo Nacional de Arte Romano</id-valor1>
-					<id-dimension2>A\u00F1o</id-dimension2>
-					<id-valor2>1985</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>En 1990 \u00C1lvaro Siza trabaj\u00F3 en Santiago de Compostela</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>En 1990 Álvaro Siza trabajó en Santiago de Compostela</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>A\u00F1o</id-dimension1>
-					<id-valor1>1990</id-valor1>
-					<id-dimension2>Arquitecto</id-dimension2>
-					<id-valor2>\u00C1lvaro Siza</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>A\u00F1o</id-dimension1>
-					<id-valor1>1990</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Santiago de Compostela</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Arquitecto</id-dimension1>
-					<id-valor1>\u00C1lvaro Siza</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Santiago de Compostela</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

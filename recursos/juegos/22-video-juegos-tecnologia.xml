@@ -1,426 +1,797 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>22</id>
-	<titulo>Video juegos y tecnolog\u00EDa</titulo>
-	<texto>5 jovenes de distintas nacionalidades son fan\u00E1ticos de los video juegos, sus consolas, los celulares y las redes sociales.  Descubre la nacionalidad de cada uno de ellos, su video juego y consola favorita, el celular de su preferencia y en que red social prefiere pasar su tiempo libre</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Video juegos y tecnología</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>5 jovenes de distintas nacionalidades son fanáticos de los video juegos, sus consolas, los celulares y las redes sociales. Descubre la nacionalidad de cada uno de ellos, su video juego y consola favorita, el celular de su preferencia y en que red social prefiere pasar su tiempo libre</texto>
+		</traduccion>
+	</texto>
 	<costo>524</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Jack</valor>
-				<valor>Liam</valor>
-				<valor>Benjamin</valor>
-				<valor>Andrew</valor>
-				<valor>James</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Jack</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Liam</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Benjamin</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Andrew</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>James</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Nacionalidad</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nacionalidad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>estadounidense</valor>
-				<valor>ingl\u00E9s</valor>
-				<valor>canadiense</valor>
-				<valor>australiano</valor>
-				<valor>neozeland\u00E9s</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>estadounidense</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>inglés</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>canadiense</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>australiano</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>neozelandés</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Consola</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Consola</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>PlayStation</valor>
-				<valor>XBox</valor>
-				<valor>Wii</valor>
-				<valor>Nintendo</valor>
-				<valor>Game Boy</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>PlayStation</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>XBox</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Wii</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Nintendo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Game Boy</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Video juego</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Video juego</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Call of duty</valor>
-				<valor>Mortal Kombat</valor>
-				<valor>Super Mario</valor>
-				<valor>Mario Kart</valor>
-				<valor>Battlefield</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Call of duty</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mortal Kombat</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Super Mario</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mario Kart</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Battlefield</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Marca de celular</id>
+			<nro>5</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Marca de celular</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Samsung</valor>
-				<valor>Apple</valor>
-				<valor>LG</valor>
-				<valor>Sony</valor>
-				<valor>Windows Phone</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Samsung</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Apple</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>LG</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Sony</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Windows Phone</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Red social</id>
+			<nro>6</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Red social</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>facebook</valor>
-				<valor>twitter</valor>
-				<valor>youtube</valor>
-				<valor>google+</valor>
-				<valor>instagram</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>facebook</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>twitter</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>youtube</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>google+</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>instagram</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Quien usa la consola Nintendo no tiene un celular marca Windows Phone</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa la consola Nintendo no tiene un celular marca Windows Phone</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Windows Phone</id-valor1>
-					<id-dimension2>Consola</id-dimension2>
-					<id-valor2>Nintendo</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>5</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Liam, quien prefiere un celular Sony, es fan\u00E1tico de la red social facebook</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Liam, quien prefiere un celular Sony, es fanático de la red social facebook</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Sony</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Liam</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Sony</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>facebook</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Benjamin usa un celular LG, pero no le gustan las consolas Nintendo</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>LG</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Benjamin</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>LG</id-valor1>
-					<id-dimension2>Consola</id-dimension2>
-					<id-valor2>Nintendo</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El estadounidense es fan\u00E1tico de "Call of duty"</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Call of duty</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>estadounidense</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>4</valor1>
+					<dimension2>6</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien juega con "Mario Kart" no usa celular LG, ni Samsung, ni se llama Liam</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Benjamin usa un celular LG, pero no le gustan las consolas Nintendo</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Mario Kart</id-valor1>
-					<id-dimension2>Marca de celular</id-dimension2>
-					<id-valor2>LG</id-valor2>
-					<afirma-niega>false</afirma-niega>
+					<dimension1>5</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Mario Kart</id-valor1>
-					<id-dimension2>Marca de celular</id-dimension2>
-					<id-valor2>Samsung</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Mario Kart</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Liam</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>James, que juega con "Super Mario", su red social favorita no es ni instagram ni twitter</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El estadounidense es fanático de "Call of duty"</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Super Mario</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>James</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Super Mario</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>instagram</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Super Mario</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>twitter</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Andrew, el australiano, es fan\u00E1tico de la consola Nintendo</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Andrew</id-valor1>
-					<id-dimension2>Consola</id-dimension2>
-					<id-valor2>Nintendo</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>australiano</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Andrew</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Consola</id-dimension1>
-					<id-valor1>XBox</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Andrew</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien usa un IPhone (marca Apple) no prefiere la consola XBox, ni el video juego "Call of duty"</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Apple</id-valor1>
-					<id-dimension2>Consola</id-dimension2>
-					<id-valor2>XBox</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Apple</id-valor1>
-					<id-dimension2>Video juego</id-dimension2>
-					<id-valor2>Call of duty</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El canadiense juega con su PlayStation, usa la red social twitter, pero no le gusta "Mario Kart"</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>canadiense</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>facebook</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Consola</id-dimension1>
-					<id-valor1>PlayStation</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>canadiense</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>canadiense</id-valor1>
-					<id-dimension2>Video juego</id-dimension2>
-					<id-valor2>Mario Kart</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>twitter</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>canadiense</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien usa un Samsung habitualmente juega al Battlefield</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien juega con "Mario Kart" no usa celular LG, ni Samsung, ni se llama Liam</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Samsung</id-valor1>
-					<id-dimension2>Video juego</id-dimension2>
-					<id-valor2>Battlefield</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>4</valor1>
+					<dimension2>5</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>4</dimension1>
+					<valor1>4</valor1>
+					<dimension2>5</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>4</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>James, que juega con "Super Mario", su red social favorita no es ni instagram ni twitter</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>6</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>6</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Andrew, el australiano, es fanático de la consola Nintendo</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>2</valor1>
+					<dimension2>1</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa un IPhone (marca Apple) no prefiere la consola XBox, ni el video juego "Call of duty"</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El canadiense juega con su PlayStation, usa la red social twitter, pero no le gusta "Mario Kart"</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>6</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El estadounidense no usa facebook</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa un Samsung habitualmente juega al Battlefield</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>estadounidense</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>facebook</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien usa la red social instagram (el australiano) no le gusta la PlayStation ni el juego "Call of duty"</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>instagram</id-valor1>
-					<id-dimension2>Video juego</id-dimension2>
-					<id-valor2>Call of duty</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>instagram</id-valor1>
-					<id-dimension2>Consola</id-dimension2>
-					<id-valor2>PlayStation</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>neozeland\u00E9s</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>instagram</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>instagram</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>australiano</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Liam no es estadounidense</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El estadounidense no usa facebook</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Liam</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>estadounidense</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>6</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien usa IPhone no usa facebook</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa la red social instagram (el australiano) no le gusta la PlayStation ni el juego "Call of duty"</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>facebook</id-valor1>
-					<id-dimension2>Marca de celular</id-dimension2>
-					<id-valor2>Apple</id-valor2>
+					<dimension1>6</dimension1>
+					<valor1>5</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>5</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>5</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Liam no es estadounidense</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien usa youtube (que no es James) prefiere la consola XBox, pero no los celulares Apple, ni le gusta el juego "Mortal Kombat"</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa IPhone no usa facebook</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>youtube</id-valor1>
-					<id-dimension2>Consola</id-dimension2>
-					<id-valor2>XBox</id-valor2>
+					<dimension1>6</dimension1>
+					<valor1>1</valor1>
+					<dimension2>5</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa youtube (que no es James) prefiere la consola XBox, pero no los celulares Apple, ni le gusta el juego "Mortal Kombat"</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Marca de celular</id-dimension1>
-					<id-valor1>Apple</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>youtube</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>6</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>James</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>youtube</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Video juego</id-dimension1>
-					<id-valor1>Mortal Kombat</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>youtube</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien usa la consola Game Boy, no usa ni twitter ni google+</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Consola</id-dimension1>
-					<id-valor1>Game Boy</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>twitter</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Consola</id-dimension1>
-					<id-valor1>Game Boy</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>google+</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>6</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien prefiere la red social google+ usa un celular Windows Phone, es neozeland\u00E9s, pero no le gusta la consola XBox ni Nintendo</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien usa la consola Game Boy, no usa ni twitter ni google+</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>google+</id-valor1>
-					<id-dimension2>Marca de celular</id-dimension2>
-					<id-valor2>Windows Phone</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien prefiere la red social google+ usa un celular Windows Phone, es neozelandés, pero no le gusta la consola XBox ni Nintendo</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>4</valor1>
+					<dimension2>5</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Consola</id-dimension1>
-					<id-valor1>XBox</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>google+</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>2</valor1>
+					<dimension2>6</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Consola</id-dimension1>
-					<id-valor1>Nintendo</id-valor1>
-					<id-dimension2>Red social</id-dimension2>
-					<id-valor2>google+</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>6</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Red social</id-dimension1>
-					<id-valor1>google+</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>neozeland\u00E9s</id-valor2>
+					<dimension1>6</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

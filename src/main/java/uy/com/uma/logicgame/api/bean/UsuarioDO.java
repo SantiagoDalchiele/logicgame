@@ -47,7 +47,7 @@ public class UsuarioDO implements IJSONObject {
 		buf.append(UtilJSON.getPropJSON(TAG_RUTA) + UtilJSON.getValorJSON("" + getRuta()));
 		buf.append(UtilJSON.getPropJSON(TAG_NIVEL) + UtilJSON.getValorJSON("" + getNivel()));
 		buf.append(UtilJSON.getPropJSON(TAG_IDIOMA) + UtilJSON.getValorJSON("" + getIdioma()));
-		buf.append(UtilJSON.getPropJSON(TAG_ESTADO) + UtilJSON.getComillasJSON(getEstado()));
+		buf.append(UtilJSON.getPropJSON(TAG_ESTADO) + "[" + getEstado() + "]");
 		buf.append("}");
 		return buf.toString();
 	}

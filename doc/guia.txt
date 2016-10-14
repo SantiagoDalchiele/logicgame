@@ -1,14 +1,6 @@
--Ver sugerencias de Sabrina
-
--internacionalización, Probar:	
-	resolverJuego
-	generarJuego
--obtener todos los juegos con la nueva estructura del xml
-
--Usar cache para las hojas de estilos levantadas en el web-server (http://www.ehcache.org/)
-
--olvido de clave, mandar un mail con un token y con ese token poder re-ingresar la clave, en una página aparte a la del juego o no?
-	https://www.owasp.org/index.php/Forgot_Password_Cheat_Sheet
+-comitear cambios:
+	-cambio de estructura del xml del juego
+	-olvido de contraseña
 
 -Poder visualizar TODAS las pistas en un panel por encima o al costado
 
@@ -50,11 +42,6 @@
 
 -Documentar todo lo hecho
 
--Seguridad (necesario usando heroku?)
-	Como obtener que mi certificado generado en forma local me lo certifique una autoridad certificadora
-		letsecrypt.org
-		https://www.startssl.com/
-		
 -Interface para android
 
 -Swift

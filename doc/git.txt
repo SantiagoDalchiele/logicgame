@@ -5,7 +5,7 @@ git commit -m "Comentario"
 git remote add origin https://github.com/SantiagoDalchiele/repositorio.git
 git remote add prueba-git https://github.com/SantiagoDalchiele/prueba-git.git
 
-git push -u origin master
+git push -u [sistema] master
 	usuario: santiagodalchiele
 	clave: ........
 	

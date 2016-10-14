@@ -1,5 +1,7 @@
 package uy.com.uma.logicgame.persistencia.seguridad;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -50,6 +52,12 @@ class Usuario {
     @JoinColumn(name="idioma", referencedColumnName="id")
 	private Idioma idioma;
 	
+	@Column(columnDefinition = "bpchar(128)")
+	private String token;
+	
+	@Column(name="fch_expira_token")
+	private Date fchExpiraToken;
+	
 	
 	
 	/**
@@ -63,7 +71,7 @@ class Usuario {
 		du.setIdUsuario (usuario.getId());
 		du.setLogeado (usuario.getLogeado());
 		du.setNivel (usuario.getRutaNivel().getId().getNivel());
-		du.setEstado (usuario.getEstado());
+		du.setEstado ((usuario.getEstado() == null) ? "" : usuario.getEstado());
 		du.setCorreo (usuario.getCorreo());
 		du.setRuta (usuario.getRutaNivel().getId().getId());
 		return du;
@@ -120,4 +128,17 @@ class Usuario {
 	public void setIdioma(Idioma idioma) {
 		this.idioma = idioma;
 	}
+	public String getToken() {
+		return token;
+	}
+	public void setToken(String token) {
+		this.token = token;
+	}
+	public Date getFchExpiraToken() {
+		return fchExpiraToken;
+	}
+	public void setFchExpiraToken(Date fchExpiraToken) {
+		this.fchExpiraToken = fchExpiraToken;
+	}
+	
 }

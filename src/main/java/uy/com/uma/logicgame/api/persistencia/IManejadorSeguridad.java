@@ -27,6 +27,9 @@ public interface IManejadorSeguridad {
 	/** Retorna TRUE si el usuario está logeado en el sistema */
 	boolean estaLogeado (String idUsuario) throws PersistenciaException;
 	
+	/** Retorna TRUE si existe un usuario con este identificado o dirección de correo */
+	boolean existeUsuario (String idUsuario) throws PersistenciaException;
+	
 	/** Realiza el login en el sistema */
 	short login (String idUsuario, String clave) throws PersistenciaException;
 	
@@ -38,6 +41,15 @@ public interface IManejadorSeguridad {
 	
 	/** Registra un usuario en el sistema */
 	short registro (String idioma, String idUsuario, String correo, String clave) throws PersistenciaException;
+	
+	/** Retorna un token generado en forma aleatoria y persistido en la base de datos para dicho usuario (el token dura 24 horas) */
+	String generarToken (String idUsuario) throws PersistenciaException;
+	
+	/** Retorna TRUE si el token coincide con el identificador de usuario y no ha expirado */
+	boolean esValidoToken (String idUsuario, String token) throws PersistenciaException;
+	
+	/** Asigna un nuevo valor a la clave */
+	void resetClave (String idUsuario, String clave) throws PersistenciaException;
 	
 	/** Retorna datos del usuario */
 	UsuarioDO getDatosUsuario (String idUsuario) throws PersistenciaException;

@@ -127,11 +127,12 @@ public class GeneradorJuegos {
 		juego.setPistasDelJuego(new PistasDelJuego());
 		juego.setCosto(BigInteger.valueOf(-1));
 		
-		for (int i = 1; i <= param.getCantDimensiones(); i++) {
+		for (short i = 1; i <= param.getCantDimensiones(); i++) {
 			String id = "dime" + (i < 10 ? "0" : "") + i;
 			String prefVal = "dim" + (i < 10 ? "0" : "") + i + "_val";
 			Dimension d = new Dimension();
-			d.setId(UtilJuego.getLiteral(idiomaXDefecto, id));			
+			d.setId(UtilJuego.getLiteral(idiomaXDefecto, id));
+			d.setNro(i);
 			d.setValores(new Valores());
 			
 			for (short j = 1; j <= param.getCantValores(); j++) {

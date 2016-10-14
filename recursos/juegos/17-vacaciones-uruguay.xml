@@ -1,80 +1,200 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>17</id>
-	<titulo>Vacaciones en Uruguay</titulo>
-	<texto>Juan, Pedro y Manuel pasar\u00E1n sus vacaciones en balnearios de Uruguay, descubre en que balneario pasar\u00E1 sus vacaciones cada uno y cu\u00E1l es su deporte preferido</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Vacaciones en Uruguay</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Juan, Pedro y Manuel pasarán sus vacaciones en balnearios de Uruguay, descubre en que balneario pasará sus vacaciones cada uno y cuál es su deporte preferido</texto>
+		</traduccion>
+	</texto>
 	<costo>12</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Juan</valor>
-				<valor>Pedro</valor>
-				<valor>Manuel</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Juan</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pedro</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Manuel</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Balneario</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Balneario</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Punta del Este</valor>
-				<valor>Piri\u00E1polis</valor>
-				<valor>La Paloma</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Punta del Este</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Piriápolis</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>La Paloma</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Deporte</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Deporte</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>surf</valor>
-				<valor>f\u00FAtbol</valor>
-				<valor>volleyball</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>surf</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>fútbol</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>volleyball</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>A Juan no le gusta el f\u00FAtbol</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>A Juan no le gusta el fútbol</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Juan</id-valor1>
-					<id-dimension2>Deporte</id-dimension2>
-					<id-valor2>f\u00FAtbol</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Pedro pasar\u00E1 sus vacaciones en Punta del Este</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Pedro pasará sus vacaciones en Punta del Este</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Pedro</id-valor1>
-					<id-dimension2>Balneario</id-dimension2>
-					<id-valor2>Punta del Este</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Manuel prefiere La Paloma</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Manuel prefiere La Paloma</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Balneario</id-dimension1>
-					<id-valor1>La Paloma</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Manuel</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien visita Punta del Este prefiere como deporte el	volleyball</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien visita Punta del Este prefiere como deporte el volleyball</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Balneario</id-dimension1>
-					<id-valor1>Punta del Este</id-valor1>
-					<id-dimension2>Deporte</id-dimension2>
-					<id-valor2>volleyball</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

@@ -1,140 +1,300 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>15</id>
-	<titulo>Problemas en la vivienda</titulo>
-	<texto>M\u00F3nica, Claudia y Laura est\u00E1n teniendo problemas en sus viviendas.  Descubre en que tipo de vivienda vive cada uno que tipo de problemas tienen y en que habitaci\u00F3n</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Problemas en la vivienda</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Mónica, Claudia y Laura están teniendo problemas en sus viviendas. Descubre en que tipo de vivienda vive cada uno que tipo de problemas tienen y en que habitación</texto>
+		</traduccion>
+	</texto>
 	<costo>48</costo>
 	<dimensiones>
 		<dimension>
-			<id>nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>M\u00F3nica</valor>
-				<valor>Claudia</valor>
-				<valor>Laura</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mónica</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Claudia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Laura</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>vivienda</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>vivienda</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>apartamento</valor>
-				<valor>casa</valor>
-				<valor>loft</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>apartamento</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>casa</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>loft</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>habitaci\u00F3n</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>habitación</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>ba\u00F1o</valor>
-				<valor>cocina</valor>
-				<valor>dormitorio</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>baño</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>cocina</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>dormitorio</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>problema</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>problema</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>ca\u00F1o roto</valor>
-				<valor>humedad</valor>
-				<valor>el\u00E9ctricos</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>caño roto</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>humedad</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>eléctricos</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>M\u00F3nica tiene problemas el\u00E9ctricos pero no en el ba\u00F1o</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Mónica tiene problemas eléctricos pero no en el baño</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>nombre</id-dimension1>
-					<id-valor1>M\u00F3nica</id-valor1>
-					<id-dimension2>problema</id-dimension2>
-					<id-valor2>el\u00E9ctricos</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>habitaci\u00F3n</id-dimension1>
-					<id-valor1>ba\u00F1o</id-valor1>
-					<id-dimension2>nombre</id-dimension2>
-					<id-valor2>M\u00F3nica</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>1</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Claudia no es quien tiene problemas con el ca\u00F1o roto ni vive en una casa</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Claudia no es quien tiene problemas con el caño roto ni vive en una casa</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>nombre</id-dimension1>
-					<id-valor1>Claudia</id-valor1>
-					<id-dimension2>problema</id-dimension2>
-					<id-valor2>ca\u00F1o roto</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>vivienda</id-dimension1>
-					<id-valor1>casa</id-valor1>
-					<id-dimension2>nombre</id-dimension2>
-					<id-valor2>Claudia</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Laura no vive en casa ni tiene problemas en su cocina</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Laura no vive en casa ni tiene problemas en su cocina</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>nombre</id-dimension1>
-					<id-valor1>Laura</id-valor1>
-					<id-dimension2>vivienda</id-dimension2>
-					<id-valor2>casa</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>nombre</id-dimension1>
-					<id-valor1>Laura</id-valor1>
-					<id-dimension2>habitaci\u00F3n</id-dimension2>
-					<id-valor2>cocina</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien tiene problemas de humedad no los tiene el dormitorio ni vive en un loft</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien tiene problemas de humedad no los tiene el dormitorio ni vive en un loft</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>problema</id-dimension1>
-					<id-valor1>humedad</id-valor1>
-					<id-dimension2>vivienda</id-dimension2>
-					<id-valor2>loft</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>problema</id-dimension1>
-					<id-valor1>humedad</id-valor1>
-					<id-dimension2>habitaci\u00F3n</id-dimension2>
-					<id-valor2>dormitorio</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien vive en un apartamento no tiene problemas en su cocina</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>vivienda</id-dimension1>
-					<id-valor1>apartamento</id-valor1>
-					<id-dimension2>habitaci\u00F3n</id-dimension2>
-					<id-valor2>cocina</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien vive en un loft tiene un ca\u00F1o roto</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien vive en un apartamento no tiene problemas en su cocina</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>vivienda</id-dimension1>
-					<id-valor1>loft</id-valor1>
-					<id-dimension2>problema</id-dimension2>
-					<id-valor2>ca\u00F1o roto</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien vive en un loft tiene un caño roto</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

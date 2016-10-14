@@ -1,167 +1,354 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>4</id>
-	<titulo>Esot\u00E9rico</titulo>
-	<texto>A pesar del misterio que rodea a la vidente Virginia, su jornada laboral se puede deducir leyendo cinco apuntes - los de abajo - sacados de su agenda.  Relacione los datos en el gr\u00E1fico y adivine la hora de cita de los clientes, los temas de sus consultas y las herramientas m\u00E1gicas que piensa utilizar</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Esotérico</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>A pesar del misterio que rodea a la vidente Virginia, su	jornada laboral se puede deducir leyendo cinco apuntes - los de	abajo - sacados de su agenda. Relacione los datos en el gráfico y adivine la hora de cita de los clientes, los temas de sus consultas y las herramientas mágicas que piensa utilizar</texto>
+		</traduccion>
+	</texto>
 	<costo>105</costo>
 	<dimensiones>
 		<dimension>
-			<id>Cliente</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Cliente</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Amalia</valor>
-				<valor>Benito</valor>
-				<valor>Jos\u00E9</valor>
-				<valor>Matilde</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Amalia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Benito</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>José</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Matilde</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Hora</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Hora</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>16:00</valor>
-				<valor>16:30</valor>
-				<valor>17:00</valor>
-				<valor>17:30</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>16:00</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>16:30</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>17:00</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>17:30</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Herramienta</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Herramienta</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Bola de cristal</valor>
-				<valor>Posos</valor>
-				<valor>Tarot</valor>
-				<valor>Velas</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Bola de cristal</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Posos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Tarot</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Velas</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Temas</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Temas</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Amores</valor>
-				<valor>Dinero</valor>
-				<valor>Familia</valor>
-				<valor>Salud</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Amores</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Dinero</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Familia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Salud</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>En la cita concertada con Matilde, indagar\u00E9 sobre sus futuros amores</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>En la cita concertada con Matilde, indagaré sobre sus futuros amores</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>Matilde</id-valor1>
-					<id-dimension2>Temas</id-dimension2>
-					<id-valor2>Amores</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Para la entrevista de las 17:00 horas, me servir\u00E9 de la bola de cristal</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Para la entrevista de las 17:00 horas, me serviré de la bola	de cristal</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Hora</id-dimension1>
-					<id-valor1>17:00</id-valor1>
-					<id-dimension2>Herramienta</id-dimension2>
-					<id-valor2>Bola de cristal</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El tarot lo utilizar\u00E9 antes de atender a Jos\u00E9 y despu\u00E9s de responder al cliente preocupado por cuestiones de dinero</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El tarot lo utilizaré antes de atender a José y después de responder al cliente preocupado por cuestiones de dinero</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Herramienta</id-dimension1>
-					<id-valor1>Tarot</id-valor1>
-					<id-dimension2>Cliente</id-dimension2>
-					<id-valor2>Jos\u00E9</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Herramienta</id-dimension1>
-					<id-valor1>Tarot</id-valor1>
-					<id-dimension2>Temas</id-dimension2>
-					<id-valor2>Dinero</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>Jos\u00E9</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>16:00</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>Jos\u00E9</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>16:30</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>Jos\u00E9</id-valor1>
-					<id-dimension2>Temas</id-dimension2>
-					<id-valor2>Dinero</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Temas</id-dimension1>
-					<id-valor1>Dinero</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>17:00</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Temas</id-dimension1>
-					<id-valor1>Dinero</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>17:30</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Herramienta</id-dimension1>
-					<id-valor1>Tarot</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>16:00</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Herramienta</id-dimension1>
-					<id-valor1>Tarot</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>17:30</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Para responder a las preguntas de quien acude por temas de familia, recurrir\u00E9 a las velas</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Para responder a las preguntas de quien acude por temas de familia, recurriré a las velas</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Temas</id-dimension1>
-					<id-valor1>Familia</id-valor1>
-					<id-dimension2>Herramienta</id-dimension2>
-					<id-valor2>Velas</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Benito viene por motivos de salud. No le atender\u00E9 a las 16:30</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Benito viene por motivos de salud. No le atenderé a las 16:30</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>Benito</id-valor1>
-					<id-dimension2>Temas</id-dimension2>
-					<id-valor2>Salud</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Cliente</id-dimension1>
-					<id-valor1>Benito</id-valor1>
-					<id-dimension2>Hora</id-dimension2>
-					<id-valor2>16:30</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>

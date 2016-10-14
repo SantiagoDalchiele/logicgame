@@ -32,23 +32,48 @@ public class TestGetJuego {
 	 */
 	public static void main(String[] args) {		
 		try {
-			String pathDest = "c:/temp/nuevojuego10multi2.xml";
-			PersistenciaFactory.getInstancia().getManejadorSesiones().reset(null, null);
-			IManejadorJuego mj = PersistenciaFactory.getInstancia().getManejadorJuego();
-			JAXBContext jaxbContext = JAXBContext.newInstance(Juego.class);
-			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-			File dest = new File(pathDest);
-			Juego j = mj.obtener(10);			
-			
-			if (dest.exists())
-				dest.delete();			
-			
-			jaxbMarshaller.marshal(j, dest);			
+			obtener(1, "recursos/juegosnew/01-problemas-en-la-escuela.xml");
+			obtener(2, "recursos/juegosnew/02-turismo-espana.xml");
+			obtener(3, "recursos/juegosnew/03-vacaciones-islas.xml");
+			obtener(4, "recursos/juegosnew/04-esoterico.xml");
+			obtener(6, "recursos/juegosnew/06-museos.xml");
+			obtener(7, "recursos/juegosnew/07-gustos-literarios.xml");
+			obtener(8, "recursos/juegosnew/08-mascotas.xml");
+			obtener(9, "recursos/juegosnew/09-einstein.xml");
+			obtener(10, "recursos/juegosnew/10-simple.xml");
+			obtener(13, "recursos/juegosnew/13-hispanoamerica-recursos.xml");
+			obtener(14, "recursos/juegosnew/14-RiosYBanderas.xml");
+			obtener(15, "recursos/juegosnew/15-problemas-en-la-vivienda.xml");
+			obtener(16, "recursos/juegosnew/16-juegos-infantiles.xml");
+			obtener(17, "recursos/juegosnew/17-vacaciones-uruguay.xml");
+			obtener(18, "recursos/juegosnew/18-comensales.xml");
+			obtener(19, "recursos/juegosnew/19-mundial-de-rugby.xml");
+			obtener(20, "recursos/juegosnew/20-casamientos.xml");
+			obtener(21, "recursos/juegosnew/21-turistas-en-uruguay.xml");
+			obtener(22, "recursos/juegosnew/22-video-juegos-tecnologia.xml");
 			log.info("Fin exitoso de la aplicación");
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException | ConfiguracionException | PersistenciaException | JAXBException e) {
 			e.printStackTrace();
 		} finally {
 			SessionFactoryUtil.shutdown();
 		}
+	}
+	
+	
+	
+	private static void obtener (int nroJuego, String pathDest) throws InstantiationException, IllegalAccessException, 
+										ClassNotFoundException, ConfiguracionException, JAXBException, PersistenciaException {
+		log.info("obteniendo el juego " + nroJuego + " al archivo " + pathDest);
+		PersistenciaFactory.getInstancia().getManejadorSesiones().reset();
+		IManejadorJuego mj = PersistenciaFactory.getInstancia().getManejadorJuego();
+		JAXBContext jaxbContext = JAXBContext.newInstance(Juego.class);
+		Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+		File dest = new File(pathDest);
+		Juego j = mj.obtener(nroJuego);			
+		
+		if (dest.exists())
+			dest.delete();			
+		
+		jaxbMarshaller.marshal(j, dest);
 	}
 }

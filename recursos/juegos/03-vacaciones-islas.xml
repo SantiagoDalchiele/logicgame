@@ -1,154 +1,356 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>3</id>
-	<titulo>Vacaciones en las islas</titulo>
-	<texto>Descubre a que isla viajar\u00E1 cada una de las 4 amigas, en que compa\u00F1\u00EDa a\u00E9rea y cuantos d\u00EDas durar\u00E1 su estad\u00EDa</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Vacaciones en las islas</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Descubre a que isla viajará cada una de las 4 amigas, en que	compañía aérea y cuantos días durará su estadía</texto>
+		</traduccion>
+	</texto>
 	<costo>156</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Carolina</valor>
-				<valor>Diana</valor>
-				<valor>Luisa</valor>
-				<valor>Mar\u00EDa</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Carolina</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Diana</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Luisa</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>María</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Isla</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Isla</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Ibiza</valor>
-				<valor>Lanzarote</valor>
-				<valor>Mallorca</valor>
-				<valor>Tenerife</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Ibiza</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Lanzarote</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mallorca</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Tenerife</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Compa\u00F1ia</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Compañia</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Air France</valor>
-				<valor>Iberia</valor>
-				<valor>Lufthansa</valor>
-				<valor>Sabena</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Air France</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Iberia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Lufthansa</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Sabena</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>D\u00EDas</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Días</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>7</valor>
-				<valor>10</valor>
-				<valor>14</valor>
-				<valor>15</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>7</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>10</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>14</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>15</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Diana ha planeado ir a Lanzarote</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Diana ha planeado ir a Lanzarote</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Diana</id-valor1>
-					<id-dimension2>Isla</id-dimension2>
-					<id-valor2>Lanzarote</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La que va a volar con Sabena pasar\u00E1 siete d\u00EDas en su isla elegida</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La que va a volar con Sabena pasará siete días en su isla elegida</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compa\u00F1ia</id-dimension1>
-					<id-valor1>Sabena</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>7</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Lufthansa es la compa\u00F1\u00EDa elegida por la que viajar\u00E1 a Tenerife</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Lufthansa es la compañía elegida por la que viajará a Tenerife</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compa\u00F1ia</id-dimension1>
-					<id-valor1>Lufthansa</id-valor1>
-					<id-dimension2>Isla</id-dimension2>
-					<id-valor2>Tenerife</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien volar\u00E1 con Air France cuenta con 15 d\u00EDas de descanso</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien volará con Air France cuenta con 15 días de descanso</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compa\u00F1ia</id-dimension1>
-					<id-valor1>Air France</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>15</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Carolina se tomar\u00E1 diez d\u00EDas de relax</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Carolina se tomará diez días de relax</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Carolina</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>10</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien viajar\u00E1 con Iberia se ha reservado m\u00E1s d\u00EDas que quien viajar\u00E1 a Mallorca</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien viajará con Iberia se ha reservado más días que quien viajará a Mallorca</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Compa\u00F1ia</id-dimension1>
-					<id-valor1>Iberia</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>7</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Isla</id-dimension1>
-					<id-valor1>Mallorca</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>15</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Luisa no piensa ir a Ibiza</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Luisa no piensa ir a Ibiza</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Luisa</id-valor1>
-					<id-dimension2>Isla</id-dimension2>
-					<id-valor2>Ibiza</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Mar\u00EDa (que no visitar\u00E1 Tenerife) tiene programados 14 d\u00EDas de ocio</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>María (que no visitará Tenerife) tiene programados 14 días de ocio</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Mar\u00EDa</id-valor1>
-					<id-dimension2>Isla</id-dimension2>
-					<id-valor2>Tenerife</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Mar\u00EDa</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>14</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

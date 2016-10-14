@@ -40,7 +40,7 @@ public class TestPersistirJuego {
 			File ori = new File(pathOri);
 			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(ori);
 			new ValidadorJuego().validarJuego(juego);
-			PersistenciaFactory.getInstancia().getManejadorSesiones().reset(null, null);
+			PersistenciaFactory.getInstancia().getManejadorSesiones().reset();
 			IManejadorJuego mj = PersistenciaFactory.getInstancia().getManejadorJuego();
 			mj.persistir(juego);
 			mj.actualizarRedundancias(juego.getId().intValue());

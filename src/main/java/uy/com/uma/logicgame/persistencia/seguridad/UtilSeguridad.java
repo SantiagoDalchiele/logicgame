@@ -64,7 +64,7 @@ public abstract class UtilSeguridad {
 				byte[] hash = digest.digest(text.getBytes(StandardCharsets.UTF_8));
 				return new BASE64Encoder().encode(hash);
 			} catch (NoSuchAlgorithmException e) {
-				log.fatal("No se puede encriptar las clave porque no se soporta el algoritmo SHA-256");				
+				log.fatal("No se puede encriptar las clave porque no se soporta el algoritmo " + HASH_METHOD);				
 			}			
 		}
 		

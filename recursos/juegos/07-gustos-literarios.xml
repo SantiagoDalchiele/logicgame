@@ -1,128 +1,282 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>7</id>
-	<titulo>Gustos literarios</titulo>
-	<texto>Descubre los gustos literarios de estos 4 personajes y sus profesiones</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Gustos literarios</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Descubre los gustos literarios de estos 4 personajes y sus profesiones</texto>
+		</traduccion>
+	</texto>
 	<costo>24</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Arturo</valor>
-				<valor>Carlos</valor>
-				<valor>Juan</valor>
-				<valor>Luis</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Arturo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Carlos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Juan</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Luis</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Profesi\u00F3n</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Profesión</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Empresario</valor>
-				<valor>Jardinero</valor>
-				<valor>Mec\u00E1nico</valor>
-				<valor>M\u00E9dico</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Empresario</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Jardinero</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mecánico</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Médico</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>G\u00E9nero</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Género</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Cuentos</valor>
-				<valor>Novela</valor>
-				<valor>Poes\u00EDa</valor>
-				<valor>Teatro</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Cuentos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Novela</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Poesía</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Teatro</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>El m\u00E9dico no se llama Carlos y no le gusta la poes\u00EDa</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El médico no se llama Carlos y no le gusta la poesía</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Profesi\u00F3n</id-dimension1>
-					<id-valor1>M\u00E9dico</id-valor1>
-					<id-dimension2>Nombre</id-dimension2>
-					<id-valor2>Carlos</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Profesi\u00F3n</id-dimension1>
-					<id-valor1>M\u00E9dico</id-valor1>
-					<id-dimension2>G\u00E9nero</id-dimension2>
-					<id-valor2>Poes\u00EDa</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Luis no es m\u00E9dico ni empresario</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Luis no es médico ni empresario</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Luis</id-valor1>
-					<id-dimension2>Profesi\u00F3n</id-dimension2>
-					<id-valor2>M\u00E9dico</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Luis</id-valor1>
-					<id-dimension2>Profesi\u00F3n</id-dimension2>
-					<id-valor2>Empresario</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Al que le gustan los cuentos no es mec\u00E1nico</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>G\u00E9nero</id-dimension1>
-					<id-valor1>Cuentos</id-valor1>
-					<id-dimension2>Profesi\u00F3n</id-dimension2>
-					<id-valor2>Mec\u00E1nico</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Arturo es jardinero y no le gusta el teatro</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Al que le gustan los cuentos no es mecánico</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Arturo</id-valor1>
-					<id-dimension2>Profesi\u00F3n</id-dimension2>
-					<id-valor2>Jardinero</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Arturo es jardinero y no le gusta el teatro</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Arturo</id-valor1>
-					<id-dimension2>G\u00E9nero</id-dimension2>
-					<id-valor2>Teatro</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Al m\u00E9dico le gustan los cuentos</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Al médico le gustan los cuentos</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Profesi\u00F3n</id-dimension1>
-					<id-valor1>M\u00E9dico</id-valor1>
-					<id-dimension2>G\u00E9nero</id-dimension2>
-					<id-valor2>Cuentos</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Al empresario le encanta la novela</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Al empresario le encanta la novela</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Profesi\u00F3n</id-dimension1>
-					<id-valor1>Empresario</id-valor1>
-					<id-dimension2>G\u00E9nero</id-dimension2>
-					<id-valor2>Novela</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

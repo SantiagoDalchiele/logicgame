@@ -8,7 +8,7 @@ package uy.com.uma.logicgame.api.persistencia;
 public interface IManejadorSesiones {
 
 	/** Resetea la configuracion */
-	void reset (String user, String password);
+	void reset ();
 	
 	/** Retorna TRUE si se inicializó */
 	boolean isInitialized();

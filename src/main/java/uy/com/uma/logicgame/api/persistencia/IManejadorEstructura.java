@@ -20,4 +20,7 @@ public interface IManejadorEstructura {
 	
 	/** Crea la ruta por defecto a asignarle a los usuarios cuando recien son creados */
 	void crearRutaXDefecto() throws PersistenciaException;
+	
+	/** Crea los atributos token y fch_expira_token en la tabla usuarios */
+	void parche01TokenUsuarios() throws PersistenciaException;
 }

@@ -112,6 +112,8 @@ public class ManejadorEstructura implements IManejadorEstructura {
 						"nivel INTEGER," +
 						"estado TEXT," +
 						"idioma CHAR(2) REFERENCES idiomas (id)," +
+						"token CHAR(128)," +
+						"fch_expira_token TIMESTAMP," +
 						"FOREIGN KEY (ruta, nivel) REFERENCES rutas (id, nivel))");
 		
 		idsTablas.add("usuarios");
@@ -243,5 +245,30 @@ public class ManejadorEstructura implements IManejadorEstructura {
 		} finally {
 			UtilSQL.close(connection, stmt);
 		}		
+	}
+	
+	
+	
+	/** 
+	 * Crea los atributos token y fch_expira_token en la tabla usuarios 
+	 */
+	@Override
+	public void parche01TokenUsuarios() throws PersistenciaException {
+		Connection connection = null;
+		Statement stmt = null;
+		
+		try {
+			connection = SessionFactoryUtil.getConnection();
+			stmt = connection.createStatement();
+			final String alter = "ALTER TABLE usuarios " + 
+									"ADD COLUMN token CHAR(128) NULL, " +
+									"ADD COLUMN fch_expira_token TIMESTAMP NULL;";
+			log.info(alter);
+			stmt.execute(alter);						
+		} catch (Exception e) {
+			throw new PersistenciaException(e);
+		} finally {
+			UtilSQL.close(connection, stmt);
+		}
 	}
 }

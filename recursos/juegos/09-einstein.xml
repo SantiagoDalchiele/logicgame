@@ -1,299 +1,655 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>9</id>
-	<titulo>Test de Einstein</titulo>
-	<texto>Einstein fue quien propuso este problema, y mostr\u00F3 su convencimiento de que no m\u00E1s del 2% de la poblaci\u00F3n del mundo podr\u00EDa resolverlo. Demuestra que est\u00E1s dentro del 2% restante.  Condiciones iniciales: Tenemos cinco casas, cada una de un color.  Cada casa tiene un due\u00F1o de nacionalidad diferente.  Los 5 due\u00F1os beben una bebida diferente, fuman marca diferente y tienen mascota diferente.  Ning\u00FAn due\u00F1o tiene la misma mascota, fuma la misma marca o bebe el mismo tipo de bebida que otro</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Test de Einstein</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Einstein fue quien propuso este problema, y mostró su convencimiento de que no más del 2% de la población del mundo podría resolverlo. Demuestra que	estás dentro del 2% restante. Condiciones iniciales: Tenemos cinco casas, cada una de un color. Cada casa tiene un dueño de nacionalidad diferente. Los 5 dueños beben una bebida diferente, fuman marca diferente y tienen mascota diferente. Ningún dueño tiene la misma mascota, fuma la misma marca o bebe el mismo tipo de bebida que otro</texto>
+		</traduccion>
+	</texto>
 	<costo>609</costo>
 	<dimensiones>
 		<dimension>
-			<id>Casa</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Casa</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>1</valor>
-				<valor>2</valor>
-				<valor>3</valor>
-				<valor>4</valor>
-				<valor>5</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>1</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>2</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>3</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>4</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>5</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Nacionalidad</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nacionalidad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>alem\u00E1n</valor>
-				<valor>dan\u00E9s</valor>
-				<valor>ingl\u00E9s</valor>
-				<valor>noruego</valor>
-				<valor>sueco</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>alemán</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>danés</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>inglés</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>noruego</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>sueco</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Color</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Color</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>amarilla</valor>
-				<valor>azul</valor>
-				<valor>blanca</valor>
-				<valor>roja</valor>
-				<valor>verde</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>amarilla</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>azul</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>blanca</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>roja</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>verde</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Bebida</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Bebida</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>agua</valor>
-				<valor>caf\u00E9</valor>
-				<valor>cerveza</valor>
-				<valor>leche</valor>
-				<valor>t\u00E9</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>agua</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>café</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>cerveza</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>leche</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>té</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Tabaco</id>
+			<nro>5</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Tabaco</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Blend</valor>
-				<valor>BlueMaster</valor>
-				<valor>Dunhill</valor>
-				<valor>PallMall</valor>
-				<valor>Prince</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Blend</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>BlueMaster</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Dunhill</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>PallMall</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Prince</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Mascota</id>
+			<nro>6</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Mascota</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>caballos</valor>
-				<valor>gatos</valor>
-				<valor>p\u00E1jaros</valor>
-				<valor>peces</valor>
-				<valor>perro</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>caballos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>gatos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>pájaros</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>peces</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>perro</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>El noruego vive en la primera casa, junto a la casa azul</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El noruego vive en la primera casa, junto a la casa azul</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>noruego</id-valor1>
-					<id-dimension2>Casa</id-dimension2>
-					<id-valor2>1</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>2</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>azul</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El que vive en la casa del centro toma leche</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>3</id-valor1>
-					<id-dimension2>Bebida</id-dimension2>
-					<id-valor2>leche</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El ingl\u00E9s vive en la casa roja</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que vive en la casa del centro toma leche</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>ingl\u00E9s</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>roja</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La mascota del sueco es un perro</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El inglés vive en la casa roja</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>sueco</id-valor1>
-					<id-dimension2>Mascota</id-dimension2>
-					<id-valor2>perro</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El dan\u00E9s bebe t\u00E9</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La mascota del sueco es un perro</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>dan\u00E9s</id-valor1>
-					<id-dimension2>Bebida</id-dimension2>
-					<id-valor2>t\u00E9</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La casa verde es la inmediata de la izquierda de la casa blanca</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El danés bebe té</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>5</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>verde</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>1</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>blanca</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>1</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>verde</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>2</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>verde</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>2</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>blanca</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>3</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>blanca</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El de la casa verde toma caf\u00E9</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Color</id-dimension1>
-					<id-valor1>verde</id-valor1>
-					<id-dimension2>Bebida</id-dimension2>
-					<id-valor2>caf\u00E9</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El que fuma PallMall cr\u00EDa p\u00E1jaros</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La casa verde es la inmediata de la izquierda de la casa blanca</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Tabaco</id-dimension1>
-					<id-valor1>PallMall</id-valor1>
-					<id-dimension2>Mascota</id-dimension2>
-					<id-valor2>p\u00E1jaros</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>5</valor1>
+					<dimension2>3</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El de la casa verde toma café</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>5</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El de la casa amarilla fuma Dunhill</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que fuma PallMall cría pájaros</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Color</id-dimension1>
-					<id-valor1>amarilla</id-valor1>
-					<id-dimension2>Tabaco</id-dimension2>
-					<id-valor2>Dunhill</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>4</valor1>
+					<dimension2>6</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El que fuma Blend vive junto al que tiene gatos</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El de la casa amarilla fuma Dunhill</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Tabaco</id-dimension1>
-					<id-valor1>Blend</id-valor1>
-					<id-dimension2>Mascota</id-dimension2>
-					<id-valor2>gatos</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Tabaco</id-dimension1>
-					<id-valor1>Blend</id-valor1>
-					<id-dimension2>Mascota</id-dimension2>
-					<id-valor2>peces</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Casa</id-dimension1>
-					<id-valor1>4</id-valor1>
-					<id-dimension2>Mascota</id-dimension2>
-					<id-valor2>peces</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El que tiene caballos vive junto al que fuma Dunhill*</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Mascota</id-dimension1>
-					<id-valor1>caballos</id-valor1>
-					<id-dimension2>Tabaco</id-dimension2>
-					<id-valor2>Dunhill</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El que fuma BlueMaster bebe cerveza</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Tabaco</id-dimension1>
-					<id-valor1>BlueMaster</id-valor1>
-					<id-dimension2>Bebida</id-dimension2>
-					<id-valor2>cerveza</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>5</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El alem\u00E1n fuma Prince</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que fuma Blend vive junto al que tiene gatos</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>alem\u00E1n</id-valor1>
-					<id-dimension2>Tabaco</id-dimension2>
-					<id-valor2>Prince</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>6</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>6</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>6</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que tiene caballos vive junto al que fuma Dunhill*</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>1</valor1>
+					<dimension2>5</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que fuma BlueMaster bebe cerveza</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El que fuma Blend tiene un vecino que bebe agua</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El alemán fuma Prince</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Tabaco</id-dimension1>
-					<id-valor1>Blend</id-valor1>
-					<id-dimension2>Bebida</id-dimension2>
-					<id-valor2>agua</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>5</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que fuma Blend tiene un vecino que bebe agua</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Tabaco</id-dimension1>
-					<id-valor1>Blend</id-valor1>
-					<id-dimension2>Casa</id-dimension2>
-					<id-valor2>3</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>1</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>

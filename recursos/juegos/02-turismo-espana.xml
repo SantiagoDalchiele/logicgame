@@ -1,159 +1,324 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>2</id>
-	<titulo>Turismo por Espa\u00F1a</titulo>
-	<texto>Tres estudiantes hispanoamericanos de distintos pa\u00EDses visitan Espa\u00F1a. Descubre la nacionalidad de cada uno y tambi\u00E9n la ciudad y el monumento que quieren visitar</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Turismo por España</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Tres estudiantes hispanoamericanos de distintos países visitan España. Descubre la nacionalidad de cada uno y también la ciudad y el monumento que quieren visitar</texto>
+		</traduccion>
+	</texto>
 	<costo>26</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Pedro</valor>
-				<valor>Belen</valor>
-				<valor>Carlos</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pedro</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Belen</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Carlos</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Nacionalidad</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nacionalidad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Mejicano</valor>
-				<valor>Argentino</valor>
-				<valor>Puertorique\u00F1o</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mejicano</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Argentino</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Puertoriqueño</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Ciudad</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Ciudad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Sevilla</valor>
-				<valor>Barcelona</valor>
-				<valor>Madrid</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Sevilla</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Barcelona</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Madrid</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Monumento</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Monumento</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Casa Mil\u00E1</valor>
-				<valor>Palacio Real</valor>
-				<valor>La Giralda</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Casa Milá</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Palacio Real</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>La Giralda</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>El mejicano quiere visitar Sevilla</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El mejicano quiere visitar Sevilla</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>Mejicano</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Sevilla</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Belen</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>Mejicano</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Sevilla</id-valor1>
-					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>La Giralda</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Barcelona</id-valor1>
-					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>Casa Mil\u00E1</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Ciudad</id-dimension1>
-					<id-valor1>Madrid</id-valor1>
-					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>Palacio Real</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>La argentina quiere ver la Casa Mil\u00E1</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Belen</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>Argentino</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>Argentino</id-valor1>
-					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>Casa Mil\u00E1</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Carlos quiere visitar el Palacio Real</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La argentina quiere ver la Casa Milá</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Carlos</id-valor1>
-					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>Palacio Real</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Bel\u00E9n quiere ir a Barcelona</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Carlos quiere visitar el Palacio Real</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Belen</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Barcelona</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Carlos no es argentino</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Belén quiere ir a Barcelona</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Carlos</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>Argentino</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Carlos no es argentino</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El que quiere visitar Madrid es puertorrique\u00F1o</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El que quiere visitar Madrid es puertorriqueño</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>Puertorique\u00F1o</id-valor1>
-					<id-dimension2>Ciudad</id-dimension2>
-					<id-valor2>Madrid</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Pedro quiere visitar La Giralda</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Pedro quiere visitar La Giralda</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Pedro</id-valor1>
-					<id-dimension2>Monumento</id-dimension2>
-					<id-valor2>La Giralda</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

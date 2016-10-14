@@ -1,201 +1,450 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>13</id>
-	<titulo>Hispanoam\u00E9rica y su econom\u00EDa</titulo>
-	<texto>Los pa\u00EDses hispanoamericanos tienen un enorme potencial econ\u00F3mico. Hoy vamos a conocer algunas de sus riquezas m\u00E1s importantes en varios sectores de la econom\u00EDa. Pero para conseguir esta informaci\u00F3n debes leer atentamente las pistas que te damos</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Hispanoamérica y su economía</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Los países hispanoamericanos tienen un enorme potencial económico. Hoy vamos a conocer algunas de sus riquezas más importantes en varios sectores de	la economía. Pero para conseguir esta información debes leer atentamente las pistas que te damos</texto>
+		</traduccion>
+	</texto>
 	<costo>88</costo>
 	<dimensiones>
 		<dimension>
-			<id>Pa\u00EDs</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>País</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Costa Rica</valor>
-				<valor>Cuba</valor>
-				<valor>Chile</valor>
-				<valor>Ecuador</valor>
-				<valor>Guatemala</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Costa Rica</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Cuba</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Chile</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Ecuador</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Guatemala</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Agricultura</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Agricultura</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>ma\u00EDz</valor>
-				<valor>ca\u00F1a de az\u00FAcar</valor>
-				<valor>trigo</valor>
-				<valor>algod\u00F3n</valor>
-				<valor>pl\u00E1tano</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>maíz</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>caña de azúcar</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>trigo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>algodón</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>plátano</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Miner\u00EDa</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Minería</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>bauxita</valor>
-				<valor>n\u00EDquel</valor>
-				<valor>cobre</valor>
-				<valor>oro</valor>
-				<valor>zinc</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>bauxita</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>níquel</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>cobre</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>oro</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>zinc</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Industria</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Industria</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>maquinaria</valor>
-				<valor>tabaco</valor>
-				<valor>siderurgia</valor>
-				<valor>tejido</valor>
-				<valor>alimentos</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>maquinaria</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>tabaco</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>siderurgia</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>tejido</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>alimentos</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>El pa\u00EDs andino utiliza en su bandera el color amarillo, que recuerda sus importantes yacimientos de oro</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El país andino utiliza en su bandera el color amarillo, que recuerda sus importantes yacimientos de oro</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Ecuador</id-valor1>
-					<id-dimension2>Miner\u00EDa</id-dimension2>
-					<id-valor2>oro</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La ca\u00F1a de az\u00FAcar es el m\u00E1s importante producto agr\u00EDcola de la mayor de las islas de las Antillas</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La caña de azúcar es el más importante producto agrícola de la mayor de las islas de las Antillas</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Agricultura</id-dimension1>
-					<id-valor1>ca\u00F1a de az\u00FAcar</id-valor1>
-					<id-dimension2>Pa\u00EDs</id-dimension2>
-					<id-valor2>Cuba</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Costa Rica posee grandes plantaciones de ma\u00EDz</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Costa Rica posee grandes plantaciones de maíz</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Costa Rica</id-valor1>
-					<id-dimension2>Agricultura</id-dimension2>
-					<id-valor2>ma\u00EDz</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Cuba produce, fabrica y exporta tabaco de gran calidad</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Cuba produce, fabrica y exporta tabaco de gran calidad</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Cuba</id-valor1>
-					<id-dimension2>Industria</id-dimension2>
-					<id-valor2>tabaco</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Chile, con su clima templado, tiene excelentes tierras para la siembra de trigo y ricas minas de cobre</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Chile, con su clima templado, tiene excelentes tierras para la siembra de trigo y ricas minas de cobre</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Chile</id-valor1>
-					<id-dimension2>Agricultura</id-dimension2>
-					<id-valor2>trigo</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Chile</id-valor1>
-					<id-dimension2>Miner\u00EDa</id-dimension2>
-					<id-valor2>cobre</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Ecuador destaca por sus algodonales, que le han permitido desarrollar una importante industria textil</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Ecuador destaca por sus algodonales, que le han permitido desarrollar una importante industria textil</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Ecuador</id-valor1>
-					<id-dimension2>Agricultura</id-dimension2>
-					<id-valor2>algod\u00F3n</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Ecuador</id-valor1>
-					<id-dimension2>Industria</id-dimension2>
-					<id-valor2>tejido</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Los guatemaltecos dedican sus tierras a la siembra del pl\u00E1tano y su industria a los alimentos en general</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Los guatemaltecos dedican sus tierras a la siembra del plátano y su industria a los alimentos en general</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Guatemala</id-valor1>
-					<id-dimension2>Agricultura</id-dimension2>
-					<id-valor2>pl\u00E1tano</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>5</valor1>
+					<dimension2>2</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Guatemala</id-valor1>
-					<id-dimension2>Industria</id-dimension2>
-					<id-valor2>alimentos</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El pa\u00EDs caribe\u00F1o posee grandes yacimientos de n\u00EDquel</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Cuba</id-valor1>
-					<id-dimension2>Miner\u00EDa</id-dimension2>
-					<id-valor2>n\u00EDquel</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>5</valor1>
+					<dimension2>4</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El cobre ha permitido a este Pa\u00EDs sudamericano desarrollar la siderurgia</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El país caribeño posee grandes yacimientos de níquel</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Miner\u00EDa</id-dimension1>
-					<id-valor1>cobre</id-valor1>
-					<id-dimension2>Industria</id-dimension2>
-					<id-valor2>siderurgia</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Guatemala tiene un gran recurso minero: el zinc</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El cobre ha permitido a este País sudamericano desarrollar la siderurgia</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Pa\u00EDs</id-dimension1>
-					<id-valor1>Guatemala</id-valor1>
-					<id-dimension2>Miner\u00EDa</id-dimension2>
-					<id-valor2>zinc</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>La bauxita es un mineral de gran importancia en el pa\u00EDs centroamericano, que, adem\u00E1s, produce maquinaria para la industria</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Guatemala tiene un gran recurso minero: el zinc</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Miner\u00EDa</id-dimension1>
-					<id-valor1>bauxita</id-valor1>
-					<id-dimension2>Industria</id-dimension2>
-					<id-valor2>maquinaria</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>5</valor1>
+					<dimension2>3</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>La bauxita es un mineral de gran importancia en el país centroamericano, que, además, produce maquinaria para la industria</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

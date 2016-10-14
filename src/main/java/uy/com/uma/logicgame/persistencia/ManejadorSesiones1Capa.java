@@ -15,8 +15,8 @@ public class ManejadorSesiones1Capa implements IManejadorSesiones {
 	 * Resetea la configuracion 
 	 */
 	@Override
-	public void reset(String user, String password) {
-		SessionFactoryUtil.reset(user, password);
+	public void reset() {
+		SessionFactoryUtil.reset();
 	}
 
 	

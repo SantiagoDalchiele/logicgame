@@ -32,22 +32,24 @@ public class TestResolucion {
 	public static void main(String[] args) {
 		try {
 			Collection<String> pathArchivos = new ArrayList<String>();
-			/*pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/01-problemas-en-la-escuela.xml");  // 34
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/02-turismo-espana.xml");  // 26
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/03-vacaciones-islas.xml");  // 156 (usa el absurdo - para un humano no es necesario)
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/04-esoterico.xml");  // 105
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/05-ropa-prestada.xml");  // 70 (tiene al menos 2 soluciones posibles) 
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/06-museos.xml"); // 50
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/07-gustos-literarios.xml"); // 24 
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/08-mascotas.xml"); // 126
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/09-einstein.xml"); // 609 */
-			//pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/10-simple.xml"); // 12
-			//pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/13-hispanoamerica-recursos.xml"); // 88
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/prueba-genera-6x5.xml");
+			/*pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/01-problemas-en-la-escuela.xml");  // 34
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/02-turismo-espana.xml");  // 26
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/03-vacaciones-islas.xml");  // 156 (usa el absurdo - para un humano no es necesario)
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/04-esoterico.xml");  // 105
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/05-ropa-prestada.xml");  // 70 (tiene al menos 2 soluciones posibles) 
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/06-museos.xml"); // 50
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/07-gustos-literarios.xml"); // 24 
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/08-mascotas.xml"); // 126
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/09-einstein.xml"); // 609 */
+			//pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/10-simple.xml"); // 12
+			//pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/13-hispanoamerica-recursos.xml"); // 88
+			//pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/prueba-genera-6x5.xml");
 			
 			/* 
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/11-simple-sin-solucion.xml"); 
-			pathArchivos.add("c:/santiago/java/logicgame/recursos/juegos/12-simple-2-soluciones.xml");*/
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/11-simple-sin-solucion.xml"); 
+			pathArchivos.add("c:/santiago/lg/logicgame/recursos/juegos/12-simple-2-soluciones.xml");*/
+			
+			pathArchivos.add("c:/temp/nuevojuego10multi2.xml");
 			
 			for (String path : pathArchivos)
 				resolverUnJuego(path);

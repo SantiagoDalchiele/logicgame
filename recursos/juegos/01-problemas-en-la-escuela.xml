@@ -1,133 +1,293 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>1</id>
-	<titulo>Problemas en la escuela</titulo>
-	<texto>Encuentra el apodo de cada estudiante y donde estaba cuando fue observado por lo que hizo</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Problemas en la escuela</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Encuentra el apodo de cada estudiante y donde estaba cuando fue observado por lo que hizo</texto>
+		</traduccion>
+	</texto>
 	<costo>34</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Daniela</valor>
-				<valor>Marcos</valor>
-				<valor>Saul</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Daniela</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Marcos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Saul</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Apodo</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Apodo</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Nela</valor>
-				<valor>Tarta</valor>
-				<valor>Mercurio</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Nela</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Tarta</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Mercurio</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Estaba</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Estaba</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Patio</valor>
-				<valor>Ba\u00F1o</valor>
-				<valor>Aula</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Patio</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Baño</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Aula</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Que hizo</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Que hizo</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Rompio</valor>
-				<valor>Dibujaba</valor>
-				<valor>Charlaba</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Rompio</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Dibujaba</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Charlaba</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Todo comenz\u00F3 porque hubo roturas en el ba\u00F1o</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Todo comenzó porque hubo roturas en el baño</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Estaba</id-dimension1>
-					<id-valor1>Ba\u00F1o</id-valor1>
-					<id-dimension2>Que hizo</id-dimension2>
-					<id-valor2>Rompio</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Al que apodan "Tarta" fue visto por el preceptor en el patio</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Al que apodan "Tarta" fue visto por el preceptor en el patio</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Apodo</id-dimension1>
-					<id-valor1>Tarta</id-valor1>
-					<id-dimension2>Estaba</id-dimension2>
-					<id-valor2>Patio</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>A Marcos no le dicen "Nela" y no estaba dibujando</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>A Marcos no le dicen "Nela" y no estaba dibujando</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Marcos</id-valor1>
-					<id-dimension2>Apodo</id-dimension2>
-					<id-valor2>Nela</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Marcos</id-valor1>
-					<id-dimension2>Que hizo</id-dimension2>
-					<id-valor2>Dibujaba</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>"Nela" recibi\u00F3 un reto del preceptor por estar dibujando en su mesa corazones</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>"Nela" recibió un reto del preceptor por estar dibujando en su mesa corazones</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Apodo</id-dimension1>
-					<id-valor1>Nela</id-valor1>
-					<id-dimension2>Que hizo</id-dimension2>
-					<id-valor2>Dibujaba</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Apodo</id-dimension1>
-					<id-valor1>Nela</id-valor1>
-					<id-dimension2>Estaba</id-dimension2>
-					<id-valor2>Aula</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>1</valor1>
+					<dimension2>3</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Estaba</id-dimension1>
-					<id-valor1>Aula</id-valor1>
-					<id-dimension2>Que hizo</id-dimension2>
-					<id-valor2>Dibujaba</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Una profesora coment\u00F3 que en una evaluaci\u00F3n de Daniela estaba escrito varias veces el sobrenombre "Nela &amp; Ricardo" / "Richard &amp; Daniela"</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Una profesora comentó que en una evaluación de Daniela estaba escrito varias veces el sobrenombre "Nela &amp; Ricardo" /	"Richard &amp; Daniela"</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Daniela</id-valor1>
-					<id-dimension2>Apodo</id-dimension2>
-					<id-valor2>Nela</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>A Marcos le dicen "mercurio", por lo denso que es</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>A Marcos le dicen "mercurio", por lo denso que es</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Marcos</id-valor1>
-					<id-dimension2>Apodo</id-dimension2>
-					<id-valor2>Mercurio</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

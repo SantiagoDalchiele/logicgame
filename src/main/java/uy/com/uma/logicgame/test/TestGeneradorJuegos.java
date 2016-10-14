@@ -23,12 +23,12 @@ public class TestGeneradorJuegos {
 	public static void main(String[] args) {
 		String path = "c:/temp/prueba-genera-5x5.xml";
 		ParametrosGeneracionJuego param = new ParametrosGeneracionJuego();
-		param.setCantDimensiones(5);
-		param.setCantValores(5);
+		param.setCantDimensiones(4);
+		param.setCantValores(4);
 		param.setPorcAfirma(25);
 		param.setCostoMin(200);
 		param.setCostoMax(99999);
-		param.setTimeout(600);
+		param.setTimeout(60);
 		GeneradorJuegos gen = new GeneradorJuegos(param);
 		
 		try {

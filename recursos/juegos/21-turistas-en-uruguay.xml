@@ -1,261 +1,607 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>21</id>
-	<titulo>Turistas de vacaciones en Uruguay</titulo>
-	<texto>Averigua que balneario visita cada turista seg\u00FAn su nacionalidad, donde se hospedan cada uno de ellos, por cuantos d\u00EDas, quienes los acompa\u00F1an en su estad\u00EDa y cu\u00E1l es su entretenimiento favorito</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Turistas de vacaciones en Uruguay</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Averigua que balneario visita cada turista según su nacionalidad, donde se hospedan cada uno de ellos, por cuantos días, quienes los acompañan en su	estadía y cuál es su entretenimiento favorito</texto>
+		</traduccion>
+	</texto>
 	<costo>687</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nacionalidad</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nacionalidad</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>espa\u00F1ol</valor>
-				<valor>argentino</valor>
-				<valor>brasile\u00F1o</valor>
-				<valor>paraguayo</valor>
-				<valor>chileno</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>español</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>argentino</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>brasileño</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>paraguayo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>chileno</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Balneario</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Balneario</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Punta del Este</valor>
-				<valor>Piri\u00E1polis</valor>
-				<valor>La Paloma</valor>
-				<valor>Punta del Diablo</valor>
-				<valor>Atlantida</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Punta del Este</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Piriápolis</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>La Paloma</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Punta del Diablo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Atlantida</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Hospedaje</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Hospedaje</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>casa</valor>
-				<valor>apartamento</valor>
-				<valor>hotel</valor>
-				<valor>camping</valor>
-				<valor>hostel</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>casa</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>apartamento</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>hotel</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>camping</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>hostel</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>D\u00EDas</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Días</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>4</valor>
-				<valor>7</valor>
-				<valor>10</valor>
-				<valor>14</valor>
-				<valor>15</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>4</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>7</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>10</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>14</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>15</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Acompa\u00F1ado</id>
+			<nro>5</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Acompañado</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>primos</valor>
-				<valor>pareja</valor>
-				<valor>hijos</valor>
-				<valor>amigos</valor>
-				<valor>padres</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>primos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>pareja</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>hijos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>amigos</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>padres</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Entretenimiento</id>
+			<nro>6</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Entretenimiento</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>surf</valor>
-				<valor>navegar</valor>
-				<valor>senderismo</valor>
-				<valor>volleyball</valor>
-				<valor>cabalgar</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>surf</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>navegar</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>senderismo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>4</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>volleyball</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>5</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>cabalgar</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>Quien viaja acompa\u00F1ado por amigos es argentino y le encanta el surf</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien viaja acompañado por amigos es argentino y le encanta el surf</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Acompa\u00F1ado</id-dimension1>
-					<id-valor1>amigos</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>argentino</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Acompa\u00F1ado</id-dimension1>
-					<id-valor1>amigos</id-valor1>
-					<id-dimension2>Entretenimiento</id-dimension2>
-					<id-valor2>surf</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien viaja acompa\u00F1ado por sus hijos es brasile\u00F1o</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Acompa\u00F1ado</id-dimension1>
-					<id-valor1>hijos</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>brasile\u00F1o</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>4</valor1>
+					<dimension2>6</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien viaja por la menor cantidad de d\u00EDas visita Punta del Este</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien viaja acompañado por sus hijos es brasileño</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>D\u00EDas</id-dimension1>
-					<id-valor1>4</id-valor1>
-					<id-dimension2>Balneario</id-dimension2>
-					<id-valor2>Punta del Este</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien visita el pa\u00EDs por 14 d\u00EDas no es argentino</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien viaja por la menor cantidad de días visita Punta del Este</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>D\u00EDas</id-dimension1>
-					<id-valor1>14</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>argentino</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien visita el país por 14 días no es argentino</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>4</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien visita el pa\u00EDs por 10 d\u00EDas es chileno, pero no le gusta navegar</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien visita el país por 10 días es chileno, pero no le gusta navegar</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>D\u00EDas</id-dimension1>
-					<id-valor1>10</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>chileno</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>1</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>D\u00EDas</id-dimension1>
-					<id-valor1>10</id-valor1>
-					<id-dimension2>Entretenimiento</id-dimension2>
-					<id-valor2>navegar</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>3</valor1>
+					<dimension2>6</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El paraguayo se hospeda en un camping en Punta del Diablo</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El paraguayo se hospeda en un camping en Punta del Diablo</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>paraguayo</id-valor1>
-					<id-dimension2>Hospedaje</id-dimension2>
-					<id-valor2>camping</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>4</valor1>
+					<dimension2>3</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Balneario</id-dimension1>
-					<id-valor1>Punta del Diablo</id-valor1>
-					<id-dimension2>Nacionalidad</id-dimension2>
-					<id-valor2>paraguayo</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>4</valor1>
+					<dimension2>1</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien gusta de navegar se hospeda en una casa en el balneario La Paloma.  Su estad\u00EDa no es de 14 d\u00EDas</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien gusta de navegar se hospeda en una casa en el balneario La Paloma. Su estadía no es de 14 días</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Hospedaje</id-dimension1>
-					<id-valor1>casa</id-valor1>
-					<id-dimension2>Balneario</id-dimension2>
-					<id-valor2>La Paloma</id-valor2>
+					<dimension1>3</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Balneario</id-dimension1>
-					<id-valor1>La Paloma</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>14</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>4</dimension2>
+					<valor2>4</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Entretenimiento</id-dimension1>
-					<id-valor1>navegar</id-valor1>
-					<id-dimension2>Balneario</id-dimension2>
-					<id-valor2>La Paloma</id-valor2>
+					<dimension1>6</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien viaja con sus primos se quedar\u00E1 la mayor cantidad de d\u00EDas en Uruguay</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien viaja con sus primos se quedará la mayor cantidad de días en Uruguay</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Acompa\u00F1ado</id-dimension1>
-					<id-valor1>primos</id-valor1>
-					<id-dimension2>D\u00EDas</id-dimension2>
-					<id-valor2>15</id-valor2>
+					<dimension1>5</dimension1>
+					<valor1>1</valor1>
+					<dimension2>4</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El argentino no visitar\u00E1 Punta del Este</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El argentino no visitará Punta del Este</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>argentino</id-valor1>
-					<id-dimension2>Balneario</id-dimension2>
-					<id-valor2>Punta del Este</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>El senderismo es preferido por quien se hospeda en un apartamento, que no es el chileno</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Entretenimiento</id-dimension1>
-					<id-valor1>senderismo</id-valor1>
-					<id-dimension2>Hospedaje</id-dimension2>
-					<id-valor2>apartamento</id-valor2>
-					<afirma-niega>true</afirma-niega>
-				</pista>
-				<pista>
-					<id-dimension1>Nacionalidad</id-dimension1>
-					<id-valor1>chileno</id-valor1>
-					<id-dimension2>Entretenimiento</id-dimension2>
-					<id-valor2>senderismo</id-valor2>
-					<afirma-niega>false</afirma-niega>
-				</pista>
-			</pistas>
-		</pista-del-juego>
-		<pista-del-juego>
-			<texto>Quien elige un hostel, no le gusta el volleyball</texto>
-			<pistas>
-				<pista>
-					<id-dimension1>Hospedaje</id-dimension1>
-					<id-valor1>hostel</id-valor1>
-					<id-dimension2>Entretenimiento</id-dimension2>
-					<id-valor2>volleyball</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El volleyball es el entretenimiento preferido de quien viaja acompa\u00F1ado por sus padres y visita Atlantida</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El senderismo es preferido por quien se hospeda en un apartamento, que no es el chileno</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Entretenimiento</id-dimension1>
-					<id-valor1>volleyball</id-valor1>
-					<id-dimension2>Acompa\u00F1ado</id-dimension2>
-					<id-valor2>padres</id-valor2>
+					<dimension1>6</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Entretenimiento</id-dimension1>
-					<id-valor1>volleyball</id-valor1>
-					<id-dimension2>Balneario</id-dimension2>
-					<id-valor2>Atlantida</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>3</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien elige un hostel, no le gusta el volleyball</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>3</dimension1>
+					<valor1>5</valor1>
+					<dimension2>6</dimension2>
+					<valor2>4</valor2>
+					<afirma-niega>false</afirma-niega>
+				</pista>
+			</pistas>
+		</pista-del-juego>
+		<pista-del-juego>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El volleyball es el entretenimiento preferido de quien viaja acompañado por sus padres y visita Atlantida</texto>
+				</traduccion>
+			</texto>
+			<pistas>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>4</valor1>
+					<dimension2>5</dimension2>
+					<valor2>5</valor2>
+					<afirma-niega>true</afirma-niega>
+				</pista>
+				<pista>
+					<dimension1>6</dimension1>
+					<valor1>4</valor1>
+					<dimension2>2</dimension2>
+					<valor2>5</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>

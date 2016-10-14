@@ -1,95 +1,245 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
 <juego xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/juego-logica.xsd">
 	<id>16</id>
-	<titulo>Juegos infantiles</titulo>
-	<texto>Descubre cual es el juguete preferido de cada ni\u00F1o, de que color es y donde le gusta jugar</texto>
+	<titulo>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Juegos infantiles</texto>
+		</traduccion>
+	</titulo>
+	<texto>
+		<traduccion>
+			<idioma>es</idioma>
+			<texto>Descubre cual es el juguete preferido de cada niño, de que color es y donde le gusta jugar</texto>
+		</traduccion>
+	</texto>
 	<costo>50</costo>
 	<dimensiones>
 		<dimension>
-			<id>Nombre</id>
+			<nro>1</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Nombre</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Luis</valor>
-				<valor>Mat\u00EDas</valor>
-				<valor>Renzo</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Luis</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Matías</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Renzo</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Juguete</id>
+			<nro>2</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Juguete</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Cami\u00F3n</valor>
-				<valor>Pelota</valor>
-				<valor>Mu\u00F1eco</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Camión</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Pelota</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Muñeco</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Color</id>
+			<nro>3</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Color</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Rojo</valor>
-				<valor>Verde</valor>
-				<valor>Azul</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Rojo</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Verde</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Azul</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 		<dimension>
-			<id>Lugar</id>
+			<nro>4</nro>
+			<id>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Lugar</texto>
+				</traduccion>
+			</id>
 			<valores>
-				<valor>Living</valor>
-				<valor>Dormitorio</valor>
-				<valor>Patio</valor>
+				<valor>
+					<nro>1</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Living</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>2</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Dormitorio</texto>
+						</traduccion>
+					</id>
+				</valor>
+				<valor>
+					<nro>3</nro>
+					<id>
+						<traduccion>
+							<idioma>es</idioma>
+							<texto>Patio</texto>
+						</traduccion>
+					</id>
+				</valor>
 			</valores>
 		</dimension>
 	</dimensiones>
 	<pistas-del-juego>
 		<pista-del-juego>
-			<texto>A Luis le gusta jugar con su pelota</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>A Luis le gusta jugar con su pelota</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Luis</id-valor1>
-					<id-dimension2>Juguete</id-dimension2>
-					<id-valor2>Pelota</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>1</valor1>
+					<dimension2>2</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Mat\u00EDas prefiere el juguete de color verde</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Matías prefiere el juguete de color verde</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Nombre</id-dimension1>
-					<id-valor1>Mat\u00EDas</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>Verde</id-valor2>
+					<dimension1>1</dimension1>
+					<valor1>2</valor1>
+					<dimension2>3</dimension2>
+					<valor2>2</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>Quien prefiere el mu\u00F1eco (que es de color rojo), no le gusta jugar en el dormitorio</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>Quien prefiere el muñeco (que es de color rojo), no le gusta jugar en el dormitorio</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Juguete</id-dimension1>
-					<id-valor1>Mu\u00F1eco</id-valor1>
-					<id-dimension2>Color</id-dimension2>
-					<id-valor2>Rojo</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>3</valor1>
+					<dimension2>3</dimension2>
+					<valor2>1</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 				<pista>
-					<id-dimension1>Lugar</id-dimension1>
-					<id-valor1>Dormitorio</id-valor1>
-					<id-dimension2>Juguete</id-dimension2>
-					<id-valor2>Mu\u00F1eco</id-valor2>
+					<dimension1>4</dimension1>
+					<valor1>2</valor1>
+					<dimension2>2</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>false</afirma-niega>
 				</pista>
 			</pistas>
 		</pista-del-juego>
 		<pista-del-juego>
-			<texto>El ni\u00F1o que juega en el patio prefiere hacerlo con su pelota</texto>
+			<texto>
+				<traduccion>
+					<idioma>es</idioma>
+					<texto>El niño que juega en el patio prefiere hacerlo con su pelota</texto>
+				</traduccion>
+			</texto>
 			<pistas>
 				<pista>
-					<id-dimension1>Juguete</id-dimension1>
-					<id-valor1>Pelota</id-valor1>
-					<id-dimension2>Lugar</id-dimension2>
-					<id-valor2>Patio</id-valor2>
+					<dimension1>2</dimension1>
+					<valor1>2</valor1>
+					<dimension2>4</dimension2>
+					<valor2>3</valor2>
 					<afirma-niega>true</afirma-niega>
 				</pista>
 			</pistas>
