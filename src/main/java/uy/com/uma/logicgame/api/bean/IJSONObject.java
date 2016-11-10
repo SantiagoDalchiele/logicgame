@@ -1,5 +1,7 @@
 package uy.com.uma.logicgame.api.bean;
 
+import javax.json.JsonObject;
+
 /**
  * Objetos que son "transformables" al formato JSON
  * 
@@ -8,5 +10,5 @@ package uy.com.uma.logicgame.api.bean;
 public interface IJSONObject {
 
 	/** Retorna el dato en formato JSON */
-	String toJSON();
+	JsonObject toJSON();
 }

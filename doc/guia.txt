@@ -1,9 +1,3 @@
--comitear cambios:
-	-cambio de estructura del xml del juego
-	-olvido de contraseña
-
--Poder visualizar TODAS las pistas en un panel por encima o al costado
-
 -Seguridad		
 	Controles de abuso de uso de servicios (ataques)
 		Intentar logearse muchas veces con un id de usuario
@@ -60,14 +54,13 @@
 -Node JS, MEAN
 
 -JSF
+-Estudiar Java Server Faces (JSF), ver combinación de AJAX con JSF
 	
 -TomEE, tomcat + J2EE
 
 -Cursos gratis: https://miriadax.net/web/general-navigation/cursos
 
 -Maven: C:\santiago\cursos\OReilly.Maven.The.Definitive.Guide.Oct.2008.ISBN.0596517335.pdf
-
--Estudiar Java Server Faces (JSF), ver combinación de AJAX con JSF
 
 -Buscar mas juegos para resolver
 http://cvc.cervantes.es/aula/pasatiempos/pasatiempos1/

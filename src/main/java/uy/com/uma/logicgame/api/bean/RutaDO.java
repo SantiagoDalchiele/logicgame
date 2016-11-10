@@ -1,6 +1,12 @@
 package uy.com.uma.logicgame.api.bean;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.json.JsonObject;
+
 import uy.com.uma.comun.util.UtilJSON;
+import uy.com.uma.comun.util.UtilString;
 
 /**
  * Clase "liviana" que encapsula los datos de una ruta
@@ -27,15 +33,13 @@ public class RutaDO implements IJSONObject {
 	/**
 	 * Retorna el objeto en formato JSON: {"ruta":<id>,"nivel":<nivel>,"juego":<idJuego>,"estilo":<hojaEstilo>}
 	 */
-	public String toJSON() {
-		StringBuffer buf = new StringBuffer();
-		buf.append("{");
-		buf.append(UtilJSON.getPropJSON(TAG_ID_RUTA) + UtilJSON.getValorJSON("" + getId()));
-		buf.append(UtilJSON.getPropJSON(TAG_NIVEL) + UtilJSON.getValorJSON("" + getNivel()));
-		buf.append(UtilJSON.getPropJSON(TAG_ID_JUEGO) + UtilJSON.getValorJSON("" + getIdJuego())); 
-		buf.append(UtilJSON.getPropJSON(TAG_HOJA_ESTILO) + UtilJSON.getComillasJSON(getHojaEstilo()));
-		buf.append("}");
-		return buf.toString();
+	public JsonObject toJSON() {
+		Map<String, Object> props = new LinkedHashMap<String, Object>();
+		props.put(TAG_ID_RUTA, getId());
+		props.put(TAG_NIVEL, getNivel());
+		props.put(TAG_ID_JUEGO, getIdJuego());
+		props.put(TAG_HOJA_ESTILO, UtilString.quitarNulo(getHojaEstilo()));
+		return UtilJSON.getJSONObject(props);
 	}
 	
 	

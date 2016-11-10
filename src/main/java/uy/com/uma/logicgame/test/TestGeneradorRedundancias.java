@@ -16,6 +16,7 @@ public class TestGeneradorRedundancias {
 	 */
 	public static void main(String[] args) {
 		try {
+			PersistenciaFactory.getInstancia().getManejadorSesiones().reset();
 			IManejadorJuego manJuego = PersistenciaFactory.getInstancia().getManejadorJuego();
 			manJuego.actualizarRedundancias(10);
 			

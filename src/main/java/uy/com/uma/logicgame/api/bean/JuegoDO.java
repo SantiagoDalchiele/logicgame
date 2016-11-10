@@ -2,6 +2,10 @@ package uy.com.uma.logicgame.api.bean;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.json.JsonObject;
 
 import uy.com.uma.comun.util.UtilJSON;
 import uy.com.uma.comun.util.UtilString;
@@ -41,23 +45,21 @@ public class JuegoDO implements IJSONObject {
 	
 	/**
 	 * Retorna el objeto en formato JSON: {"id":<id>,"idiomas":<idioma1,idioma2,...>,"titulo":<titulo>,"texto":<texto>,"costo":<costo>,
-	 * 				"cantDims":<cantDims>,"cantValores":<cantValores>,"solucion":<solucion>,"defJuego":<defJuego>}
+	 * 				"cantDims":<cantDims>,"cantValores":<cantValores>,"solucion":<solucion>,"defJuego":<defJuego>}	 * 
 	 */
-	public String toJSON() {
-		StringBuffer buf = new StringBuffer();
-		buf.append("{");
-		buf.append(UtilJSON.getPropJSON(TAG_ID_JUEGO) + UtilJSON.getValorJSON("" + getId()));
-		buf.append(UtilJSON.getPropJSON(TAG_IDIOMAS_JUEGO) + UtilJSON.getValorJSON(UtilString.concatenar(getIdiomas(), ",")));
-		buf.append(UtilJSON.getPropJSON(TAG_TITULO_JUEGO) + UtilJSON.getValorJSON(getTitulo()));
-		buf.append(UtilJSON.getPropJSON(TAG_TEXTO_JUEGO) + UtilJSON.getValorJSON(getTexto()));
-		buf.append(UtilJSON.getPropJSON(TAG_COSTO_JUEGO) + UtilJSON.getValorJSON("" + getCosto()));
-		buf.append(UtilJSON.getPropJSON(TAG_CANT_DIMS_JUEGO) + UtilJSON.getValorJSON("" + getCantDims()));
-		buf.append(UtilJSON.getPropJSON(TAG_CANT_VALORES_JUEGO) + UtilJSON.getValorJSON("" + getCantValores()));
-		buf.append(UtilJSON.getPropJSON(TAG_SOLUCION_JUEGO) + UtilJSON.getValorJSON(getSolucion()));
+	public JsonObject toJSON() {
 		final String def = getDefinicion().replaceAll("\"", "'");
-		buf.append(UtilJSON.getPropJSON(TAG_DEFINICION_JUEGO) + UtilJSON.getComillasJSON(def)); 
-		buf.append("}");
-		return buf.toString();
+		Map<String, Object> props = new LinkedHashMap<String, Object>();
+		props.put(TAG_ID_JUEGO, getId());
+		props.put(TAG_IDIOMAS_JUEGO, UtilString.concatenar(getIdiomas(), ","));
+		props.put(TAG_TITULO_JUEGO, getTitulo());
+		props.put(TAG_TEXTO_JUEGO, getTexto());
+		props.put(TAG_COSTO_JUEGO, getCosto());
+		props.put(TAG_CANT_DIMS_JUEGO, getCantDims());
+		props.put(TAG_CANT_VALORES_JUEGO, getCantValores());
+		props.put(TAG_SOLUCION_JUEGO, getSolucion());
+		props.put(TAG_DEFINICION_JUEGO, def);		
+		return UtilJSON.getJSONObject(props);
 	}
 	
 	public int getId() {

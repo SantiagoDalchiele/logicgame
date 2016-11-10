@@ -1,5 +1,10 @@
 package uy.com.uma.logicgame.api.bean;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.json.JsonObject;
+
 import uy.com.uma.comun.util.UtilJSON;
 
 /**
@@ -37,19 +42,17 @@ public class UsuarioDO implements IJSONObject {
 	 * Retorna el objeto en formato JSON: {"id":<idUsuario>,"alias":<alias>,"correo":<correo>,"logeado":<logeado>,
 	 * 									"ruta":<ruta>,"nivel":<nivel>,"idioma":<idioma>,"estado":<estado>}
 	 */
-	public String toJSON() {
-		StringBuffer buf = new StringBuffer();
-		buf.append("{");
-		buf.append(UtilJSON.getPropJSON(TAG_ID_USUARIO) + UtilJSON.getValorJSON(getIdUsuario()));
-		buf.append(UtilJSON.getPropJSON(TAG_ALIAS) + UtilJSON.getValorJSON(getAlias()));
-		buf.append(UtilJSON.getPropJSON(TAG_CORREO) + UtilJSON.getValorJSON(getCorreo()));
-		buf.append(UtilJSON.getPropJSON(TAG_LOGEADO) + UtilJSON.getValorJSON(Boolean.toString(isLogeado())));
-		buf.append(UtilJSON.getPropJSON(TAG_RUTA) + UtilJSON.getValorJSON("" + getRuta()));
-		buf.append(UtilJSON.getPropJSON(TAG_NIVEL) + UtilJSON.getValorJSON("" + getNivel()));
-		buf.append(UtilJSON.getPropJSON(TAG_IDIOMA) + UtilJSON.getValorJSON("" + getIdioma()));
-		buf.append(UtilJSON.getPropJSON(TAG_ESTADO) + "[" + getEstado() + "]");
-		buf.append("}");
-		return buf.toString();
+	public JsonObject toJSON() {
+		Map<String, Object> props = new LinkedHashMap<String, Object>();
+		props.put(TAG_ID_USUARIO, getIdUsuario());
+		props.put(TAG_ALIAS, getAlias());
+		props.put(TAG_CORREO, getCorreo());
+		props.put(TAG_LOGEADO, Boolean.toString(isLogeado()));
+		props.put(TAG_RUTA, getRuta());
+		props.put(TAG_NIVEL, getNivel());
+		props.put(TAG_IDIOMA, getIdioma());		
+		props.put(TAG_ESTADO, UtilJSON.getJSONObjects(getEstado()));
+		return UtilJSON.getJSONObject(props);
 	}
 	
 	

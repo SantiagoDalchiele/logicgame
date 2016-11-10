@@ -1,8 +1,15 @@
 package uy.com.uma.logicgame.persistencia.juego;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+
+import javax.json.JsonObject;
 
 import uy.com.uma.comun.util.UtilJSON;
+import uy.com.uma.comun.util.UtilString;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego.Dimensiones.Dimension;
@@ -42,41 +49,40 @@ abstract class DefJuegoBuilder {
 	 * @return String con el objeto json
 	 */
 	public static String construir (String idioma, Juego juego) throws PersistenciaException {
-		StringBuffer def = new StringBuffer();
-		def.append(UtilJSON.getPropJSON(TAG_TITULO) + UtilJSON.getValorJSON(UtilJuego.getTextoXIdioma(idioma, juego.getTitulo())));
-		def.append(UtilJSON.getPropJSON(TAG_TEXTO) + UtilJSON.getValorJSON(UtilJuego.getTextoXIdioma(idioma, juego.getTexto())));
-		def.append(UtilJSON.getPropJSON(TAG_DIMS_SUPERIOR) + "[");
+		Map<String, Object> props = new LinkedHashMap<String, Object>();
+		Collection<JsonObject> dimsSup = new ArrayList<JsonObject>();
+		Collection<JsonObject> dimsLat = new ArrayList<JsonObject>();
+		Collection<String> pistas = new ArrayList<String>();
 		List<Dimension> dims = juego.getDimensiones().getDimension();
 		
 		/** Dimensiones por columna (parte superior del tablero): de la 2° hasta la última */
 		for (int i = 1; i < dims.size(); i++)
-			addDimensionJSON(idioma, dims.get(i), def, (i == (dims.size()-1)));
-		
-		def.append("]," + UtilJSON.getPropJSON(TAG_DIMS_LATERAL) + "[");
+			addDimensionJSON(idioma, dims.get(i), dimsSup);	
 		
 		/** Dimensiones por fila (parte lateral del tablero): la 1° y de la nésima hasta la 3° */
-		addDimensionJSON(idioma, dims.get(0), def, false);
+		addDimensionJSON(idioma, dims.get(0), dimsLat);
 		
 		for (int i = (dims.size()-1); i >= 2; i--)
-			addDimensionJSON(idioma, dims.get(i), def, (i == 2));
+			addDimensionJSON(idioma, dims.get(i), dimsLat);
 		
-		def.append("]," + UtilJSON.getPropJSON(TAG_PISTAS) + "[");
+		for (PistaDelJuego pj : juego.getPistasDelJuego().getPistaDelJuego())
+			pistas.add(reemplazarCaracteresEspeciales(UtilJuego.getTextoXIdioma(idioma, pj.getTexto())));
 		
-		for (PistaDelJuego pj : juego.getPistasDelJuego().getPistaDelJuego()) {
-			String pista = reemplazarCaracteresEspeciales(UtilJuego.getTextoXIdioma(idioma, pj.getTexto()));
-			def.append(UtilJSON.getValorJSON(pista));
-		}
-		
-		def.deleteCharAt(def.length()-1);
-		String ret = def.toString() + "]"; 
+		props.put(TAG_TITULO, UtilJuego.getTextoXIdioma(idioma, juego.getTitulo()));
+		props.put(TAG_TEXTO, UtilJuego.getTextoXIdioma(idioma, juego.getTitulo()));
+		props.put(TAG_DIMS_SUPERIOR, dimsSup.toArray(new JsonObject [dimsSup.size()]));
+		props.put(TAG_DIMS_LATERAL, dimsLat.toArray(new JsonObject [dimsLat.size()]));
+		props.put(TAG_PISTAS, pistas.toArray(new String [pistas.size()]));
+		String ret = UtilJSON.getJSONObject(props).toString();
+		ret = UtilString.quitarUltimosCaracteres(ret.substring(1), 1);		// quita los {}
 		ret = ret.replaceAll("\n", " ").replaceAll("\t", " ");
+		ret = ret.replace("\\t", " ");
 		
 		while (ret.indexOf("  ") != -1)
 			ret = ret.replaceAll("  ", " ");
 		
 		return ret;
-	}
-	
+	}	
 	
 	
 	
@@ -98,16 +104,15 @@ abstract class DefJuegoBuilder {
 	/**
 	 * Agrega una dimension, su identificador y valores a la definición en JSON del juego
 	 */
-	private static void addDimensionJSON (String idioma, Dimension d, StringBuffer def, boolean ultimo) throws PersistenciaException {
-		String id = reemplazarCaracteresEspeciales(UtilJuego.getTextoXIdioma(idioma, d.getId()));
-		def.append("{" + UtilJSON.getPropJSON(TAG_ID) + UtilJSON.getValorJSON(id) + UtilJSON.getPropJSON(TAG_VALORES) + "[");
+	private static void addDimensionJSON (String idioma, Dimension d, Collection<JsonObject> jab) throws PersistenciaException {
+		Map<String, Object> props = new LinkedHashMap<String, Object>();
+		Collection<String> valores = new ArrayList<String>();
 		
-		for (Valor v : d.getValores().getValor()) {
-			String value = reemplazarCaracteresEspeciales(UtilJuego.getTextoXIdioma(idioma, v.getId()));
-			def.append(UtilJSON.getValorJSON(value));
-		}
+		for (Valor v : d.getValores().getValor())
+			valores.add(reemplazarCaracteresEspeciales(UtilJuego.getTextoXIdioma(idioma, v.getId())));
 		
-		def.deleteCharAt(def.length()-1);
-		def.append("]}" + (ultimo ? "" : ","));
+		props.put(TAG_ID, reemplazarCaracteresEspeciales(UtilJuego.getTextoXIdioma(idioma, d.getId())));
+		props.put(TAG_VALORES, valores.toArray(new String [valores.size()]));
+		jab.add(UtilJSON.getJSONObject(props));
 	}
 }

@@ -1,5 +1,10 @@
 package uy.com.uma.logicgame.api.bean;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import javax.json.JsonObject;
+
 import uy.com.uma.comun.util.UtilJSON;
 
 /**
@@ -25,14 +30,12 @@ public class IdiomaDO implements IJSONObject {
 	/**
 	 * Retorna el objeto en formato JSON: {"id":<id>,"nombre":<nombre>,"icono":<icono>}
 	 */
-	public String toJSON() {
-		StringBuffer buf = new StringBuffer();
-		buf.append("{");
-		buf.append(UtilJSON.getPropJSON(TAG_ID_IDIOMA) + UtilJSON.getValorJSON(getId()));
-		buf.append(UtilJSON.getPropJSON(TAG_NOMBRE_IDIOMA) + UtilJSON.getValorJSON(getNombre()));
-		buf.append(UtilJSON.getPropJSON(TAG_ICONO_IDIOMA) + UtilJSON.getComillasJSON(getIcono())); 
-		buf.append("}");
-		return buf.toString();
+	public JsonObject toJSON() {
+		Map<String, Object> props = new LinkedHashMap<String, Object>();
+		props.put(TAG_ID_IDIOMA, getId());
+		props.put(TAG_NOMBRE_IDIOMA, getNombre());
+		props.put(TAG_ICONO_IDIOMA, getIcono());
+		return UtilJSON.getJSONObject(props);
 	}
 	
 	
