@@ -23,4 +23,7 @@ public interface IManejadorEstructura {
 	
 	/** Crea los atributos token y fch_expira_token en la tabla usuarios */
 	void parche01TokenUsuarios() throws PersistenciaException;
+	
+	/** Crea la tabla log_acciones */
+	void parche02LogAcciones() throws PersistenciaException;
 }

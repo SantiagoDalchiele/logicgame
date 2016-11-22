@@ -26,6 +26,7 @@ public class PersistenciaFactory {
 	private IManejadorSeguridad manSeguridad;
 	private IManejadorConfiguracion manConfiguracion;
 	private ICargadorRecursos cargaRecursos;
+	private IManejadorLogAcciones manLogAcciones;
 	
 	
 	
@@ -108,5 +109,12 @@ public class PersistenciaFactory {
 			cargaRecursos = (ICargadorRecursos) Class.forName(conf.getCargadorRecursos()).newInstance();
 		
 		return cargaRecursos;
+	}
+	
+	public IManejadorLogAcciones getManejadorLogAcciones() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		if (manLogAcciones == null)
+			manLogAcciones = (IManejadorLogAcciones) Class.forName(conf.getManejadorLogAcciones()).newInstance();
+		
+		return manLogAcciones;
 	}
 }

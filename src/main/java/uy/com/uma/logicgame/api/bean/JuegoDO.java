@@ -38,7 +38,7 @@ public class JuegoDO implements IJSONObject {
 	private short cantDims;
 	private short cantValores;
 	private String solucion;
-	private String definicion;
+	private String definicion;	
 	
 	
 	
@@ -96,13 +96,13 @@ public class JuegoDO implements IJSONObject {
 		return cantDims;
 	}
 	public void setCantDims(short cantDims) {
-		this.cantDims = cantDims;
+		this.cantDims = cantDims;		
 	}
 	public short getCantValores() {
 		return cantValores;
 	}
 	public void setCantValores(short cantValores) {
-		this.cantValores = cantValores;
+		this.cantValores = cantValores;		
 	}
 	public String getSolucion() {
 		return solucion;

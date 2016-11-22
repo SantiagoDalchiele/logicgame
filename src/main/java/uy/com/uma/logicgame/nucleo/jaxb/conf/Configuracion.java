@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.11 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2016.07.05 a las 12:32:51 PM UYT 
+// Generado el: 2016.11.15 a las 03:58:32 PM UYST 
 //
 
 
@@ -67,6 +67,7 @@ import javax.xml.bind.annotation.XmlType;
  *                   &lt;element name="seguridad" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                   &lt;element name="configuracion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                   &lt;element name="cargador-recursos" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="log-acciones" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *                 &lt;/sequence&gt;
  *               &lt;/restriction&gt;
  *             &lt;/complexContent&gt;
@@ -495,6 +496,7 @@ public class Configuracion {
      *         &lt;element name="seguridad" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *         &lt;element name="configuracion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *         &lt;element name="cargador-recursos" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="log-acciones" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
      *       &lt;/sequence&gt;
      *     &lt;/restriction&gt;
      *   &lt;/complexContent&gt;
@@ -513,7 +515,8 @@ public class Configuracion {
         "juegoWeb",
         "seguridad",
         "configuracion",
-        "cargadorRecursos"
+        "cargadorRecursos",
+        "logAcciones"
     })
     public static class Manejadores {
 
@@ -535,6 +538,8 @@ public class Configuracion {
         protected String configuracion;
         @XmlElement(name = "cargador-recursos", required = true)
         protected String cargadorRecursos;
+        @XmlElement(name = "log-acciones", required = true)
+        protected String logAcciones;
 
         /**
          * Obtiene el valor de la propiedad estructura.
@@ -750,6 +755,30 @@ public class Configuracion {
          */
         public void setCargadorRecursos(String value) {
             this.cargadorRecursos = value;
+        }
+
+        /**
+         * Obtiene el valor de la propiedad logAcciones.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getLogAcciones() {
+            return logAcciones;
+        }
+
+        /**
+         * Define el valor de la propiedad logAcciones.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setLogAcciones(String value) {
+            this.logAcciones = value;
         }
 
     }

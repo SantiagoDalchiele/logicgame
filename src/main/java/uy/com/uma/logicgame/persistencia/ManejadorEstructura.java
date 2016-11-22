@@ -28,6 +28,16 @@ public class ManejadorEstructura implements IManejadorEstructura {
 	/** Nombre de las tablas ordenadas en el orden inverso a las que se crean */
 	private List<String> idsTablas = new ArrayList<String>();
 	
+	/** Create de la tabla de log de acciones */
+	private static final String CREATE_LOG_ACCIONES = "CREATE TABLE IF NOT EXISTS log_acciones (" +
+															"id BIGSERIAL PRIMARY KEY," +
+															"tipo_accion SMALLINT NOT NULL," +
+															"ip CHAR(30) NOT NULL," +
+															"usuario VARCHAR(64) NOT NULL," +
+															"clave CHAR(256) NULL," +
+															"resultado SMALLINT NOT NULL," +
+															"fch_registro TIMESTAMP NOT NULL)";
+	
 	
 	
 	
@@ -115,6 +125,8 @@ public class ManejadorEstructura implements IManejadorEstructura {
 						"token CHAR(128)," +
 						"fch_expira_token TIMESTAMP," +
 						"FOREIGN KEY (ruta, nivel) REFERENCES rutas (id, nivel))");
+		
+		createTablas.add(CREATE_LOG_ACCIONES);
 		
 		idsTablas.add("usuarios");
 		idsTablas.add("rutas");
@@ -271,4 +283,26 @@ public class ManejadorEstructura implements IManejadorEstructura {
 			UtilSQL.close(connection, stmt);
 		}
 	}
+
+	
+
+	/** 
+	 * Crea la tabla log_acciones 
+	 */
+	@Override
+	public void parche02LogAcciones() throws PersistenciaException {
+		Connection connection = null;
+		Statement stmt = null;
+		
+		try {
+			connection = SessionFactoryUtil.getConnection();
+			stmt = connection.createStatement();
+			log.info(CREATE_LOG_ACCIONES);
+			stmt.execute(CREATE_LOG_ACCIONES);						
+		} catch (Exception e) {
+			throw new PersistenciaException(e);
+		} finally {
+			UtilSQL.close(connection, stmt);
+		}		
+	}	
 }

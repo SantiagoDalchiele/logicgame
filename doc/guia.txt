@@ -1,15 +1,3 @@
--Seguridad		
-	Controles de abuso de uso de servicios (ataques)
-		Intentar logearse muchas veces con un id de usuario
-		Intentar registrarse muchas veces desde una ip, o validar si un usuario es válido
-		Mandar muchos setvalor para probar todas las combinaciones posibles
-		Otro tipo de ataques
-	Del curso de seguridad:
-		No permitir la enumeración de usuarios
-		Bloquear usuarios luego de N intentos
-		Mantener un log de cada intento de autenticación
-		IP Origen, usuario, digest contraseña, resultado	
-
 -Buenas practicas de programación web
 	https://developer.yahoo.com/performance/
 	

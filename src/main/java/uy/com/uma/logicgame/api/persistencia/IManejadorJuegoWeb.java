@@ -8,6 +8,13 @@ import uy.com.uma.logicgame.api.bean.ParametrosJuego;
  * @author Santiago Dalchiele
  */
 public interface IManejadorJuegoWeb {
+	
+	/** Constantes que representan el resultado de evaluar el juego */
+	public static final short JUEGO_INCOMPLETO = 1;
+	public static final short JUEGO_ERRONEO = 2;
+	public static final short JUEGO_EXITOSO = 3;
+	
+	
 
 	/** Retorna la definición del juego dado su identificador y un idioma */
 	String getDefinicion (int id, String idioma) throws PersistenciaException;

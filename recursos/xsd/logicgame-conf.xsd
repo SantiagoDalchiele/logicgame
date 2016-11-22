@@ -32,6 +32,7 @@
 							<element name="seguridad" type="string"/>
 							<element name="configuracion" type="string"/>
 							<element name="cargador-recursos" type="string"/>
+							<element name="log-acciones" type="string"/>
 						</sequence>
 					</complexType>
 				</element>

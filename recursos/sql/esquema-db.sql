@@ -1,3 +1,5 @@
+-- @Deprecated: Se utiliza uy.com.uma.logicgame.persistencia.ManejadorEstructura para administrar la estructura de la base de datos
+
 -- Internacionalización
 CREATE TABLE IF NOT EXISTS idiomas (
 	id CHAR(2) PRIMARY KEY,

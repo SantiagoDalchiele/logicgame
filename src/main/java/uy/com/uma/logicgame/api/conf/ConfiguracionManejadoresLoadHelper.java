@@ -22,6 +22,7 @@ public class ConfiguracionManejadoresLoadHelper {
 	private String manejadorSeguridad;
 	private String manejadorConfiguracion;
 	private String cargadorRecursos;
+	private String manejadorLogAcciones;
 	
 	
 	
@@ -72,6 +73,7 @@ public class ConfiguracionManejadoresLoadHelper {
 		manejadorSesiones = man.getSesiones();
 		manejadorEstructura = man.getEstructura();
 		manejadorConfiguracion = man.getConfiguracion();
+		manejadorLogAcciones = man.getLogAcciones();
 	}
 
 
@@ -112,5 +114,9 @@ public class ConfiguracionManejadoresLoadHelper {
 	
 	public String getCargadorRecursos() {
 		return cargadorRecursos;
+	}
+	
+	public String getManejadorLogAcciones() {
+		return manejadorLogAcciones;
 	}
 }

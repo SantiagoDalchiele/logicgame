@@ -34,7 +34,7 @@ class Usuario {
 	@Column
 	private String correo;
 	
-	@Column(columnDefinition = "bpchar(32)")
+	@Column(columnDefinition = "bpchar(256)")
 	private String clave;
 	
 	@Column
