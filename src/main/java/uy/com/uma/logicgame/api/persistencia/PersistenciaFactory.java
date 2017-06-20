@@ -11,7 +11,8 @@ import uy.com.uma.logicgame.api.conf.ConfiguracionManejadoresLoadHelper;
 public class PersistenciaFactory {
 
 	/** Unica instancia de la clase */
-	private static PersistenciaFactory instancia = null;
+	private static volatile PersistenciaFactory instancia = null;
+	private static final Object lock = new Object();
 	
 	/** Configuracion */
 	private ConfiguracionManejadoresLoadHelper conf = ConfiguracionManejadoresLoadHelper.getInstancia();
@@ -35,7 +36,10 @@ public class PersistenciaFactory {
 	 */
 	public static PersistenciaFactory getInstancia() throws ConfiguracionException {
 		if (instancia == null)
-			instancia = new PersistenciaFactory();
+			synchronized (lock) {
+				if (instancia == null)
+					instancia = new PersistenciaFactory();
+			}			
 		
 		return instancia;
 	}

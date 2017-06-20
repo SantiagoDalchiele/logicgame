@@ -45,12 +45,12 @@ public class ValidadorJuego {
 			Collection<String> msgs = validar(juego);
 			
 			if (!msgs.isEmpty()) {
-				String mensajes = "";
+				StringBuffer mensajes = new StringBuffer();
 				
 				for(String m : msgs)
-					mensajes += m + "\n";
+					mensajes.append(m + "\n");
 				
-				throw new ValidadorJuegoException(mensajes);
+				throw new ValidadorJuegoException(mensajes.toString());
 			}
 		} catch (Exception e) {
 			throw new ValidadorJuegoException(e);

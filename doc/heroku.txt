@@ -55,7 +55,7 @@ heroku git:clone -a [myapp]
 Para instalar un repositorio de maven local
 https://devcenter.heroku.com/articles/local-maven-dependencies
 
-mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../comun/target/comun-0.0.5.jar -DgroupId=uy.com.uma -DartifactId=comun -Dpackaging=jar -Dversion=0.0.5
+mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../comun/target/comun-0.0.6.jar -DgroupId=uy.com.uma -DartifactId=comun -Dpackaging=jar -Dversion=0.0.6
 mvn deploy:deploy-file -Durl=file://C:\santiago\lg\logicgame-fe\repo -Dfile=../logicgame/target/logicgame-0.0.8.jar -DgroupId=uy.com.uma -DartifactId=logicgame -Dpackaging=jar -Dversion=0.0.8
 
 -------------------------------------------------------------------------------------------------------------------------------------

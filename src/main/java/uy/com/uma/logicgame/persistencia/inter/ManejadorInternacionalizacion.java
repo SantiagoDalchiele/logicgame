@@ -92,7 +92,7 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 			if (idioma == null)
 				throw new PersistenceException("No existe un idioma con el identificador [" + idiomaId + "]");
 			else {
-				Literal lit = (Literal) session.get(Literal.class, new LiteralPK(new Long(id), idioma));
+				Literal lit = (Literal) session.get(Literal.class, new LiteralPK(Long.valueOf(id), idioma));
 				
 				if (lit == null)
 					throw new PersistenceException("No existe un literal con el identificador [" + id + "] para el idioma [" + idiomaId + "]");
@@ -162,7 +162,7 @@ public class ManejadorInternacionalizacion implements IManejadorInternacionaliza
 			Literal lit = new Literal();
 			long id = 1 + findMaxIdLiteral();
 			Idioma idioma = (Idioma) session.get(Idioma.class, idiomaId);
-			lit.setId(new LiteralPK(new Long(id), idioma));
+			lit.setId(new LiteralPK(Long.valueOf(id), idioma));
 			lit.setTexto(texto);
 			session.save(lit);
 			tx.commit();

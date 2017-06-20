@@ -53,7 +53,7 @@ public class TestResolucion {
 			
 			for (String path : pathArchivos)
 				resolverUnJuego(path);
-		} catch (Exception e) {
+		} catch (JAXBException | ValidadorJuegoException | ConfiguracionException e) {
 			log.fatal("Error general en la aplicación", e);
 		}
 	}

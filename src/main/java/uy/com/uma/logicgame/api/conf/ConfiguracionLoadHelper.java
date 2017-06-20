@@ -24,7 +24,8 @@ import uy.com.uma.logicgame.resolucion.estrategias.IEstrategia;
 public class ConfiguracionLoadHelper implements IConfiguracionConstantes {
 	
 	/** Unica instancia de la clase */
-	private static ConfiguracionLoadHelper instancia = null;
+	private static volatile ConfiguracionLoadHelper instancia = null;
+	private static final Object lock = new Object();
 	
 	/** Configuración en el archivo xml */
 	private Configuracion conf;
@@ -37,7 +38,11 @@ public class ConfiguracionLoadHelper implements IConfiguracionConstantes {
 	 */
 	public static ConfiguracionLoadHelper getInstancia() throws ConfiguracionException {
 		if (instancia == null)
-			instancia = new ConfiguracionLoadHelper();
+			synchronized (lock) {
+				if (instancia == null)
+					instancia = new ConfiguracionLoadHelper();
+			}
+		
 		return instancia;
 	}
 	
@@ -138,7 +143,7 @@ public class ConfiguracionLoadHelper implements IConfiguracionConstantes {
 				estrategia.setOrden(e.getOrden());
 				estrategia.setCosto(e.getCosto().intValue());
 				estrategias.add(estrategia);
-			} catch (Exception e1) {
+			} catch (InstantiationException | ClassNotFoundException | IllegalAccessException e1) {
 				throw new ConfiguracionException("Error al crear la clase " + e.getClase(), e1);
 			}
 			

@@ -1,5 +1,7 @@
 package uy.com.uma.logicgame.persistencia;
 
+import java.util.Locale;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -29,10 +31,11 @@ public class ManejadorConfiguracion implements IManejadorConfiguracion {
 	public ConfiguracionDO getDatosConfiguracion (String idUsuario) throws PersistenciaException {
 		UtilValidacionParametros.validarIdUsuario(idUsuario);
 		Session session = sessions.openSession();
+		final Locale LOCALE = Locale.getDefault();
 		
 		try {
 			ConfiguracionDO dc = new ConfiguracionDO();
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);
 				
 			if (u == null)

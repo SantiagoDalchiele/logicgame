@@ -152,7 +152,7 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 					List<String> tuplaCandidata = ab.getCandidatos().get(0); 
 					setearRelaciones(tuplaCandidata);
 					solCandidata.add(tuplaCandidata);
-					aBorrar.push(new Integer(i));
+					aBorrar.push(Integer.valueOf(i));
 				}
 			}						
 			
@@ -250,7 +250,7 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 			if (setearRelacion(candidato, cambiosAct))				
 				podarArbol(hijo, candidato);
 			else				
-				aBorrar.push(new Integer(h));
+				aBorrar.push(Integer.valueOf(h));
 			
 			deshacerCambios(cambiosAct);
 			candidato.remove(candidato.size()-1);
@@ -269,7 +269,7 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 				ArbolValores hijo = it.next();
 				
 				if (hijo.profundidad() != prof)
-					aBorrar.push(new Integer(h));
+					aBorrar.push(Integer.valueOf(h));
 			}
 		}
 		
@@ -519,7 +519,7 @@ class RazonadorXProgDinamica implements IValoresCuadroDecision {
 			Map<String,String> valores = hijo.getValoresEnNivel(nivel-1);
 			
 			if ((valores.size() == 1) && (valor.equals(valores.values().iterator().next())))
-				aBorrar.push(new Integer(h));
+				aBorrar.push(Integer.valueOf(h));
 			else
 				podarArbolXValor(hijo, valor, nivel-1);
 		}

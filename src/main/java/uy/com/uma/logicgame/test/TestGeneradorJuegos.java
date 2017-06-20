@@ -4,11 +4,14 @@ import java.io.File;
 import java.math.BigInteger;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.generacion.GeneradorJuegos;
 import uy.com.uma.logicgame.generacion.ParametrosGeneracionJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
 
 /**
  * Testea la generación aleatoria de un juego
@@ -41,13 +44,14 @@ public class TestGeneradorJuegos {
 				File file = new File(path);
 				
 				if (file.exists())
-					file.delete();
+					if (!file.delete())
+						System.out.println("Error al borrar el archivo " + file.getName());
 				
 				jaxbMarshaller.marshal(juego, file);
 				System.out.println("Fin exitoso!");
 			} else
 				System.out.println("Fin por timeout, no se pudo generar un juego válido");
-		} catch (Exception e) {
+		} catch (JAXBException | ValidadorJuegoException | ConfiguracionException e) {
 			e.printStackTrace();
 		}
 	}

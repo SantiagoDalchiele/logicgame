@@ -6,8 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import uy.com.uma.logicgame.api.bean.UsuarioDO;
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.persistencia.IManejadorInternacionalizacion;
 import uy.com.uma.logicgame.api.persistencia.IManejadorSeguridad;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaFactory;
 import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
 
@@ -40,7 +42,7 @@ public class TestManejadorInternacionalizacion {
 				log.info(du.getNivel() + "-" + du.getAlias());
 			
 			log.info("Fin exitoso de la aplicación");
-		} catch (Exception e) {
+		} catch (PersistenciaException | InstantiationException | IllegalAccessException | ClassNotFoundException | ConfiguracionException e) {
 			log.error("Error general en la aplicación", e);
 		} finally {
 			SessionFactoryUtil.shutdown();

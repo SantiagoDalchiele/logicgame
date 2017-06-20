@@ -1,5 +1,6 @@
 package uy.com.uma.logicgame.resolucion.estrategias;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
 /**
@@ -7,7 +8,10 @@ import java.util.Comparator;
  *
  * @author Santiago Dalchiele
  */
-public class EstrategiasComparator implements Comparator<IEstrategia> {
+public class EstrategiasComparator implements Comparator<IEstrategia>, Serializable {
+
+	private static final long serialVersionUID = 7200600914257870344L;
+	
 
 	@Override
 	public int compare(IEstrategia e1, IEstrategia e2) {
@@ -18,4 +22,9 @@ public class EstrategiasComparator implements Comparator<IEstrategia> {
 	public boolean equals(Object obj) {		
 		return this == obj;
 	}
+
+	@Override
+	public int hashCode() {
+		return 97 + super.hashCode(); 
+	}	
 }

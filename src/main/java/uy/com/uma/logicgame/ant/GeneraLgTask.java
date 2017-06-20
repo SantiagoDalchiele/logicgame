@@ -1,17 +1,21 @@
 package uy.com.uma.logicgame.ant;
 
+import java.io.IOException;
 import java.math.BigInteger;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;
 
 import uy.com.uma.logicgame.Messages;
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.generacion.GeneradorJuegos;
 import uy.com.uma.logicgame.generacion.ParametrosGeneracionJuego;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
 
 /**
  * Tarea ant que toma parametros de generación de un juego, lo intenta generar al azar y persiste el resultado en un archivo .xml
@@ -85,15 +89,16 @@ public class GeneraLgTask extends LgAbstractTask {
 				JAXBContext jaxbContext = JAXBContext.newInstance(Juego.class);		 
 				Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 				
-				if (file.exists() && overwrite)
-					file.delete();
+				if ((file != null) && file.exists() && overwrite)
+					if (!file.delete())
+						log("Error al borrar el archivo " + file.getName(), Project.MSG_WARN);
 				
 				jaxbMarshaller.marshal(juego, file);
 				log(Messages.getString("GeneraLgTask.msg_exito"), Project.MSG_INFO); //$NON-NLS-1$
 				log(file.getCanonicalPath() + Messages.getString("GeneraLgTask.msg_proceso_ok"), Project.MSG_INFO); //$NON-NLS-1$
 			} else
 				log(Messages.getString("GeneraLgTask.err_timeout"), Project.MSG_ERR); //$NON-NLS-1$
-		} catch (Exception e) {
+		} catch (JAXBException | ConfiguracionException | ValidadorJuegoException | IOException e) {
 			throw new BuildException(Messages.getString("GeneraLgTask.err_excepcion"), e); //$NON-NLS-1$
 		}
 	}

@@ -15,6 +15,7 @@ import org.apache.tools.ant.Project;
 import org.apache.tools.ant.types.FileSet;
 
 import uy.com.uma.logicgame.Messages;
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.persistencia.IManejadorJuego;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaFactory;
@@ -73,7 +74,8 @@ public class Lg2dbTask extends LgAbstractTask {
 				
 				for (File f : files)
 					log(f.getCanonicalPath() + Messages.getString("Lg2dbTask.msg_proceso_ok"), Project.MSG_INFO); //$NON-NLS-1$
-			} catch (Exception e) {
+			} catch (JAXBException | ClassNotFoundException | IllegalAccessException | InstantiationException | 
+					ConfiguracionException | ValidadorJuegoException | PersistenciaException | IOException e) {
 				throw new BuildException(Messages.getString("Lg2dbTask.error_archivo_proc_ini") + file.getPath() + Messages.getString("Lg2dbTask.error_archivo_proc_fin"), e); //$NON-NLS-1$ //$NON-NLS-2$
 			} finally {
 				SessionFactoryUtil.shutdown();
@@ -88,16 +90,19 @@ public class Lg2dbTask extends LgAbstractTask {
 	 */
 	private void procesar (File file) throws IOException, JAXBException, PersistenciaException, ValidadorJuegoException {
 		log(Messages.getString("Lg2dbTask.msg_proceso") + file.getCanonicalPath(), Project.MSG_INFO); //$NON-NLS-1$
-		Juego juego = (Juego) jaxbUnmarshaller.unmarshal(file);
-		validador.validarJuego(juego);
-		boolean existe = mj.existe(juego.getId().intValue()); 
 		
-		if (existe && (!overwrite))
-			log(Messages.getString("Lg2dbTask.error_id_existente") + juego.getId(), Project.MSG_ERR); //$NON-NLS-1$
-		else {
-			mj.persistir(juego);
-			mj.actualizarRedundancias(juego.getId().intValue());
-			files.add(file);
+		if ((jaxbUnmarshaller != null) && (mj != null)) {
+			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(file);
+			validador.validarJuego(juego);
+			boolean existe = mj.existe(juego.getId().intValue()); 
+			
+			if (existe && (!overwrite))
+				log(Messages.getString("Lg2dbTask.error_id_existente") + juego.getId(), Project.MSG_ERR); //$NON-NLS-1$
+			else {
+				mj.persistir(juego);
+				mj.actualizarRedundancias(juego.getId().intValue());
+				files.add(file);
+			}
 		}
 	}
 }

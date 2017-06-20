@@ -2,6 +2,7 @@ package uy.com.uma.logicgame.persistencia.juego;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -76,7 +77,7 @@ public class ManejadorJuego implements IManejadorJuego {
 		
 		try {
 			uy.com.uma.logicgame.persistencia.juego.Juego juego = (uy.com.uma.logicgame.persistencia.juego.Juego) 
-					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(id));
+					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, Integer.valueOf(id));
 			
 			return (juego != null);		
 		} catch (PersistenceException e) {
@@ -97,7 +98,7 @@ public class ManejadorJuego implements IManejadorJuego {
 		
 		try {
 			uy.com.uma.logicgame.persistencia.juego.Juego j = (uy.com.uma.logicgame.persistencia.juego.Juego) 
-					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(id));
+					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, Integer.valueOf(id));
 			
 			if (j == null)
 				throw new PersistenceException("No existe ningún juego con el identificador " + id);
@@ -122,11 +123,11 @@ public class ManejadorJuego implements IManejadorJuego {
 	 */
 	public Juego obtener (int id, String[] idiomas) throws PersistenciaException {
 		Session session = sessions.openSession();
-		log.debug("Obteniendo el juego " + id + " para los idiomas " + idiomas);
+		log.debug("Obteniendo el juego " + id + " para los idiomas " + Arrays.toString(idiomas));
 		
 		try {
 			uy.com.uma.logicgame.persistencia.juego.Juego j = (uy.com.uma.logicgame.persistencia.juego.Juego) 
-					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(id));
+					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, Integer.valueOf(id));
 			
 			if (j == null)
 				throw new PersistenceException("No existe ningún juego con el identificador " + id);
@@ -177,7 +178,7 @@ public class ManejadorJuego implements IManejadorJuego {
 				return juego;
 			}
 		} catch (PersistenceException e) {
-			throw new PersistenciaException("Error al obtener el juego " + id + " para el idioma " + idiomas, e);
+			throw new PersistenciaException("Error al obtener el juego " + id + " para el idioma " + Arrays.toString(idiomas), e);
 		} finally {
 			UtilHibernate.closeSession(session);
 		}
@@ -221,14 +222,14 @@ public class ManejadorJuego implements IManejadorJuego {
 		Transaction tx = null;
 		String [] idiomas = UtilJuego.getIdiomas(juego);
 		String idiomaXDefecto = UtilJuego.getIdiomaXDefecto(juego);
-		log.debug("Persistiendo el juego " + juego.getId() + " " + juego.getTitulo() + " para el idioma [" + idiomas + "]");
+		log.debug("Persistiendo el juego " + juego.getId() + " " + juego.getTitulo() + " para el idioma [" + Arrays.toString(idiomas) + "]");
 		dimensiones.clear();
 		valores.clear();		
 		
 		try {			
 			tx = session.beginTransaction();
 			uy.com.uma.logicgame.persistencia.juego.Juego j = (uy.com.uma.logicgame.persistencia.juego.Juego) 
-					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(juego.getId().intValue()));
+					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, Integer.valueOf(juego.getId().intValue()));
 			
 			if (j == null) {
 				j = new uy.com.uma.logicgame.persistencia.juego.Juego();
@@ -254,9 +255,9 @@ public class ManejadorJuego implements IManejadorJuego {
 			persistirDimensiones(tx, session, juego);
 			persistirPistas(tx, session, juego);		
 			tx.commit();
-		} catch (Exception e) {
+		} catch (PersistenciaException e) {
 			UtilHibernate.rollback(tx);
-			throw new PersistenciaException("No se pudo insertar el juego [" + juego.getId() + "] para el idioma [" + idiomas + "]",  e);
+			throw new PersistenciaException("No se pudo insertar el juego [" + juego.getId() + "] para el idioma [" + Arrays.toString(idiomas) + "]",  e);
 		} finally {			
 			UtilHibernate.closeSession(session);
 		}
@@ -276,7 +277,7 @@ public class ManejadorJuego implements IManejadorJuego {
 		
 		try {		
 			uy.com.uma.logicgame.persistencia.juego.Juego juego = (uy.com.uma.logicgame.persistencia.juego.Juego) 
-					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(id));
+					session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, Integer.valueOf(id));
 			
 			if (juego != null) {
 				tx = session.beginTransaction();
@@ -311,7 +312,7 @@ public class ManejadorJuego implements IManejadorJuego {
 			try {		
 				tx = session.beginTransaction();
 				uy.com.uma.logicgame.persistencia.juego.Juego j = (uy.com.uma.logicgame.persistencia.juego.Juego) 
-						session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, new Integer(id));
+						session.get(uy.com.uma.logicgame.persistencia.juego.Juego.class, Integer.valueOf(id));
 				
 				if (j == null)
 					throw new PersistenceException("No existe ningún juego con el identificador " + id);

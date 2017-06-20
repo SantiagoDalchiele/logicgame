@@ -4,14 +4,17 @@ import java.io.File;
 import java.math.BigInteger;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.generacion.OptimizadorPistas;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
+import uy.com.uma.logicgame.nucleo.jaxb.juego.ValidadorJuegoException;
 import uy.com.uma.logicgame.resolucion.Resolucion;
 
 /**
@@ -53,7 +56,7 @@ public class TestOptimizadorPistas {
 				Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 				jaxbMarshaller.marshal(juego, new File(pathDest));
 			}
-		} catch (Exception e) {
+		} catch (JAXBException | ConfiguracionException | ValidadorJuegoException e) {
 			e.printStackTrace();
 		}
 	}

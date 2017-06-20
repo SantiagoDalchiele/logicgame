@@ -27,7 +27,8 @@ public class SessionFactoryUtil {
 	private static final Logger log = LogManager.getLogger(SessionFactoryUtil.class.getName());
 
 	/** Unica instancia de la clase */
-	private static SessionFactory sessionFactory = null;
+	private static volatile SessionFactory sessionFactory = null;
+	private static final Object lock = new Object();
 	
 	
 	
@@ -43,7 +44,10 @@ public class SessionFactoryUtil {
 	
 	public static SessionFactory getSessionFactory(Configuration configuration) {
 		if (sessionFactory == null)
-	        sessionFactory = configurar(configuration);
+			synchronized (lock) {
+				if (sessionFactory == null)
+					sessionFactory = configurar(configuration);
+			}				
 		
 		return sessionFactory;
 	}
@@ -114,8 +118,12 @@ public class SessionFactoryUtil {
 	 */
 	public static void shutdown() {
 		if (sessionFactory != null) {
-			sessionFactory.close();
-			sessionFactory = null;
+			synchronized (lock) {
+				if (sessionFactory != null) {
+					sessionFactory.close();
+					sessionFactory = null;
+				}
+			}			
 		}
 	}
 	

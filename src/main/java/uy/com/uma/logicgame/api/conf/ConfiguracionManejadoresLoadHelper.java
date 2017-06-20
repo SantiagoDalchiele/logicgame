@@ -10,7 +10,8 @@ import uy.com.uma.logicgame.nucleo.jaxb.conf.Configuracion.Manejadores;
 public class ConfiguracionManejadoresLoadHelper {
 
 	/** Unica instancia de la clase */
-	private static ConfiguracionManejadoresLoadHelper instancia = null;
+	private static volatile ConfiguracionManejadoresLoadHelper instancia = null;
+	private static final Object lock = new Object();
 	
 	/** Nombre de las clases parametrizadas */
 	private String manejadorEstructura;
@@ -31,7 +32,10 @@ public class ConfiguracionManejadoresLoadHelper {
 	 */
 	public static ConfiguracionManejadoresLoadHelper getInstancia() throws ConfiguracionException {
 		if (instancia == null)
-			instancia = new ConfiguracionManejadoresLoadHelper();
+			synchronized (lock) {
+				if (instancia == null)
+					instancia = new ConfiguracionManejadoresLoadHelper();
+			}				
 		
 		return instancia;
 	}

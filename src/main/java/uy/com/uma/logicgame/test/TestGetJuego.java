@@ -72,7 +72,8 @@ public class TestGetJuego {
 		Juego j = mj.obtener(nroJuego);			
 		
 		if (dest.exists())
-			dest.delete();			
+			if (!dest.delete())
+				System.out.println("Error al borrar el archivo " + dest.getName());			
 		
 		jaxbMarshaller.marshal(j, dest);
 	}

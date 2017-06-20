@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 import java.util.UUID;
 
 import javax.persistence.PersistenceException;
@@ -19,6 +20,7 @@ import org.hibernate.Transaction;
 
 import uy.com.uma.logicgame.api.bean.RutaDO;
 import uy.com.uma.logicgame.api.bean.UsuarioDO;
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.conf.ConfiguracionLoadHelper;
 import uy.com.uma.logicgame.api.persistencia.IManejadorSeguridad;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
@@ -35,7 +37,10 @@ import uy.com.uma.logicgame.persistencia.inter.Idioma;
 public class ManejadorSeguridad implements IManejadorSeguridad {
 	
 	private static final Logger log = LogManager.getLogger(ManejadorSeguridad.class.getName());
+
 	
+	/** Locale */
+	private static final Locale LOCALE = Locale.getDefault();
 
 	/** session factory */
 	private SessionFactory sessions = SessionFactoryUtil.getSessionFactory();
@@ -69,7 +74,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		Session session = sessions.openSession();
 		
 		try {
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = null;
 			
 			if (idUsuario.contains("@")) {
@@ -109,7 +114,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		
 		try {
 			tx = session.beginTransaction();			
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = null;
 			
 			if (idUsuario.contains("@")) {
@@ -158,7 +163,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		Session session = sessions.openSession();
 		
 		try {	
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = null;
 			
 			if (idUsuario.contains("@")) {
@@ -193,7 +198,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		
 		try {
 			tx = session.beginTransaction();			
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);
 				
 			if (u != null) {			
@@ -224,8 +229,8 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		
 		try {
 			String alias = idUsuario;
-			idUsuario = idUsuario.toLowerCase();
-			correo = correo.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
+			correo = correo.toLowerCase(LOCALE);
 			tx = session.beginTransaction();			
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);
 			
@@ -284,7 +289,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 					return REGISTRO_OK;
 				}
 			}
-		} catch (Exception e) {
+		} catch (ConfiguracionException e) {
 			UtilHibernate.rollback(tx);
 			throw new PersistenciaException("Error en el logout del usuario", e);
 		} finally {
@@ -305,7 +310,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		
 		try {
 			tx = session.beginTransaction();			
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);
 				
 			if (u != null) {
@@ -372,7 +377,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		
 		try {
 			tx = session.beginTransaction();			
-			idUsuario = idUsuario.toLowerCase();
+			idUsuario = idUsuario.toLowerCase(LOCALE);
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);
 				
 			if (u != null) {
@@ -623,7 +628,7 @@ public class ManejadorSeguridad implements IManejadorSeguridad {
 		if (idUsuario == null)
 			throw new PersistenciaException("Identificador de usuario nulo");
 		
-		idUsuario = idUsuario.toLowerCase();
+		idUsuario = idUsuario.toLowerCase(LOCALE);
 		
 		try {
 			Usuario u = (Usuario) session.get(Usuario.class, idUsuario);

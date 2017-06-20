@@ -1,6 +1,8 @@
 package uy.com.uma.logicgame.persistencia;
 
+import java.net.URISyntaxException;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -158,7 +160,7 @@ public class ManejadorEstructura implements IManejadorEstructura {
 				log.info(sent);
 				stmt.execute(sent);
 			}			
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | URISyntaxException | SQLException e) {
 			throw new PersistenciaException(e);
 		} finally {
 			UtilSQL.close(connection, stmt);
@@ -184,7 +186,7 @@ public class ManejadorEstructura implements IManejadorEstructura {
 				log.info(sent);
 				stmt.execute(sent);
 			}			
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | URISyntaxException | SQLException e) {
 			throw new PersistenciaException(e);
 		} finally {
 			UtilSQL.close(connection, stmt);
@@ -210,7 +212,7 @@ public class ManejadorEstructura implements IManejadorEstructura {
 				log.info(sent);
 				stmt.execute(sent);
 			}			
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | URISyntaxException | SQLException e) {
 			throw new PersistenciaException(e);
 		} finally {
 			UtilSQL.close(connection, stmt);
@@ -252,7 +254,7 @@ public class ManejadorEstructura implements IManejadorEstructura {
 									"UNION SELECT 1, 19, id FROM juegos WHERE id = 21";			
 			log.info(ins);
 			stmt.execute(ins);						
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | URISyntaxException | SQLException e) {
 			throw new PersistenciaException(e);
 		} finally {
 			UtilSQL.close(connection, stmt);
@@ -277,7 +279,7 @@ public class ManejadorEstructura implements IManejadorEstructura {
 									"ADD COLUMN fch_expira_token TIMESTAMP NULL;";
 			log.info(alter);
 			stmt.execute(alter);						
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | URISyntaxException | SQLException e) {
 			throw new PersistenciaException(e);
 		} finally {
 			UtilSQL.close(connection, stmt);
@@ -299,7 +301,7 @@ public class ManejadorEstructura implements IManejadorEstructura {
 			stmt = connection.createStatement();
 			log.info(CREATE_LOG_ACCIONES);
 			stmt.execute(CREATE_LOG_ACCIONES);						
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | URISyntaxException | SQLException e) {
 			throw new PersistenciaException(e);
 		} finally {
 			UtilSQL.close(connection, stmt);

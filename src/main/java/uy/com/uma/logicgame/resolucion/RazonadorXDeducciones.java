@@ -74,7 +74,7 @@ class RazonadorXDeducciones {
 			
 				try {
 					Collection<DatoCuadroDecision> cambios = estrategia.aplicar(matriz);
-					hubieronCambios = hubieronCambios || (!cambios.isEmpty());
+					hubieronCambios = (!cambios.isEmpty());
 					
 					if (!cambios.isEmpty()) {
 						costo += (cambios.size() * estrategia.getCosto());
@@ -93,7 +93,7 @@ class RazonadorXDeducciones {
 				
 				try {					
 					Collection<DatoCuadroDecision> cambios = absurdo.aplicar(matriz);
-					hubieronCambios = hubieronCambios || (!cambios.isEmpty());
+					hubieronCambios = (!cambios.isEmpty());
 					
 					if (!cambios.isEmpty()) {
 						costo += absurdo.getCosto();
@@ -121,7 +121,7 @@ class RazonadorXDeducciones {
 	 * Se debe invocar primero al método resolver de esta clase
 	 */
 	public String getSolucion() {
-		String solucion = "";
+		StringBuffer solucion = new StringBuffer();
 		int dimMatriz = matriz.getDimensionesXFila().size();
 		
 		for (short i = 0; i < dimMatriz; i++)
@@ -130,10 +130,10 @@ class RazonadorXDeducciones {
 					for (short h = 0; h < matriz.getCantValores(); h++) {
 						String id = i + "." + j + "." + k + "." + h;
 						short valor = matriz.getValor(i, j, k, h);
-						solucion += id + "," + valor + ";";
+						solucion.append(id + "," + valor + ";");
 					}
 						
-		return UtilString.quitarUltimosCaracteres(solucion, 1);
+		return UtilString.quitarUltimosCaracteres(solucion.toString(), 1);
 	}
 	
 	

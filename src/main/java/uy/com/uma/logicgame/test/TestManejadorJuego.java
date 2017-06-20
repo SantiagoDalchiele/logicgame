@@ -3,6 +3,7 @@ package uy.com.uma.logicgame.test;
 import java.io.File;
 
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
@@ -11,8 +12,10 @@ import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.xml.XmlConfigurationFactory;
 import org.hibernate.cfg.Configuration;
 
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.conf.ConfiguracionLoadHelper;
 import uy.com.uma.logicgame.api.persistencia.IManejadorJuego;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaFactory;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
 import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
@@ -68,13 +71,15 @@ public class TestManejadorJuego {
 			File dest = new File(pathDest);
 			
 			if (dest.exists())
-				dest.delete();
+				if (!dest.delete())
+					log.warn("Error al borrar el archivo " + dest.getName());
 			
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			jaxbMarshaller.marshal(nuevo, dest);
 			
 			log.info("Fin exitoso de la aplicación");
-		} catch (Exception e) {
+		} catch (JAXBException | ClassNotFoundException | IllegalAccessException | InstantiationException | 
+				ConfiguracionException | PersistenciaException e) {
 			log.error("Error general en la aplicación", e);
 		} finally {
 			SessionFactoryUtil.shutdown();

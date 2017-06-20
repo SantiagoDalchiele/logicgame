@@ -135,10 +135,10 @@ class Usuario {
 		this.token = token;
 	}
 	public Date getFchExpiraToken() {
-		return fchExpiraToken;
+		return (fchExpiraToken == null) ? null : (Date) fchExpiraToken.clone();
 	}
 	public void setFchExpiraToken(Date fchExpiraToken) {
-		this.fchExpiraToken = fchExpiraToken;
+		this.fchExpiraToken = (fchExpiraToken == null ? null : (Date) fchExpiraToken.clone());
 	}
 	
 }

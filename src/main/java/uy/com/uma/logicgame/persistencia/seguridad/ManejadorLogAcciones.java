@@ -85,7 +85,7 @@ public class ManejadorLogAcciones implements IManejadorLogAcciones {
 			
 			@SuppressWarnings("unchecked")
 			List<LogAccion> queryResult = sel.list();
-			Date ultExito = UtilFormato.FECHA_NULA.getTime();
+			Date ultExito = UtilFormato.FECHA_NULA().getTime();
 			
 			if (!queryResult.isEmpty())
 				ultExito = queryResult.iterator().next().getFchRegistro();
@@ -108,8 +108,6 @@ public class ManejadorLogAcciones implements IManejadorLogAcciones {
 				sel.setString("idUsuario", idUsuario);			
 			
 			return sel.list().size();
-		} catch (Exception e) {
-			throw new PersistenciaException("Error al obtener cantidad de acciones", e);
 		} finally {
 			UtilHibernate.closeSession(session);
 		}

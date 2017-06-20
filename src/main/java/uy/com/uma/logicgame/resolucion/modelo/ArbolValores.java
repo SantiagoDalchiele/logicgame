@@ -159,11 +159,11 @@ public class ArbolValores {
 	 */
 	@Override
 	public String toString() {		 
-		String strHijos = "";
+		StringBuffer strHijos = new StringBuffer();
 		
 		for (Iterator<ArbolValores> it = hijos.iterator(); it.hasNext();)
-			strHijos += it.next().toString() + (it.hasNext() ? ", " : "");
+			strHijos.append(it.next().toString() + (it.hasNext() ? ", " : ""));
 		
-		return this.valor + (hijos.isEmpty() ? "" : " -> (" + strHijos + ")");
+		return this.valor + (hijos.isEmpty() ? "" : " -> (" + strHijos.toString() + ")");
 	}	
 }

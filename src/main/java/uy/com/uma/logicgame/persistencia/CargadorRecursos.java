@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.io.StringReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -87,7 +88,7 @@ public class CargadorRecursos implements ICargadorRecursos {
 
 				for (String arch : cr.getArchivosProcesados())
 					System.out.println(arch);
-			} catch (Exception e) {
+			} catch (IOException | LogicGameException e) {
 				e.printStackTrace();
 			} finally {
 				SessionFactoryUtil.shutdown();
@@ -142,14 +143,15 @@ public class CargadorRecursos implements ICargadorRecursos {
 	 */
 	public void setInputStream (InputStream is) throws IOException {
 		ZipInputStream zis = null;
+		log.info("Procesando el archivos con el siguiente charset: " + Charset.defaultCharset());
 		
 		try {
 			zis = new ZipInputStream(is);		        
 	        ZipEntry entry;
 	        init();
 	        
-            while((entry = zis.getNextEntry()) != null) {
-            	Reader r = new BufferedReader (new InputStreamReader (zis/*, cs*/));
+            while((entry = zis.getNextEntry()) != null) {            	
+            	Reader r = new BufferedReader (new InputStreamReader (zis, Charset.defaultCharset()));
                 final String contenido = UtilString.getTexto(r, false);
                 final String nombre = entry.getName();
                 
@@ -158,12 +160,16 @@ public class CargadorRecursos implements ICargadorRecursos {
 	                	juegos.put(nombre, contenido);	                	
 	                } else if (EXT_CSV.equalsIgnoreCase(UtilIO.extFile(nombre))) {	                	
 	                	final BufferedReader br = new BufferedReader(new StringReader(contenido));
-	                	final String [] tokensFirstLine = br.readLine().split(SEP_CSV);
+	                	final String line = br.readLine();
 	                	
-	                	if (tokensFirstLine.length == 4)
-	                		idiomas.put(nombre, contenido);
-	                	else
-	                		literales.put(nombre, contenido);
+	                	if (line != null) {
+		                	final String [] tokensFirstLine = line.split(SEP_CSV);
+		                	
+		                	if (tokensFirstLine.length == 4)
+		                		idiomas.put(nombre, contenido);
+		                	else
+		                		literales.put(nombre, contenido);
+		                }
 	                }
                 }
             }	
@@ -207,19 +213,18 @@ public class CargadorRecursos implements ICargadorRecursos {
 	 * Carga los idiomas
 	 */
 	private void cargarIdiomas() throws PersistenciaException, IOException {
-		for (final String arch : idiomas.keySet()) {
-			final String contenido = idiomas.get(arch);
-			BufferedReader br = new BufferedReader(new StringReader(contenido));
+		for (final Map.Entry<String, String> entry : idiomas.entrySet()) {
+			BufferedReader br = new BufferedReader(new StringReader(entry.getValue()));
 			String line;
-			log.info("Procesando el archivo: " + arch);
+			log.info("Procesando el archivo: " + entry.getKey());
 			
 			while (br.ready() && ((line = br.readLine()) != null)) {
 				final String [] datos = line.split(SEP_CSV);
 				mai.setIdioma(datos[0], datos[1], datos[2]);
 			}
 			
-			log.info(arch + " procesado OK");
-			archivosProcesados.add(arch);
+			log.info(entry.getKey() + " procesado OK");
+			archivosProcesados.add(entry.getKey());
 		}		
 	}
 	
@@ -229,12 +234,11 @@ public class CargadorRecursos implements ICargadorRecursos {
 	 * Carga todos los literales en una única transacción por archivo
 	 */
 	private void cargarLiterales() throws PersistenciaException, IOException, NumberFormatException {
-		for (final String arch : literales.keySet()) {
-			final String contenido = literales.get(arch);
-			BufferedReader br = new BufferedReader(new StringReader(contenido));
+		for (final Map.Entry<String, String> entry : literales.entrySet()) {
+			BufferedReader br = new BufferedReader(new StringReader(entry.getValue()));
 			String line;
 			Collection<LiteralDO> literales = new ArrayList<LiteralDO>();
-			log.info("Procesando el archivo: " + arch);
+			log.info("Procesando el archivo: " + entry.getKey());
 			
 			while (br.ready() && ((line = br.readLine()) != null)) {
 				final String [] datos = line.split(SEP_CSV);
@@ -242,8 +246,8 @@ public class CargadorRecursos implements ICargadorRecursos {
 			}			
 			
 			mai.setLiterales(literales);
-			log.info(arch + " procesado OK");
-			archivosProcesados.add(arch);
+			log.info(entry.getKey() + " procesado OK");
+			archivosProcesados.add(entry.getKey());
 		}
 	}
 	
@@ -256,14 +260,13 @@ public class CargadorRecursos implements ICargadorRecursos {
 		JAXBContext jaxbContext = JAXBContext.newInstance(Juego.class);
     	Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 		
-		for (final String arch : juegos.keySet()) {
-			log.info("Procesando el archivo: " + arch);
-			final String contenido = juegos.get(arch);
-			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(new StringReader(contenido));
+		for (final Map.Entry<String, String> entry : juegos.entrySet()) {
+			log.info("Procesando el archivo: " + entry.getKey());			
+			Juego juego = (Juego) jaxbUnmarshaller.unmarshal(new StringReader(entry.getValue()));
 			mj.persistir(juego);
 			mj.actualizarRedundancias(juego.getId().intValue());
-			log.info(arch + " procesado OK");
-			archivosProcesados.add(arch);
+			log.info(entry.getKey() + " procesado OK");
+			archivosProcesados.add(entry.getKey());
 		}
 	}
 }

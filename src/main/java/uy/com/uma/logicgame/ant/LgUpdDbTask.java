@@ -49,7 +49,7 @@ public class LgUpdDbTask extends LgAbstractTask {
         return ids;
     }	
 	
-	public class IdSet {        
+	public static class IdSet {        
         private int id;
         public IdSet() {}
         public void setId(int id) { this.id = id; }
@@ -92,11 +92,13 @@ public class LgUpdDbTask extends LgAbstractTask {
 	 * Procesa un identificador de juego en particular
 	 */
 	private void procesar (int idJuego) throws PersistenciaException {
-		if (!mj.existe(idJuego))
-			log(Messages.getString("LgUpdDbTask.no_existe_id_ini") + idJuego + Messages.getString("LgUpdDbTask.no_existe_id_fin"), Project.MSG_ERR); //$NON-NLS-1$ //$NON-NLS-2$
-		else {
-			mj.actualizarRedundancias(idJuego);
-			ids.add(idJuego);
+		if (mj != null) {
+			if (!mj.existe(idJuego))
+				log(Messages.getString("LgUpdDbTask.no_existe_id_ini") + idJuego + Messages.getString("LgUpdDbTask.no_existe_id_fin"), Project.MSG_ERR); //$NON-NLS-1$ //$NON-NLS-2$
+			else {
+				mj.actualizarRedundancias(idJuego);
+				ids.add(idJuego);
+			}
 		}
 	}
 }

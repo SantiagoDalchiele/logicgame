@@ -1,5 +1,7 @@
 package uy.com.uma.logicgame.persistencia.inter;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -15,7 +17,9 @@ import uy.com.uma.logicgame.api.bean.IdiomaDO;
  */
 @Entity
 @Table(name = "idiomas")
-public class Idioma {
+public class Idioma implements Serializable {
+
+	private static final long serialVersionUID = -6357013149661526629L;
 
 	@Id
 	@Column(columnDefinition = "bpchar(2)")

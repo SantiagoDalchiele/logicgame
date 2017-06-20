@@ -1,15 +1,16 @@
--Buenas practicas de programación web
-	https://developer.yahoo.com/performance/
+desa.logicgame@gmail.com
+facebook: LogicGame Desa
 	
--Hacer un asistente para mostrar como se juega el juego con un juego sencillo (el de los apodos tal vez)
-
 -Login con facebook
+	https://developers.facebook.com/docs/facebook-login/web/
+	https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.0
 	https://www.elserver.com/facebook-login-javascript/
 	https://platzi.com/blog/facebook-login-button/
+	https://developers.facebook.com/docs/facebook-login/	
+	https://developers.facebook.com/apps/734636610025493/add/
+	http://localhost:8080/loginfb.html	
 	
--Como integrar una aplicación en facebook
-	crearme un mail desa.logicgame@gmail.com
-	crear un perfil de facebook para LogicGame Desa
+-Como integrar una aplicación en facebook	
 	https://developers.facebook.com/docs
 	https://developers.facebook.com/quickstarts/
 	http://hayageek.com/facebook-javascript-sdk/
@@ -22,7 +23,20 @@
 	cantidad de ayudas que puede enviar un usuario a otro
 	solicitud de ayudas a otros amigos
 
+-Hacer un asistente para mostrar como se juega el juego con un juego sencillo (el de los apodos tal vez)
+
+-Subir todo lo hecho a un usuario distinto de github desa.logicgame
+
+-Subir todo lo hecho a Heroku con un usuario distinto desa.logicgame y probar que ande 
+
 -Documentar todo lo hecho
+
+-JSF
+-Estudiar Java Server Faces (JSF), ver combinación de AJAX con JSF
+	
+-Node JS, MEAN
+
+-TomEE, tomcat + J2EE
 
 -Interface para android
 
@@ -39,13 +53,6 @@
 	https://cordova.apache.org/
 	ionicframework.com
 	
--Node JS, MEAN
-
--JSF
--Estudiar Java Server Faces (JSF), ver combinación de AJAX con JSF
-	
--TomEE, tomcat + J2EE
-
 -Cursos gratis: https://miriadax.net/web/general-navigation/cursos
 
 -Maven: C:\santiago\cursos\OReilly.Maven.The.Definitive.Guide.Oct.2008.ISBN.0596517335.pdf

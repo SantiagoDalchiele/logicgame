@@ -1,13 +1,18 @@
 package uy.com.uma.logicgame.ant;
 
+import java.io.IOException;
+
 import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.Project;
 
 import uy.com.uma.logicgame.Messages;
+import uy.com.uma.logicgame.api.conf.ConfiguracionException;
 import uy.com.uma.logicgame.api.persistencia.IManejadorJuego;
+import uy.com.uma.logicgame.api.persistencia.PersistenciaException;
 import uy.com.uma.logicgame.api.persistencia.PersistenciaFactory;
 import uy.com.uma.logicgame.nucleo.jaxb.juego.Juego;
 import uy.com.uma.logicgame.persistencia.SessionFactoryUtil;
@@ -59,11 +64,13 @@ public class Lg2xmlTask extends LgAbstractTask {
 				Juego juego = mj.obtener(id);
 				
 				if (file.exists() && overwrite)
-					file.delete();				
+					if (!file.delete())
+						log("Error al borrar el archivo " + file.getName(), Project.MSG_WARN);				
 
 				jaxbMarshaller.marshal(juego, file);
 				log(file.getCanonicalPath() + Messages.getString("Lg2xmlTask.msg_proceso_ok"), Project.MSG_INFO); //$NON-NLS-1$
-			} catch (Exception e) {
+			} catch (JAXBException | InstantiationException | IllegalAccessException | ClassNotFoundException | ConfiguracionException | 
+					PersistenciaException | IOException e) {
 				throw new BuildException(Messages.getString("Lg2xmlTask.error_proceso_ini") + file.getPath() + Messages.getString("Lg2xmlTask.error_proceso_fin"), e); //$NON-NLS-1$ //$NON-NLS-2$
 			} finally {
 				SessionFactoryUtil.shutdown();

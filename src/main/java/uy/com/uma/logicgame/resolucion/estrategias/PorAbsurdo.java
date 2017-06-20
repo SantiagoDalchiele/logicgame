@@ -274,7 +274,7 @@ public class PorAbsurdo extends EstrategiaAbstracta {
 			for (Iterator<IEstrategia> it = estrategias.iterator(); it.hasNext() && !hubieronCambios;) {
 				IEstrategia estrategia = it.next();
 				Collection<DatoCuadroDecision> cambiosIt = estrategia.aplicar(matriz);
-				hubieronCambios = hubieronCambios || (!cambiosIt.isEmpty());
+				hubieronCambios = (!cambiosIt.isEmpty());
 					
 				if (!cambiosIt.isEmpty()) {
 					costo += (cambiosIt.size() * estrategia.getCosto());
@@ -284,9 +284,6 @@ public class PorAbsurdo extends EstrategiaAbstracta {
 					log.debug("Costo actualizado (solo de la estrategia por absurdo): " + costo);*/
 				}
 			}
-			
-			/*if (!matriz.resueltoCompleto())
-				costo++;*/
 		}
 
 	}	

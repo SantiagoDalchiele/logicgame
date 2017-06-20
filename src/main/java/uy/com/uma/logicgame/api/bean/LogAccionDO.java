@@ -38,7 +38,7 @@ public class LogAccionDO {
 		this.usuario = usuario;
 		this.clave = clave;
 		this.resultado = resultado;
-		this.fchRegistro = fchRegistro;
+		this.setFchRegistro(fchRegistro);
 	}
 	
 	
@@ -80,9 +80,9 @@ public class LogAccionDO {
 		this.resultado = resultado;
 	}
 	public Date getFchRegistro() {
-		return fchRegistro;
+		return fchRegistro == null ? null : (Date) fchRegistro.clone();
 	}
 	public void setFchRegistro(Date fchRegistro) {
-		this.fchRegistro = fchRegistro;
+		this.fchRegistro = (fchRegistro == null ? null : (Date) fchRegistro.clone());
 	}	
 }
